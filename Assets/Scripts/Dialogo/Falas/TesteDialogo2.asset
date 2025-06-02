@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbad49a3245fbacca3cd8778b9780eb, type: 3}
+  m_Name: TesteDialogo2
+  m_EditorClassIdentifier: 
+  dialogueBlocks:
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Outro peixe peixe peixe peixe peixe
+        whosTalking: Pescador 2
+        whosTalkingIcon: {fileID: 21300000, guid: 1784704df3a7069d09a276dbb7d66cd1, type: 3}
+    - type: 0
+      textLine:
+        textLine: Mais outro peixe peixe peixe peixe peixe
+        whosTalking: Pescador 2
+        whosTalkingIcon: {fileID: 21300000, guid: 1784704df3a7069d09a276dbb7d66cd1, type: 3}
+    - type: 0
+      textLine:
+        textLine: Mais mais outro peixe peixe peixe peixe peixe
+        whosTalking: Pescador 2
+        whosTalkingIcon: {fileID: 21300000, guid: 1784704df3a7069d09a276dbb7d66cd1, type: 3}
+    overrideJump: 0
+    jumpToBlock: 0
