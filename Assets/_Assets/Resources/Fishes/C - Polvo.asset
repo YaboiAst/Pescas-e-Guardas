@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54af0f2288003894d87bd60b5594db90, type: 3}
-  m_Name: FishC
+  m_Name: C - Polvo
   m_EditorClassIdentifier: 
   _uniqueID: 5cc53953-8c1b-4c4f-899a-cff67c48ec4e
   _displayName: Pexe C
@@ -22,4 +22,4 @@ MonoBehaviour:
   _fishPrefab: {fileID: 0}
   _icon: {fileID: 21300000, guid: a105a48bae5384b4cb0713da4b087e24, type: 3}
   _weightRange: {x: 2, y: 3}
-  _possibleLocations: 0
+  _location: 0

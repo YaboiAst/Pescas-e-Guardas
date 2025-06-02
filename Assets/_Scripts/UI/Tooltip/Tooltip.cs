@@ -12,6 +12,8 @@ public class Tooltip : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _contentField;
     [SerializeField] private Transform _elementsParent;
     [SerializeField] private GameObject _elementPrefab;
+    [SerializeField] private Transform _actionsParent;
+    [SerializeField] private GameObject _actionPrefab;
     [SerializeField] private LayoutElement _layoutElement;
     [SerializeField] private int _characterWrapLimit;
     [SerializeField] private RectTransform _avoidPanel;
@@ -104,6 +106,16 @@ public class Tooltip : MonoBehaviour
         {
             _elementsParent.gameObject.SetActive(false);
         }
+        
+        if (info.Actions.Count > 0)
+        {
+            _actionsParent.gameObject.SetActive(true);
+            CreateActions(info.Actions);
+        }
+        else
+        {
+            _actionsParent.gameObject.SetActive(false);
+        }
 
         _layoutElement.enabled = (headerLength > _characterWrapLimit || contentLength > _characterWrapLimit);
     }
@@ -116,11 +128,22 @@ public class Tooltip : MonoBehaviour
             element.SetElementInfo(info);
         }
     }
+    
+    private void CreateActions(List<TooltipActionInfo> infos)
+    {
+        foreach (TooltipActionInfo info in infos)
+        {
+            TooltipAction action = ObjectPoolManager.SpawnGameObject(_actionPrefab, _actionsParent, Quaternion.identity).GetComponent<TooltipAction>();
+            action.SetActionInfo(info);
+        }
+    }
 
     private void ReturnElements()
     {
         for (int i = _elementsParent.childCount - 1; i >= 0; i--) 
             ObjectPoolManager.ReturnObjectToPool(_elementsParent.GetChild(i).gameObject); 
+        
+        for (int i = _actionsParent.childCount - 1; i >= 0; i--) 
+            ObjectPoolManager.ReturnObjectToPool(_actionsParent.GetChild(i).gameObject); 
     }
-    
 }

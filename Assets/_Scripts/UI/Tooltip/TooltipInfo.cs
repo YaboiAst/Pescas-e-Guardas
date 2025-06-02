@@ -10,6 +10,8 @@ public struct TooltipInfo
     public string Header;
     [ReorderableList]
     public List<TooltipElementInfo> Elements;
+    [ReorderableList]
+    public List<TooltipActionInfo> Actions;
     [TextArea]
     public string Content;
     
@@ -20,4 +22,11 @@ public struct TooltipElementInfo
 {
     public string Name;
     public string Value;
+}
+
+[Serializable]
+public struct TooltipActionInfo
+{
+    public string Action;
+    public Sprite Prompt;
 }

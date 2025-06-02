@@ -1,37 +1,26 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DiaryManager : MonoBehaviour
+public class DiaryManager : MonoBehaviour, IDataPersistence
 {
     public static DiaryManager Instance { get; private set; }
-    private readonly HashSet<EntryData> _allEntries = new HashSet<EntryData>();
-    public event Action<HashSet<EntryData>> OnEntriesLoaded;
+    private List<EntryData> _allEntries = new List<EntryData>();
+
+    private DiaryUI _diaryUI;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
         
         Instance = this;
-    }
 
-    private IEnumerator Start()
-    {
-        foreach (FishData fishData in FishManager.AllFishes)
-        {
-            EntryData entry = new EntryData(fishData);
-            _allEntries.Add(entry);
-        }
-        
-        yield return null;
-        
-        OnEntriesLoaded?.Invoke(_allEntries);
+        _diaryUI = GetComponent<DiaryUI>();
     }
 
     public bool IsDiscovered(FishData fish)
@@ -50,15 +39,38 @@ public class DiaryManager : MonoBehaviour
         else
             Debug.LogError("The fish you caught isn't in the Diary");
     }
+
+    public void LoadData(GameData data)
+    {
+        if (data.AllEntries.Count < 1)
+        {
+            foreach (FishData fishData in FishManager.AllFishes)
+            {
+                EntryData entry = new EntryData(fishData);
+                _allEntries.Add(entry);
+            }
+        }
+        else
+        {
+            _allEntries = data.AllEntries;
+        }
+        
+        _diaryUI.BindDatas(_allEntries);
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.AllEntries = _allEntries;
+    }
 }
 
 [Serializable]
 public class EntryData
 {
-    public FishData FishData { get; private set; }
+    public FishData FishData;
     public string UniqueID => FishData.UniqueID;
-    public int TimesCaught { get; private set; }
-    public float HighestWeight { get; private set; }
+    public int TimesCaught;
+    public float HighestWeight;
     public bool IsDiscovered => TimesCaught > 0;
 
     public event Action OnEntryUpdated; 
@@ -78,6 +90,5 @@ public class EntryData
             HighestWeight = fish.Weight;
             OnEntryUpdated?.Invoke();
         } 
-        
     }
 }
