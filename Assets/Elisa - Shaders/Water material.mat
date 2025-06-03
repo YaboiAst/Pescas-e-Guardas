@@ -129,9 +129,9 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Water_depth: 0.5
-    - _Wave_amplitude: 0
+    - _Wave_amplitude: 1.19
     - _Wave_frequency: 0.6
-    - _Wave_speed: 0
+    - _Wave_speed: 2.5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
