@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294153b5f8410204585d0160d04523a2, type: 3}
+  m_Name: TestKeyDate
+  m_EditorClassIdentifier: 
+  KeyDateName: Test Key Date
+  KeyDateDescription: 
+  Type: 0
+  Day: 1
+  AmountOfDays: 1
+  Hour: 8
+  Minute: 8
+  OnKeyDateTriggered:
+    m_PersistentCalls:
+      m_Calls: []
+  KeyDateTriggerEvents: []

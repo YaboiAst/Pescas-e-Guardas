@@ -230,6 +230,17 @@ MonoBehaviour:
       MethodName: Quit
       Parameters: []
       Flags: 24
+  - Name: raise_event
+    Description: Triggers a game event if found
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 005147616d654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: RaiseEvent
+      Parameters:
+      - Data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      Flags: 24
   - Name: reload_active_scene
     Description: Reloads the current active scene
     TargetType: 0
