@@ -19,6 +19,7 @@ public class DialogueEvent
 public class DialogueBlock
 {
     [AllowNesting] public List<DialogueEvent> dialogueBlock;
+    public ScriptableQuest questToStart;
 
     [Space(5)]
     public bool overrideJump;

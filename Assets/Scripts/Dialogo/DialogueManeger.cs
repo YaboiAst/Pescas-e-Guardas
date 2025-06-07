@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     private Queue<DialogueEvent> _dialogueQueue;
 
+
     public static readonly UnityEvent<ScriptableDialogue> OnStartDialogue = new ();
     public static readonly UnityEvent<int> OnNextDialogueBlock = new();
     public static readonly UnityEvent OnFinishDialogue = new();
@@ -16,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public static readonly UnityEvent OnNextDialogue = new();
    
     public static readonly DialogueInfoEvent OnDialogueEvent = new();
+
 
 
     private ScriptableDialogue _currentDialogue;
@@ -33,9 +35,12 @@ public class DialogueManager : MonoBehaviour
         OnNextDialogueBlock.AddListener(LoadBlock);
     }
 
+    private ScriptableQuest _questToStart;
+
     private void InitDialogue(ScriptableDialogue dialogueToParse)
     {
         _currentDialogue = dialogueToParse;
+        _questToStart = dialogueToParse.dialogueBlocks[0].questToStart;
         OnNextDialogueBlock?.Invoke(0);
     }
     
@@ -62,7 +67,12 @@ public class DialogueManager : MonoBehaviour
             }
             
             OnFinishDialogue?.Invoke();
-            return;
+            if (_questToStart != null)
+            {
+                QuestManager.Instance.updateQuest(_questToStart.questInfo);
+                Debug.Log("dialogo finalizado");
+            }
+
         }
         
         var dialogueEvent = _dialogueQueue.Dequeue();

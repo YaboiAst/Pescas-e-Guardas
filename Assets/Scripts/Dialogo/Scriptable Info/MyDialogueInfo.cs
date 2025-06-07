@@ -13,4 +13,5 @@ public class MyDialogueInfo
     
     public string whosTalking;
     public Sprite whosTalkingIcon;
+   
 }

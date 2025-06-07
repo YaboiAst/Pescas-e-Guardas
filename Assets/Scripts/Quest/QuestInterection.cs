@@ -2,29 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueInteraction : MonoBehaviour
+public class QuestInteraction : MonoBehaviour
 {
     [SerializeField] private List<ScriptableDialogue> dialogues;
     private bool _canInteract;
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("Player")) return;
-        Debug.Log("testeA");
+        if (!other.CompareTag("Player")) return;
         _canInteract = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(!other.CompareTag("Player")) return;
-        Debug.Log("testeA");
+        if (!other.CompareTag("Player")) return;
         _canInteract = false;
     }
-    
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && _canInteract)
+        if (Input.GetKeyDown(KeyCode.P) && _canInteract)
         {
-            DialogueManager.OnStartDialogue?.Invoke(dialogues[0]);
+            QuestManager.Instance.completeQuest();
         }
     }
 }
