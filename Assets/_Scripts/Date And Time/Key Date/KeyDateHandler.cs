@@ -9,16 +9,16 @@ public class KeyDateHandler : MonoBehaviour
     [SerializeField] private List<KeyDate> _currentKeyDates;
     private void OnValidate() => _keyDates = Extensions.GetAllInstances<KeyDate>().ToList();
 
-    private void OnEnable()
+    private void Start()
     {
-        TimeManager.OnDayChanged += DayChanged;
-        TimeManager.OnMinuteChanged += HandleCurrentKeyDates;
+        TimeManager.OnDayChange += DayChanged;
+        TimeManager.OnHourChange += HandleCurrentKeyDates;
     }
-
+    
     private void OnDestroy()
     {
-        TimeManager.OnDayChanged -= DayChanged;
-        TimeManager.OnMinuteChanged -= HandleCurrentKeyDates;
+        TimeManager.OnDayChange -= DayChanged;
+        TimeManager.OnHourChange -= HandleCurrentKeyDates;
     }
 
     private void DayChanged(int day)
@@ -32,13 +32,13 @@ public class KeyDateHandler : MonoBehaviour
         }
     }
     
-    private void HandleCurrentKeyDates(int minute, int hour)
+    private void HandleCurrentKeyDates(int hour)
     {
         if (_currentKeyDates.Count == 0) return;
         
         foreach (KeyDate keyDate in _currentKeyDates)
         {
-            if (keyDate.Hour == hour && keyDate.Minute == minute) 
+            if (keyDate.Hour == hour) 
                 keyDate.TriggerDate();
         }
     }

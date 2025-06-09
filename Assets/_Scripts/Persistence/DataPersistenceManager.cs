@@ -23,7 +23,7 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private bool _useEncryption = false;
 
     [SerializeField] private string _dataFileName = "game.sav";
-    [SerializeField] private string _settingsFileName = "settings.cfg";
+    [SerializeField] private string _settingsFileName = "game.cfg";
 
 
     [Header("Auto Saving Configuration")] 

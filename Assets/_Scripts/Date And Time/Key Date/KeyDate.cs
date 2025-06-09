@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Key Date/New Key Date")]
 public class KeyDate : ScriptableObject
@@ -23,19 +23,18 @@ public class KeyDate : ScriptableObject
     [Header("Event Time")]
     [Range(0, 23)]
     public int Hour;
-    [Range(0, 59)]
-    public int Minute;
 
+    
     [Header("Actions")]
-    public UnityEvent OnKeyDateTriggered;
     public List<GameEvent> KeyDateTriggerEvents;
+    public event Action OnKeyDateTriggered;
 
     public bool ShouldTriggerToday(int day)
     {
         if (Type == KeyDateType.Recurring)
             return day % AmountOfDays == 0;
-        else
-            return day == Day;
+        
+        return day == Day;
     }
 
     public void TriggerDate()

@@ -17,8 +17,7 @@ MonoBehaviour:
   Type: 0
   Day: 1
   AmountOfDays: 1
-  Hour: 8
-  Minute: 8
+  Hour: 13
   OnKeyDateTriggered:
     m_PersistentCalls:
       m_Calls: []

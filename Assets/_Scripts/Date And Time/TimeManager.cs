@@ -1,142 +1,113 @@
 using System;
-using NaughtyAttributes;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class TimeManager : MonoBehaviour, IDataPersistence
 {
-    public static TimeManager Instance { get; private set; }
+    private static readonly int Blend = Shader.PropertyToID("_Blend");
     
-    [Header("Time Settings")] 
-    [SerializeField] private bool _overrideSaveTime; 
-    [Range(0, 23), SerializeField, ShowIf(nameof(_overrideSaveTime))] 
-    private int _initialHour = 8;
-    [Range(0, 59), SerializeField, ShowIf(nameof(_overrideSaveTime))] 
-    private int _initialMinute = 0;
+    //[SerializeField] private bool _overrideSave;
+    [SerializeField] private TimeSettings _timeSettings;
 
-    [SerializeField] private float _secondsPerMinute = 5.0f;
+    [SerializeField] private Light _sun;
+    [SerializeField] private Light _moon;
+    
+    [SerializeField] private AnimationCurve _lightIntensityCurve;
+    
+    [SerializeField] private float _maxSunIntensity = 1f;
+    [SerializeField] private float _maxMoonIntensity = 0.5f;
 
-    [Header("Date Settings")] 
-    [SerializeField] private int _day = 1;
-    //[SerializeField] private int _month = 1;
-    //[SerializeField] private int _year = 1;
+    [SerializeField] private Color _dayAmbientLight;
+    [SerializeField] private Color _nightAmbientLight;
 
-    [Header("Current Time")] 
-    [SerializeField, ReadOnly] private int _currentHour;
-    [SerializeField, ReadOnly] private int _currentMinute;
-    [SerializeField, ReadOnly] private float _currentSeconds;
+    [SerializeField] private Volume _volume;
+    [SerializeField] private Material _skyboxMaterial;
 
-    public static event Action<int, int> OnMinuteChanged;
+    private ColorAdjustments _colorAdjustments;
 
-    public static event Action<int> OnHourChanged;
-
-    //public static event Action<int, int, int> OnDayChanged;
-    public static event Action<int> OnDayChanged;
+    private static TimeService _service;
+    public static TimeService Service => _service;
+    
+    public static event Action OnSunrise
+    {
+        add => _service.OnSunrise += value;
+        remove => _service.OnSunrise -= value;
+    }
+    public static event Action OnSunset
+    {
+        add => _service.OnSunset += value;
+        remove => _service.OnSunset -= value;
+    }
+    public static event Action<int> OnHourChange
+    {
+        add => _service.OnHourChange += value;
+        remove => _service.OnHourChange -= value;
+    }
+    
+    public static event Action<int>  OnDayChange
+    {
+        add => _service.OnDayChange += value;
+        remove => _service.OnDayChange -= value;
+    }
 
     private void Start()
     {
-        OnMinuteChanged?.Invoke(_currentHour, _currentMinute);
-        OnHourChanged?.Invoke(_currentHour);
-        OnDayChanged?.Invoke(_day);
-    }
-
-    private void Awake()
-    {
-        if (Instance && Instance != this)
-            Destroy(gameObject);
-        
-        Instance = this;
+        _volume.profile.TryGet(out _colorAdjustments);
     }
 
     private void Update()
     {
-        UpdateTime();
+        UpdateTimeOfDay();
+        RotateSun();
+        UpdateLightSettings();
+        UpdateSkyBlend();
     }
-    private void UpdateTime()
+
+    private void UpdateTimeOfDay()
     {
-        _currentSeconds += Time.deltaTime;
-
-        if (!(_currentSeconds >= _secondsPerMinute)) 
-            return;
-        
-        _currentSeconds = 0f;
-        _currentMinute++;
-
-        if (_currentMinute >= 60)
-        {
-            _currentMinute = 0;
-            _currentHour++;
-
-            if (_currentHour >= 24)
-            {
-                _currentHour = 0;
-                _day++;
-
-                // if (_day > 30)
-                // {
-                //     _day = 1;
-                //     _month++;
-                //
-                //     if (_month > 12)
-                //     {
-                //         _month = 1;
-                //         _year++;
-                //     }
-                // }
-                
-                //OnDayChanged?.Invoke(_day, _month, _year);
-                OnDayChanged?.Invoke(_day);
-            }
-            OnHourChanged?.Invoke(_currentHour);
-        }
-        OnMinuteChanged?.Invoke(_currentHour, _currentMinute);
+        _service.UpdateTime(Time.deltaTime);
     }
 
-    public string GetTimeAsString() => $"{_currentHour:D2}:{_currentMinute:D2}";
+    private void UpdateSkyBlend()
+    {
+        float dotProduct = Vector3.Dot(_sun.transform.forward, Vector3.up);
+        float blend = Mathf.Lerp(0, 1, _lightIntensityCurve.Evaluate(dotProduct));
+        _skyboxMaterial.SetFloat(Blend, blend);
+    }
 
-    public string GetDateAsString() => $"Day {_day}";
+    private void UpdateLightSettings()
+    {
+        float dotProduct = Vector3.Dot(_sun.transform.forward, Vector3.down);
+        float lightIntensity = _lightIntensityCurve.Evaluate(dotProduct);
+        
+        _sun.intensity = Mathf.Lerp(0, _maxSunIntensity, lightIntensity);
+        _moon.intensity = Mathf.Lerp(_maxMoonIntensity, 0, lightIntensity);
 
-    public int GetCurrentHour() => _currentHour;
+        if (!_colorAdjustments)
+            return;
 
-    public int GetCurrentMinute() => _currentMinute;
+        _colorAdjustments.colorFilter.value = Color.Lerp(_nightAmbientLight, _dayAmbientLight, _lightIntensityCurve.Evaluate(dotProduct));
+        
+    }
 
-    public int GetCurrentDay() => _day;
-
-    // public int GetCurrentMonth() => _month;
-
-    // public int GetCurrentYear() => _year;
+    private void RotateSun()
+    {
+        float rotation = _service.CalculateSunAngle();
+        _sun.transform.rotation = Quaternion.AngleAxis(rotation, Vector3.right);
+    }
 
     public void LoadData(GameData data)
     {
-        if (_overrideSaveTime)
-        {
-            _currentHour = _initialHour;
-            _currentMinute = _initialMinute;
-            _currentSeconds = 0f;
-            Debug.LogWarning("Overrode Date and Time");
-        }
-        else
-        {
-            _currentHour = data.CurrentHour;
-            _currentMinute = data.CurrentMinute;
-            _currentSeconds = data.CurrentSeconds;
-            _day = data.CurrentDay;
-            //_month = data.CurrentMonth;
-            //_year = data.CurrentYear;
-        }
-
-        OnMinuteChanged?.Invoke(_currentHour, _currentMinute);
-        OnHourChanged?.Invoke(_currentHour);
-        OnDayChanged?.Invoke(_day);
-        //OnDayChanged?.Invoke(_day, _month, _year);
+        _service = new TimeService(data.TimeSettings);
     }
 
     public void SaveData(GameData data)
     {
-        data.CurrentHour = _currentHour;
-        data.CurrentMinute = _currentMinute;
-        data.CurrentSeconds = _currentSeconds;
-        data.CurrentDay = _day;
-        //data.CurrentMonth = _month;
-        //data.CurrentYear = _year;
+        data.TimeSettings = new TimeSettings(
+            _service.DaysPassed, 
+            _service.CurrentTime.Hour, 
+            _service.CurrentTime.Minute);
     }
 }

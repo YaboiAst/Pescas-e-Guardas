@@ -9,12 +9,7 @@ public class GameData
     public string LastSession;
     
     // Date and Time Data
-    public int CurrentHour;
-    public int CurrentMinute;
-    public float CurrentSeconds;
-    public int CurrentDay;
-    public int CurrentMonth;
-    public int CurrentYear;
+    public TimeSettings TimeSettings;
     
     // Diary Data
     public List<EntryData> AllEntries;
@@ -23,12 +18,6 @@ public class GameData
     {
         // Initialize Data
         AllEntries = new List<EntryData>();
-        
-        CurrentHour = 8;
-        CurrentMinute = 0;
-        CurrentSeconds = 0;
-        CurrentDay = 1;
-        CurrentMonth = 1;
-        CurrentYear = 1;
+        TimeSettings = new TimeSettings(1,12,0);
     }
 }
