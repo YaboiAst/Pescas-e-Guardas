@@ -8,6 +8,9 @@ public class GameData
     public long LastUpdated;
     public string LastSession;
     
+    // Boat Data
+    public BoatData BoatData;
+    
     // Date and Time Data
     public TimeSettings TimeSettings;
     
@@ -17,7 +20,8 @@ public class GameData
     public GameData()
     {
         // Initialize Data
-        AllEntries = new List<EntryData>();
-        TimeSettings = new TimeSettings(1,12,0);
+        this.AllEntries = new List<EntryData>();
+        this.TimeSettings = new TimeSettings(1,12,0);
+        this.BoatData = new BoatData();
     }
 }
