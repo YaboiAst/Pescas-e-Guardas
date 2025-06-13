@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 829108112}
   - component: {fileID: 829108111}
   - component: {fileID: 829108114}
-  - component: {fileID: 829108115}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -266,7 +265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cb8485d4c630be849b86ad0374ec8415, type: 2}
+  - {fileID: 2100000, guid: d21db55fae425764eae8b7884959d310, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,8 +305,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 14.05, y: 0.1405, z: 14.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -318,27 +317,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829108109}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 330cb9b8f09eeb64e89662d7178248ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 10
+  amplitude: 96.42
   length: 5
   speed: 7
   offset: 0
---- !u!114 &829108115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829108109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c84f01f979b994ca5ea6c817867648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &938325969
 GameObject:
   m_ObjectHideFlags: 0

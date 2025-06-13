@@ -681,8 +681,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 378.4000244140625,
-            "y": -195.99996948242188
+            "x": 393.6000061035156,
+            "y": -191.19998168945313
         },
         "m_Blocks": [
             {
@@ -2029,7 +2029,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "4a945f7c7d0d43a69bd1d3190ac95ba3",
     "m_Id": 0,
-    "m_DisplayName": "Wave amplitude",
+    "m_DisplayName": "WaveAmplitude",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2350,10 +2350,10 @@
     "m_Guid": {
         "m_GuidSerialized": "2bddc6b8-8c54-4bd6-b37d-8cd7f9a83e5b"
     },
-    "m_Name": "Wave frequency",
+    "m_Name": "WaveFrequency",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Wave frequency",
-    "m_DefaultReferenceName": "_Wave_frequency",
+    "m_RefNameGeneratedByDisplayName": "WaveFrequency",
+    "m_DefaultReferenceName": "_WaveFrequency",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2484,10 +2484,10 @@
     "m_Guid": {
         "m_GuidSerialized": "0740bfbd-6a05-4b7c-b3d6-3a01180be309"
     },
-    "m_Name": "Wave speed",
+    "m_Name": "WaveSpeed",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Wave speed",
-    "m_DefaultReferenceName": "_Wave_speed",
+    "m_RefNameGeneratedByDisplayName": "WaveSpeed",
+    "m_DefaultReferenceName": "_WaveSpeed",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2792,10 +2792,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3ab83bd8-f427-4454-be45-73793db5a9a7"
     },
-    "m_Name": "Wave amplitude",
+    "m_Name": "WaveAmplitude",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Wave amplitude",
-    "m_DefaultReferenceName": "_Wave_amplitude",
+    "m_RefNameGeneratedByDisplayName": "WaveAmplitude",
+    "m_DefaultReferenceName": "_WaveAmplitude",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3188,7 +3188,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "8890bdff8906496ea95c0872db3b0d95",
     "m_Id": 0,
-    "m_DisplayName": "Wave speed",
+    "m_DisplayName": "WaveSpeed",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -3997,7 +3997,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "b407c6c9880a420b85da66162f71bc27",
     "m_Id": 0,
-    "m_DisplayName": "Wave frequency",
+    "m_DisplayName": "WaveFrequency",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -4559,10 +4559,10 @@
     "m_Guid": {
         "m_GuidSerialized": "9262132d-4bd9-4e82-ba7d-40eb138d3dda"
     },
-    "m_Name": "Water depth",
+    "m_Name": "WaterDepth",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Water depth",
-    "m_DefaultReferenceName": "_Water_depth",
+    "m_RefNameGeneratedByDisplayName": "WaterDepth",
+    "m_DefaultReferenceName": "_WaterDepth",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -4768,7 +4768,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "f06c4534303c4f1e894e35e5d36ae79c",
     "m_Id": 0,
-    "m_DisplayName": "Water depth",
+    "m_DisplayName": "WaterDepth",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

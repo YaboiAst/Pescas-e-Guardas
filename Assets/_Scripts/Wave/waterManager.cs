@@ -3,27 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-
-[RequireComponent(typeof(MeshFilter))]
-[RequireComponent(typeof(MeshRenderer))]
 public class waterManager : MonoBehaviour
 {
-    private MeshFilter meshFilter;
+    public float WaveSpeed = 1f;
+    public float WaveFrequency = 0.5f;
+    public float WaveAmplitude = 1f;
+    public GameObject water;
+    
+    Material waterMaterial;
+    private Texture2D WavesDisplacement;
 
-    private void Awake()
+    private void Start()
     {
-        meshFilter = GetComponent<MeshFilter>();
+        SetVariables();
     }
 
-    private void Update()
+    void SetVariables()
     {
-        Vector3[] vertices = meshFilter.mesh.vertices;
-        for (int i = 0; i < vertices.Length; i++)
-        {
-            vertices[i].y = Wave.instance.GetWaveHeight(transform.position.x + vertices[i].x);
-        } 
+        waterMaterial = water.GetComponent<Renderer>().sharedMaterial;
+        WavesDisplacement = (Texture2D)waterMaterial.GetTexture("_WavesDisplacement");
+    }
+
+    public float WaveDepth(Vector3 position)
+    {
         
-        meshFilter.mesh.vertices = vertices;
-        meshFilter.mesh.RecalculateNormals();
     }
 }

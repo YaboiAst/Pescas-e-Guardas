@@ -109,6 +109,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
+    - _Float: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -128,10 +129,11 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Water_depth: 0.5
-    - _Wave_amplitude: 1.19
-    - _Wave_frequency: 0.6
-    - _Wave_speed: 2.5
+    - _Water_depth: 2.5
+    - _Wave_amplitude: 28.51
+    - _Wave_frequency: 101.87
+    - _Wave_height: 1
+    - _Wave_speed: 2.72
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
