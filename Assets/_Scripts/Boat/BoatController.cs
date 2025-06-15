@@ -71,5 +71,4 @@ public class BoatData
     public BoatTypeData BoatTypeData;
     public Vector3 Position = Vector3.zero;
     public int Health = 0;
-
 }

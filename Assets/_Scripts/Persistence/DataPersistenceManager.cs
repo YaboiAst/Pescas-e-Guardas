@@ -35,6 +35,7 @@ public class DataPersistenceManager : MonoBehaviour
     [Header("Game Data Info")] 
     public string SelectedProfileId = "";
     [SerializeField] private GameData _gameData;
+    [SerializeField] private SettingsData _settingsData;
 
     private Coroutine _autoSaveCoroutine;
 
@@ -87,16 +88,16 @@ public class DataPersistenceManager : MonoBehaviour
         _autoSaveCoroutine = StartCoroutine(AutoSave());
     }
 
-    public SettingsData NewSettings() => new SettingsData();
+    public SettingsData NewSettings() => _settingsData = new SettingsData();
 
-    public void SaveSettings(SettingsData settingsData)
+    public void SaveSettings()
     {
         if (_disableDataPersistence)
         {
             return;
         }
 
-        _dataHandler.SaveSettings(settingsData);
+        _dataHandler.SaveSettings(_settingsData);
     }
 
     public SettingsData LoadSettings()
@@ -106,14 +107,14 @@ public class DataPersistenceManager : MonoBehaviour
             return NewSettings();
         }
 
-        SettingsData settingsData = _dataHandler.LoadSettings();
+        _settingsData = _dataHandler.LoadSettings();
 
-        if (settingsData == null && _initializeDataIfNull)
+        if (_settingsData == null && _initializeDataIfNull)
         {
             return NewSettings();
         }
 
-        return settingsData;
+        return _settingsData;
     }
 
     public void NewGame() => this._gameData = new GameData();

@@ -36,6 +36,7 @@ namespace PedronsaDev.Console
 		public bool SaveConsoleOutput;
 		public bool CacheReloadOnPlayMode;
 		public bool PersistConsole;
+		public bool PauseGameOnConsole;
 
 		public void Reset()
 		{
@@ -65,6 +66,7 @@ namespace PedronsaDev.Console
 			SaveConsoleOutput = false;
 			CacheReloadOnPlayMode = true;
 			PersistConsole = false;
+			PauseGameOnConsole = false;
 		}
 	}
 }

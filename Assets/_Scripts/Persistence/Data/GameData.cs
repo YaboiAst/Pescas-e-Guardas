@@ -11,6 +11,9 @@ public class GameData
     // Boat Data
     public BoatData BoatData;
     
+    // Money Data
+    public int MoneyAmount;
+    
     // Date and Time Data
     public TimeSettings TimeSettings;
     
@@ -21,6 +24,8 @@ public class GameData
     {
         // Initialize Data
         this.AllEntries = new List<EntryData>();
+        this.BoatData = new BoatData();
+        this.MoneyAmount = 1000;
         this.TimeSettings = new TimeSettings(1,12,0);
         this.BoatData = new BoatData();
     }

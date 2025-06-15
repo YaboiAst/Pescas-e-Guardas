@@ -1,4 +1,5 @@
 using System;
+using PedronsaDev.Console;
 using TMPro;
 using UnityEngine;
 
@@ -7,8 +8,7 @@ public class BoatHealth : MonoBehaviour
     [SerializeField] private int _maxHealthPoints;
     [SerializeField] private int _healthPoints;
     [SerializeField] private TMP_Text _healthText;
-
-
+    
     public event Action OnBoatHealthUpdate; 
     public event Action OnBoatDestroy; 
     
@@ -16,8 +16,6 @@ public class BoatHealth : MonoBehaviour
     {
         _maxHealthPoints = typeData.HealthPoints;
         SetHealth(health == 0 ? _maxHealthPoints : health);
-        
-        UpdateUI();
     }
     
     public void TakeDamage(int damage = 1)
@@ -26,9 +24,10 @@ public class BoatHealth : MonoBehaviour
         
         if (_healthPoints <= 0) 
             OnBoatDestroy?.Invoke();
-        
-        UpdateUI();
     }
+    
+    [Command("reset_boat_health", "Resets the health of the boat to max health")]
+    public void ResetHealth() => SetHealth(_maxHealthPoints);
 
     private void SetHealth(int health)
     {
@@ -38,16 +37,8 @@ public class BoatHealth : MonoBehaviour
         
         UpdateUI();
     }
+
+    public int GetCurrentHealth() => _healthPoints;
     
-    private void UpdateUI()
-    {
-        _healthText.SetText($"HP: {_healthPoints}/{_maxHealthPoints}");
-    }
-
-    public void ResetHealth()
-    {
-        _healthPoints = _maxHealthPoints;
-    }
-
-    public int GetHealth() => _healthPoints;
+    private void UpdateUI() => _healthText.SetText($"HP: {_healthPoints}/{_maxHealthPoints}");
 }

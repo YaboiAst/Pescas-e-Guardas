@@ -210,6 +210,17 @@ MonoBehaviour:
       Parameters:
       - Data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
       Flags: 24
+  - Name: modify_money
+    Description: Modifies the current money amount by value
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 00544d6f6e65794d616e616765722c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: ModifyMoneyAmount
+      Parameters:
+      - Data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      Flags: 20
   - Name: pause_game
     Description: Pauses the game
     TargetType: 0
@@ -220,6 +231,17 @@ MonoBehaviour:
       MethodName: PauseGame
       Parameters: []
       Flags: 24
+  - Name: pause_game_on_open_console
+    Description: Choose if opening the console the game will pause the game
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 0071506564726f6e73614465762e436f6e736f6c652e436f6d706f6e656e74732e436f6e736f6c6553797374656d2c20536d617274436f6e736f6c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: SetPauseGameOnConsole
+      Parameters:
+      - Data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      Flags: 20
   - Name: quit
     Description: Quits the application
     TargetType: 0
@@ -251,6 +273,16 @@ MonoBehaviour:
       MethodName: ReloadActiveScene
       Parameters: []
       Flags: 24
+  - Name: reset_boat_health
+    Description: Resets the health of the boat to max health
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 0052426f61744865616c74682c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: ResetHealth
+      Parameters: []
+      Flags: 20
   - Name: resume_game
     Description: Resumes the game
     TargetType: 0
@@ -316,6 +348,17 @@ MonoBehaviour:
       Parameters:
       - Data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
       Flags: 24
+  - Name: set_money
+    Description: Sets the current money amount to value
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 00544d6f6e65794d616e616765722c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: SetMoneyAmount
+      Parameters:
+      - Data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      Flags: 20
   - Name: set_playerprefs_key_float
     Description: Sets the value of a players prefs float key
     TargetType: 0
