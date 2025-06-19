@@ -162,6 +162,7 @@ public class Interactable : MonoBehaviour
         AnyInteractionComplete?.Invoke(this, _interactionType.CompletedInteraction);
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -172,6 +173,7 @@ public class Interactable : MonoBehaviour
         if (WasFullyInteracted)
             Gizmos.color = Color.red;
 
-        Gizmos.DrawSphere(transform.position + new Vector3(0, 2f, 0), 5f);
+        Gizmos.DrawSphere(transform.position + new Vector3(0, 2f, 0), 3f);
     }
+#endif
 }
