@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: B
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -301,7 +301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6559681011245574126
 Transform:
   m_ObjectHideFlags: 0
@@ -425,6 +425,7 @@ MonoBehaviour:
     Icon: {fileID: 0}
     Header: Quests [Q]
     Elements: []
+    Actions: []
     Content: Abrir menu de missoes
 --- !u!1 &2715965194792635707
 GameObject:
@@ -687,8 +688,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Bussola
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -848,7 +849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953210891721709336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -926,6 +927,9 @@ MonoBehaviour:
       Value: 2kg
     - Name: Rarity
       Value: <color=#88ff78>Common</color>
+    Actions:
+    - Action: Discard
+      Prompt: {fileID: 21300000, guid: 2dc3571d791cda14183d3727ed48f6bd, type: 3}
     Content: "Pacu \xE9 um peixe commum da america do sul"
 --- !u!1 &6425491357550178383
 GameObject:
@@ -1115,6 +1119,7 @@ MonoBehaviour:
     Icon: {fileID: 0}
     Header: Backpack [B]
     Elements: []
+    Actions: []
     Content: Abrir mochila
 --- !u!1 &7644660439226981099
 GameObject:
@@ -1183,8 +1188,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: M
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1343,6 +1348,7 @@ MonoBehaviour:
     Icon: {fileID: 0}
     Header: Map [M]
     Elements: []
+    Actions: []
     Content: Abrir mapa do mundo
 --- !u!1 &8030037917947281748
 GameObject:
@@ -1411,8 +1417,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Q
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 851789eb335ce2bf1ac715ab89fd1c9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -20,13 +20,10 @@ public class DiaryUI : CanvasController
         if (Input.GetKeyDown(KeyCode.P))
             ToggleDiary();
     }
-    
-    private void Start()
-    {
-        DiaryManager.Instance.OnEntriesLoaded += BindDatas;
-    }
 
-    private void BindDatas(HashSet<EntryData> entries)
+    private void Start() => HideCanvas();
+
+    public void BindDatas(List<EntryData> entries)
     {
         foreach (EntryData data in entries)
         {

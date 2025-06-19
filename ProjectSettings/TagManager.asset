@@ -7,14 +7,15 @@ TagManager:
   - Grid
   - PontosDePesca
   - Ilhas
+  - Obstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
-  - 
+  - Ripples
   - 
   - 
   - 
