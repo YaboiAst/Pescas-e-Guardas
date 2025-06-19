@@ -3,23 +3,63 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+public class ItemMemento
+{
+    public Vector3 LastSafePosition;
+    public float LastSafeAngle;
+
+    public ItemMemento(Vector3 lastSafePosition, float lastSafeAngle)
+    {
+        LastSafePosition = lastSafePosition;
+        LastSafeAngle = lastSafeAngle;
+    }
+
+    public void SetMemento(Vector3 newPos, float newRot)
+    {
+        this.LastSafePosition = newPos;
+        this.LastSafeAngle = newRot;
+    }
+}
 
 public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     private bool _isDragging = false;
     private bool _isRotating = false;
 
+    private ItemMemento _itemMemento;
     private ItemPlacer _placer;
     private Image _targetVisual;
+
+    public static readonly UnityEvent<ItemPlacer> OnBeginDrag = new();
+    public static readonly UnityEvent OnFinishDrag = new();
     
     private void Awake()
     {
         _targetVisual = GetComponentInChildren<Image>();
         _placer = GetComponent<ItemPlacer>();
+        _itemMemento = new ItemMemento(this.transform.position, this.transform.eulerAngles.z);
+        
+        OnBeginDrag.AddListener(SetItemInteraction);
+        OnFinishDrag.AddListener(ResetItemInteraction);
     }
 
+
+    private void SetItemInteraction(ItemPlacer activeItem)
+    {
+        if (this._placer == activeItem)
+            return;
+
+        _targetVisual.raycastTarget = false;
+    }
+    private void ResetItemInteraction()
+    {
+        _targetVisual.raycastTarget = true;
+    }
+    
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -30,6 +70,7 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
                 .SetEase(Ease.OutBounce);
 
             _targetVisual.raycastTarget = false;
+            OnBeginDrag?.Invoke(this._placer);
         }
     }
     
@@ -38,15 +79,19 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             if (_isDragging) _isDragging = false;
-
-            _targetVisual.raycastTarget = true;
-            if (eventData.pointerEnter is null) return;
-            if (eventData.pointerEnter.gameObject.CompareTag("Grid"))
+            
+            OnFinishDrag?.Invoke();
+            if (eventData.pointerEnter is null ||
+                !eventData.pointerEnter.gameObject.CompareTag("Grid") ||
+                !InventoryController.Instance.IsPositionValid())
             {
-                transform.position = _placer.GetRoot().position;
-                _placer.GetRoot().position = transform.position;
-                _targetVisual.transform.position = transform.position;
+                _placer.PlaceItem(_targetVisual, _itemMemento.LastSafePosition, _itemMemento.LastSafeAngle);
+                return;
             }
+
+            _placer.SetItemInGrid();
+            _placer.PlaceItem(_targetVisual, _placer.GetRoot().position, _targetVisual.transform.eulerAngles.z);
+            _itemMemento.SetMemento(this.transform.position, this.transform.eulerAngles.z);
         }
     }
     
@@ -54,8 +99,15 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         if (!_isDragging)
             return;
-        
+
+        var isOnGrid = (eventData.pointerEnter is not null) && (eventData.pointerEnter.CompareTag("Grid"));
+        _placer.SetPositionStatus(isOnGrid);
+
         this._targetVisual.transform.position = Input.mousePosition;
+        if (!isOnGrid)
+        {
+            _placer.GetRoot().position = _targetVisual.transform.position;
+        }
     }
     
     private void Update()
@@ -77,7 +129,7 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             .OnComplete(() =>
             {
                 _isRotating = false;
-                InventoryController.CheckOverlap?.Invoke(_placer);
+                InventoryController.CheckGrid(_placer);
             });
         _placer.GetRoot().Rotate(Vector3.forward, -90);
     }

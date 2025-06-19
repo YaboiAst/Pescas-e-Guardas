@@ -24,6 +24,7 @@ namespace PedronsaDev.Console.Components
 		[SerializeField] private TMP_InputField m_InputField;
 
 		private CanvasGroup m_canvasGroup;
+		private bool _pauseGameOnConsole;
 
 		#region Events
 
@@ -35,7 +36,10 @@ namespace PedronsaDev.Console.Components
 		private ConsoleInputHandler m_InputHandler;
 
 		private int m_LogMessageCopiedIndex;
-
+		
+		[Command("pause_game_on_open_console","Choose if opening the console the game will pause the game")]
+		public void SetPauseGameOnConsole(bool pause) => _pauseGameOnConsole = pause;
+		
 		public bool ShowApplicationLogs
 		{
 			get => m_ShowApplicationLogs;
@@ -71,6 +75,8 @@ namespace PedronsaDev.Console.Components
 
 			if (m_Preferences.PersistConsole) 
 				DontDestroyOnLoad(this);
+
+			_pauseGameOnConsole = m_Preferences.PauseGameOnConsole;
 
 #if !UNITY_EDITOR
 			SmartConsole.RefreshAutocomplete();
@@ -404,10 +410,10 @@ namespace PedronsaDev.Console.Components
 				m_canvasGroup.interactable = true;
 				m_canvasGroup.blocksRaycasts = true;
 
-				if (GameManager.Instance)
+				if (GameManager.Instance && _pauseGameOnConsole)
 					GameManager.Instance.PauseGame();
-				else
-					Console.LogWarning("GameManager Missing");
+				// else
+				// 	Console.LogWarning("GameManager Missing");
 				
 				OnActivate?.Invoke();
 			}
@@ -420,10 +426,10 @@ namespace PedronsaDev.Console.Components
 				m_canvasGroup.interactable = false;
 				m_canvasGroup.blocksRaycasts = false;
 				
-				if (GameManager.Instance)
+				if (GameManager.Instance && _pauseGameOnConsole)
 					GameManager.Instance.ResumeGame();
-				else
-					Console.LogWarning("GameManager Missing");
+				// else
+				// 	Console.LogWarning("GameManager Missing");
 				
 				OnDeactivate?.Invoke();
 			}

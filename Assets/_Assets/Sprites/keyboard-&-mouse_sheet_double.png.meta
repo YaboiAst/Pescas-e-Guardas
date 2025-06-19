@@ -1,0 +1,6518 @@
+fileFormatVersion: 2
+guid: 3b2f29497ce67ee418404df19479cc6e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1940
+        width: 72
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a4ba61e1397cc4ebed14c79f815b7f
+      internalID: -997727061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1920
+        width: 1664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154e0fb796ec91f4b918eb9945e5a977
+      internalID: 1310439719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1956
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97bc9a419d8add468806338a42ba9c0
+      internalID: 1409849603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_11
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1932
+        width: 44
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280060cfac7b76f4d9f343c2ca1711a5
+      internalID: -1799167483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1808
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478534c848a00b64cb50bd9b368603a7
+      internalID: -888608049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1812
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa1827a273185843b645c62c023ef51
+      internalID: -969303456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_20
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1812
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af83b6528d2afc0488f82cbc20b44a96
+      internalID: -1320045600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_23
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1812
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27e17ea3c3fad249b401e4c3e190b1f
+      internalID: 182859115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_28
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1812
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519330e9696ccf9489e34502a0873f1c
+      internalID: 689967853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_29
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1812
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3baee354465b4448da9b7dd5571a04
+      internalID: 1656104599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_33
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1812
+        width: 72
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f509fa765f32944aaebb723d6885fe
+      internalID: 2039598586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_55
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1812
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8074a9062a4f57941851665b6cd1e542
+      internalID: -1863396703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_56
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1828
+        width: 92
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68124e01e0740ee40a559187c710e621
+      internalID: 1752394908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_57
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1812
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f77abd5704fc345977c4539d42a3f9
+      internalID: 1812753810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_58
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1804
+        width: 92
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9962e89161813cf46ac612cb352dbc08
+      internalID: -766018802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_59
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1812
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf29c0f1b49fb94abb2aeb44d4cff84
+      internalID: 1133205205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_60
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1812
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20a76ace40be6b45bba70571d88f022
+      internalID: 1800458852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_61
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1812
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8030b5eb027baf84a8c32c29b099922a
+      internalID: 1224892081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_62
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1812
+        width: 68
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7727563abccef10448691fe91f3a84a7
+      internalID: 1936716037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_63
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1812
+        width: 68
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fac8c21953e10428fb2a1fea252677
+      internalID: -739705238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_65
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1692
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3badb13b6d1bc42b5e72e5dd140f78
+      internalID: 1707060795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_66
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2a20a767c19ee45b7980782dd96d12
+      internalID: -740302390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_67
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefb0b5bae3955f47a7d539e7a45cf0c
+      internalID: 772038722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_68
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c580021b48ef74a95ca917347ee056
+      internalID: -323944217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_69
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0114b73e8cd95e43a6368296782cb22
+      internalID: 1376794825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_70
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b67b7d82d6ac084498579e568e3d3fd
+      internalID: -657431145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_71
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef14bac9af1c674e9e61b03487905bc
+      internalID: 139328634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_72
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156e1f10ec68e4340bb12d9a11059f1e
+      internalID: 254731466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_73
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8601e633f02153e498bad9087b6bb04b
+      internalID: -1139073315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_74
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b898ca624369f3746b90849e02c73e02
+      internalID: 1646534421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_75
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01f88eff7dd04c4eb97e174b7018349
+      internalID: -1669323362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_76
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12c507df52610a4491d1318069b506b
+      internalID: 2000361533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_77
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a635e0b30c7704eb21c5dc917416c4
+      internalID: 637367838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_78
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a946885d2d7f6e84186e0250568a4026
+      internalID: 837933928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_79
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab507e228bc0a245aa86256df901e57
+      internalID: -781050553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_80
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1680
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ceb8d3528a08046b5f44bec95de8b6
+      internalID: -562620454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_81
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1568
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32f2f382f544234f928dabe7762749e
+      internalID: -196063289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_82
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ec6b52f7b4a7240ae36fbdaeeba88c
+      internalID: 1589538247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_83
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74de3f1f4132b4b44939ab6a489d1fa6
+      internalID: -1127338769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bf15d846942774f9d709ebe9bc7f06
+      internalID: -1572709089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_85
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc06c96612071e4296976b7836dabaa
+      internalID: -968337683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_86
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1572
+        width: 96
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa02bc0ab42eea41bb85f631f07e679
+      internalID: 1445944871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_87
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2245a97a1b84c46a4aebaedefedc76
+      internalID: -642273256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_88
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceba39b485769234eb10b137dbc50084
+      internalID: -2073089441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_89
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1572
+        width: 96
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a611ec81d290c964eac6c93e0490d8f3
+      internalID: 1870426761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_90
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d55705849d3e94795a7f7b430353b8
+      internalID: 1203964402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_91
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbd6026406a2844b97241ca29028a8a
+      internalID: -508759943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_92
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1564
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5206e6456237d6848a4262e654432d22
+      internalID: 1286426066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_93
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927b1f53b02ffbd498c098d6e256e3b8
+      internalID: -1131900947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_94
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6deaa82eb1044f84796607b6c21da45f
+      internalID: -337482958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_95
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d591b9077ac7c4dafecf87b6eca5ac
+      internalID: 1600283179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_96
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1552
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5ab26509ee9346bf10d19562cd9df
+      internalID: 1462807191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_97
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a7153b2dcfb854d9c02ff811d48315
+      internalID: 673853531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_98
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b834a7e82fccc0d479f2f91253f24f12
+      internalID: 947577795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_99
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766f335cf36676e4f8b92ca142cfd20d
+      internalID: 1204148059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_100
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b77ac1560bebc408b80affa05a371e
+      internalID: -1967420635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_101
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02c06c3c65b6de479a52693e128cf68
+      internalID: 869425427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_102
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8f220372ff24d49bc29ad2d7934581
+      internalID: 2107479114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_103
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02342b6f049d6f409b634fddcce4278
+      internalID: -2121093188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_104
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30bd9c24c68861468245d9ff8b462d3
+      internalID: 1989349719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_105
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5f298a324643548ba3b8bd19ed3dee
+      internalID: -867542702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_106
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c32accd279d5f4a98632ddfacccc8a
+      internalID: -1385983453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_107
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7273a2dc830efbe409aaa0f19f7cbe01
+      internalID: -297375886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_108
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbcbe0b1ffbc874b9eaf950b5116173
+      internalID: 811121629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_109
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1424
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf744da9cd2e924db59f7a53511f8bc
+      internalID: -2018495936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_110
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1440
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4fd1e68243807448ff2761bcec879b
+      internalID: -22119664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_111
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1440
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85fb082082367740bb25a3ec5ea33aa
+      internalID: 840241335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_112
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1440
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9510aba0b46cff946be2f6fe76e879ed
+      internalID: 1916398631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_113
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72466070060eb3d428f4766053a9c88d
+      internalID: 1446867980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_114
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37c12d23f405df4c8092ceda9f77e47
+      internalID: 506614982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_115
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f7adeaf709b0341ac88b96b1addb82
+      internalID: 1626898549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_116
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6cf155da24f5146b889adc8a6198db
+      internalID: -968166304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_117
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa7c06091b5fdc46ab5d2ba34f70cd2
+      internalID: 1685660760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_118
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51fb8c3451bd9e46945d4927e4cf61c
+      internalID: 505513809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_119
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9512b4279a8ac504286c81423c626a82
+      internalID: 1473305061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_120
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704aba58d26a0d54dbf829dacaf080dc
+      internalID: 288165835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_121
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592c96512f082b24d8df457f4e18f457
+      internalID: -2045581338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_122
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4145ddc65b9275d4fb55106f52a9db7a
+      internalID: 929211391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_123
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d8779265154b14e8b85a74019e6326
+      internalID: 2061771558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_124
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d44fe0d6efa00438ee845dba884c3b
+      internalID: 995839717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_125
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a74cdeddb1f7ce4da3d835c98d53c4e
+      internalID: -261090534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_126
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7a7130ed842ee45bff37f44bac9650
+      internalID: 1483999792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_127
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2708022e121324890908c6445da71b
+      internalID: 995028697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_128
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1296
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd454c0c0bcf6d24abb95c54d18da89e
+      internalID: 1134838430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_129
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624fa27bfdde1c84a8ee6972793464dd
+      internalID: -586557668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_130
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92f82295ba152244b85e7c8824ab2c8
+      internalID: -1342460998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_131
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88eca50aa0a079744ba0c99675f42691
+      internalID: 186320417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_132
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14acc5b94b1aa434dba768a1e67d9932
+      internalID: -525339050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_133
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cf76ce4ccc3da4f92873e96d031c98
+      internalID: 518207078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_134
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b80f797050077041904b9cf29d406de
+      internalID: 682112272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_135
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b6b17ec0e583b4bb9fbf51e50689c0
+      internalID: -2042117078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_136
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c7973d297ca8846b5cc23f25b1de61
+      internalID: 154000611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_137
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a232a85eb449948aea7c34c25d68f1
+      internalID: 2011139261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_138
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a15a8db2439c8049b97264d8109c188
+      internalID: -225521102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_139
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b15f59b4814fa9428d281429441962a
+      internalID: -150399816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_140
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804cfe1fdb53d4942b2d27e6099052df
+      internalID: 1519615127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_141
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1168
+        width: 68
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94732827e70c49468984f995d4ddfc9
+      internalID: -1038120288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_142
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1168
+        width: 68
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c50e77063705e4e9b13b338e21f91a
+      internalID: 114362736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_143
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d1e36a127c7a342a425542cae5e120
+      internalID: -1959523744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_144
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70af5d067cd8394bb92d130a2c64c91
+      internalID: -2093205550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_145
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7dff0d3d871d641a711142e82f8796
+      internalID: 1357303879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_146
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95f8b60619df214480d9e69fdad01b0
+      internalID: -1167865564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_147
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1de1ed6e512aff45aad767b3d08c983
+      internalID: 1346026773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_148
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89afd74c8ab46246b45054fe637c692
+      internalID: 743449439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_149
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1506a578dc63b042ad266ebe9aed7db
+      internalID: 12954448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_150
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1556036994b8248855f53ff49b900d
+      internalID: -1311249422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_151
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4352c408cd12c45b5e979293d690eb
+      internalID: -563378761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_152
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4aa41b17580fef4c8f9fe4a23c584d4
+      internalID: -330030305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_153
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995d0890042cafb4ea87116dddd77e3c
+      internalID: -627792130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_154
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a045393d50a1549b543d221a725b4d
+      internalID: 132560620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_155
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ea51497a5cb464387b6349d9e76141
+      internalID: 1942519357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_156
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7750487444cd144be71dddea236770
+      internalID: -558170542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_157
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717335d291c04d842b01ced40b2fd6da
+      internalID: 996495848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_158
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d30c56f0aa19ac409c35a13c58d2e28
+      internalID: -1892863069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_159
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f621820c07ca3bf43b2b96933941aa4b
+      internalID: -2121280857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_160
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1040
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a6af71dc8be104eb36f0c9c045a1f3
+      internalID: 1110126018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_161
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4993ee8fcf9f3c541a0b4e001af3df5f
+      internalID: 1709257796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_162
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de7eb16eb4ab8e43a3b24535d4650d1
+      internalID: 598087947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_163
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ada8134c3126d4586edb24154659fa
+      internalID: 1217140644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_164
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311556807fb6c8a4ebb0fbfe27e974c6
+      internalID: -58542508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_165
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de49695bb686dc94888ba0db53f8ef6b
+      internalID: -21252225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_166
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcafacefafa724428d8f28e3e37e657
+      internalID: 1846219304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_167
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e95c43b7eca8a47a6f0bea058eb9a7
+      internalID: -1003520453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_168
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac2539da3dd9af42a80ae0fe1b9fa42
+      internalID: 1754389867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_169
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3e9d826d988e64889e020ddcd46d9f
+      internalID: -698930554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_170
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee842f34a2d41845bff7fc682dea3ae
+      internalID: 623690433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_171
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6d2c66e8dfe794ab1b0a8079f2f478
+      internalID: 1897693943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_172
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e763f554d7a1524081ca35c0788d8a8
+      internalID: 1831916621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_173
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de58492005b011c4a8e5fa8aeb0f49da
+      internalID: 424707325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_174
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801ae4b84d400b3409113d94b5c89263
+      internalID: -1613858761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_175
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f5aa3ded6ff2e44936ed0038e8491a
+      internalID: 122960651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_176
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 912
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a35f4184944f4408af60ac0f619f17
+      internalID: 383381969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_177
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51fb25d8cab1074c8d9dd3381b216bd
+      internalID: 898949423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_178
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057d829d3a27f5646ad356417495188f
+      internalID: 1173124026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_179
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5782f1eb4eaeace499e82f77167416f1
+      internalID: -302892663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_180
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f62052ea822b744b81785c3db869a9
+      internalID: -233934820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_181
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdcd9008982b414ab0dcc7f6b02d733
+      internalID: 406253240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_182
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a96b03994bf41c44aab46781b4a1537
+      internalID: -419974298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_183
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abc6d49d609d0b49ae409e5abd4ac59
+      internalID: -210692939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_184
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eee619d6151a0d4cb7b4197e049d988
+      internalID: -164284155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_185
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5628138620673e45b48d907adc4091b
+      internalID: 1363612679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_186
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb03051d717b23247bce3814877ea59b
+      internalID: 869486219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_187
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f3f0404b5a1f340aef639e766772b7
+      internalID: -507923833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_188
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b3aaeebc0d67940baf726c4d0a04c0
+      internalID: 1108911699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_189
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9363cfc6c6ee314da7339a69e1160f1
+      internalID: 1549979937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_190
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49a66009f8cf224eb01d6cc596d249d
+      internalID: -1031827837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_191
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec920762ca610146a6467680032e6ac
+      internalID: -1822547549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_192
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 784
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02dfde21f053f1f4484d8d70758418fd
+      internalID: -616280980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_193
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca5e4df7a01f574690a6478e8842b27
+      internalID: -363283045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_194
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5138eaab37c7f04da340b2fddcf7ac3
+      internalID: -232788973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_195
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b161a4a1f0b2f74a8d8a69772be4249
+      internalID: -141937549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_196
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38bc07934e2b35408328dad69484fca
+      internalID: -429394948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_197
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 668
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4734ecab128afa499a21b2f616c3ab2
+      internalID: 1927435425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_198
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 668
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b85f3f8b7677346a8dde65cfd66609
+      internalID: -770575821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_199
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c093e5079c69b64aa6a86cea42d53e1
+      internalID: -730099090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_200
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c64a7edce033a04bab095f3e42be78d
+      internalID: 1548920403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_201
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214f762f637f47647825abe20a39d189
+      internalID: 848412559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_202
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d98142d980d2c4687b66b60ad5d22c
+      internalID: -1751643897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_203
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4cf0af2e3f4704fb59a165aee589b7
+      internalID: 1040935347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_204
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fa1fb981c7e5a4ab69f8ae6daca908
+      internalID: -1765493646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_205
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1821bec60a66eaf48b544f64f6ab092a
+      internalID: 1262370002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_206
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afa97882cf63b24d9fc66610bd2bc4a
+      internalID: -1402323928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_207
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3166f6472b1d9d4b90b912443068347
+      internalID: -989256406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_208
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 656
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76286c53561d8d54bba593e3fa9821f4
+      internalID: 64762870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_209
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487b5cfb111f0644fb4909eeda703e70
+      internalID: -964398741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_210
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3a9d0b59b1abf438856125d569366e
+      internalID: -63883856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_211
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1121921619176fa4b90a5cf64bc6dcd2
+      internalID: 1540632879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_212
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8affd002aff921542b2eb2423121549a
+      internalID: -372072949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_213
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e930c368260b9644bb9117ec21d75fa
+      internalID: 1971452871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_214
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80984b8ac7205a140952e8920087d8d6
+      internalID: -787409788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_215
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0922cab5abd3c8b409c15a33f21efb47
+      internalID: -244642843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_216
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958db3d22977efb4e94550ce46acc248
+      internalID: 387912149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_217
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 542
+        width: 96
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcfc8a56fb74c6448a3fb44e855079c
+      internalID: 421080944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_218
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 542
+        width: 96
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dd3b7adbf930c4dbcca8c6fe2c32bb
+      internalID: -129339551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_219
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 542
+        width: 96
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a632e82442a69174fa4477c22d9d7ba8
+      internalID: -958196225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_220
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 542
+        width: 96
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081fd13f4fcc93f48acfb88f79212919
+      internalID: 586261835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_221
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a805487ddd3a9644a1e91b307aa526f
+      internalID: 556705793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_222
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c5814bb0b00634787c03c438915fd1
+      internalID: -673452929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_223
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0aa39c07c214941b90fad805eff842
+      internalID: -1396455128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_224
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 528
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a898a0e2c6b3d4a9577b601199fcd0
+      internalID: -963612944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_225
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 450
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb30f94baa8d24d4fa33e66395dbf73f
+      internalID: 1844716110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_226
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 450
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9945ee39c6cfe99479e0e53d89dd787e
+      internalID: -1210962814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_227
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 450
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42ea22985bfd584fa82e8aeb1404ef5
+      internalID: -650459708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_228
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 450
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7715d825ffac243aa5efba1b9d66d5
+      internalID: -756783116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_229
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5732a698cd7b1d49be9f27dddca75b0
+      internalID: -729713687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_230
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb274b827f354141b0ab64fcb8bd105
+      internalID: 243015596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_231
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0f57f3f9f306f4a9dbaa8966388111
+      internalID: -1031341172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_232
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd5b6de7fabceb48bede5fcbf197b15
+      internalID: -502200880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_233
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 412
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c826136f633ae48929de5d6d513d4b
+      internalID: 1732086194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_234
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 416
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814040d38578b5d41a8d604f77ac0d1d
+      internalID: 247116986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_235
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f094e0d693c77408641aca1204d583
+      internalID: 2144049980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_236
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089addff741ab424cbad689a9255c575
+      internalID: 371957074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_237
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 416
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90729cacc90e0e643943a97426809cde
+      internalID: 1940241132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_238
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 412
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbf414c3a1c3e1418c4f42a5457bf9e
+      internalID: 1287890316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_239
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc64b915153a89d4a97121b02ec46c36
+      internalID: -752306315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_240
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 400
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca1a5786d78060418180193dbd49b70
+      internalID: -1096659087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_241
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513ddad1838fe6e4095e27d61b6ff701
+      internalID: 821173488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_242
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2417438a0f7db4eaa8c59abe02b117
+      internalID: 2133719120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_243
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c390e5a5ec21464d92fbc37d6eae618
+      internalID: 1141457092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_244
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c2d3117c5305f43a744faa7c915224
+      internalID: 1543418065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_245
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1acbfeb00222b14a87669974ca059aa
+      internalID: 1756556474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_246
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff786d4ee1bf6449930cc5c710f6501
+      internalID: 1109835337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_247
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620aa876f5663c04d8c49f94e63c70a1
+      internalID: 2088066398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_248
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9009bbba3ba8a3146b5c762b4d51f3f2
+      internalID: 1624593676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_249
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36077bb5b6c70643b39bd44a762d93a
+      internalID: 655239353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_250
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e07b0b4bae868478a741a4d4ad1a21
+      internalID: 1844797026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_251
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73a3e2788f083949ae25b4ec64b0e6a
+      internalID: -1712686478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_252
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 418
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6a685476c3b7a428cf6a320e0b531e
+      internalID: -1665857115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_253
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd40cff29cf8a0841aada02c7ee6a4d5
+      internalID: 2130688148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_254
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 272
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0572b9fc9370f004aaa68643f050fab5
+      internalID: 1341597628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_255
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 272
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173ba14aa26187e4988e7dea16eb2c2a
+      internalID: 1433431515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_256
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 272
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7897675346bbaf64d977c47c82a59fb7
+      internalID: -586040706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_257
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 272
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72876f1247b1f048bc4eccd03142123
+      internalID: -561473448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_258
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a07f8ce1d3f1bf4d9b4b5afb74db6bb
+      internalID: -712978213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_259
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee82b47583299964ca23152681adc614
+      internalID: 338750890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_260
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70e1a9c9aa0a164e8fd001f2cd0c5de
+      internalID: 1683643566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_261
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b42ac3981463949a844b4a3e2e2036
+      internalID: -1223993082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_262
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c0399509ed96844a9bd581eaa597dc
+      internalID: 1084692291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_263
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac492e9987f78a40b1da5a41387ce26
+      internalID: -1401360330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_264
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bf7f57bdd1882469cc1b53ba648113
+      internalID: -1133284826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_265
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a53951db33b4284898d7d906676271e
+      internalID: -1815411047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_266
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d246e0cfe5a4dc4bbd294ad90df2a86
+      internalID: 943487193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_267
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1cccb94d3870a4681e36e3c410ae16
+      internalID: 1192233930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_268
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 322
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48e00f3ba21e1842914903be84fb064
+      internalID: -1404842933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_269
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6900caa857c9f478b56d5e95eb3de6
+      internalID: -1507829672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_270
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab5500c74d1e054ab68a88e952d3e2f
+      internalID: 1698103503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_271
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf58ecc33f753564289210dc1aea22c9
+      internalID: -1063604900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_272
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d438fa0b9c20ed44b7c2cdecf04ad19
+      internalID: 1140125256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_273
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c22dd1f01d192e449b33e1f744b4416
+      internalID: 366741677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_274
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37059e4a2570014383d718ce5282810
+      internalID: 1243565389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_275
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6048d0ac45542894f871ea7064372743
+      internalID: 2002629375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_276
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81491cbcfb2eb94478419b0837f004bb
+      internalID: -1893140897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_277
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70662d7723923f48b9fd20f23b09b7b
+      internalID: 261190979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_278
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d7e6dd4cf5b85449c369d8edea1fe4
+      internalID: -259805945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_279
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f9cc1b2e3310d4d866dcc95d342d25
+      internalID: 1137537119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_280
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6345194c76abd6643adfd3f7aa9240c1
+      internalID: -228989116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_281
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52949a82548c04048864b61a2c2a1aa7
+      internalID: 1372927854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_282
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab76ae733e8f074eb1b2fb7824adb63
+      internalID: 816641836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_283
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce0e0bc46bc691479117cd4320eec66
+      internalID: 676728286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_284
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edecb932016ed294788e26aa5a7b685b
+      internalID: 892945952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_285
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaadbc4b9d1341c4a81f7cad3e53711f
+      internalID: 517609046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_286
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f60cd4be1bf48408a95b8188d22645
+      internalID: 1260088883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_287
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9eaf54107aa96418ed934a1b2aa9fa
+      internalID: 1120731007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_288
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29353458449d1c428f4ce9dd4e15632
+      internalID: 1074238606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_289
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2403c34069902d478e435f898859cb4
+      internalID: -1711131075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_290
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d6b7f39ad4b0a4fb7f745a5b60c745
+      internalID: -1058654696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_291
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d572980b6c194a41818d0594da99cc0
+      internalID: 474985892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_292
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b2e486d7e7af34baa20d564dfa6d5d
+      internalID: -747210600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_293
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1951fd95cfbb30747af7f08edd9aefe0
+      internalID: -1281232417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_294
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090ca5aba15270b4ebe4b7e30ca08dac
+      internalID: -1262196596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_295
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4474136d372834a4bbad694e262e4542
+      internalID: -1603154814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_296
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33bac6c9cb458f4fb75f9f980dd631e
+      internalID: -663855967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_297
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876684ff8df9e3b42b4cc185f180f6c9
+      internalID: 217606357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_298
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0768af416b84544aebbe37fdcc90d3
+      internalID: -1547443809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_299
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bbb1f95f7e5bc488677a4dd87b4477
+      internalID: 2030649657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_300
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984a9af3508500442ad27b012665a349
+      internalID: 223649160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_301
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 290
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4744072e8c33d24499e4f4e42a02f3ee
+      internalID: 575958339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_302
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c644485b513c7943a68b1771ac0930b
+      internalID: 840811280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_303
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a661428df5488447bc9773e3041818f
+      internalID: 95879737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_304
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eeba0cc3e5dbff4698342278d4bb5d2
+      internalID: 1068687787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_305
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85b74321315a7c4fb5541d26c2d00c2
+      internalID: 216920274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_306
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a3a7757649f564a9d06359f2a29119
+      internalID: 1034507161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_307
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8da3605a33e5446a60fae0ee2b63d5
+      internalID: 2080433293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_308
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b29036cac294643afee3993a37d69e
+      internalID: 1993772924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_309
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 156
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73bef204a14502429ef6af462783b20
+      internalID: 1349658959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_310
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 156
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e61bd717a15fc34ba1e42a5a705ec68
+      internalID: -771681573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_311
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700e507236b91914e945ddcebf4877a7
+      internalID: -792662539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_312
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164e5ffa84481764dbd390acf2973a3d
+      internalID: -751262205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_313
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df608014c88b24e49b2957af7a6a7beb
+      internalID: 2046793583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_314
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aed5c4a5266cc04f81e2e4f978d7f0d
+      internalID: 1843630199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_315
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2d0a24ba9781a4cbd6346d9369773e
+      internalID: -230803927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_316
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3e6a7ad7e02bb48acd50647aa7235c
+      internalID: -920637283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_317
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 144
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4817286ae11f2746baae6da99dbae02
+      internalID: -135283426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_319
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1763d363898d8694e9c19c2abb6fb274
+      internalID: -1205242296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_320
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5205d21fbb276964096dcb7025a0f21a
+      internalID: 1791078088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_321
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f2a2286f74b1940af233e56e7b5aae
+      internalID: -1931583016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_322
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e15ba0426cc9c408ac8d323ddeb07c
+      internalID: -136963357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_323
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacfec7cbe5200d4bb0b6d11e3b748c1
+      internalID: -1575988216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_324
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05ab1674e8227f4b8cd965f72ba921d
+      internalID: -1755476016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_325
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb5cd0454c94ce419f27777acf0e64d
+      internalID: 1096518752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_326
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701bf6aa3baf8f54ca2828cf2cbc7d50
+      internalID: 1220620886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_327
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbc9035f7008da449cc8232bda060b7
+      internalID: -1399049926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_328
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ef80f434c0b464babe8e5bd994d885
+      internalID: -1631529679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_329
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be316efe8762f14e93f39001c534f22
+      internalID: -1211659549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_330
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebff8bdc7de253948b48685cbf62ea09
+      internalID: -1626107206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_331
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfd32a5d6912a34cb4d2ea87201bc32
+      internalID: 1161331462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_332
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0e7d9f49019a34ea4c8d2ebeeb5b77
+      internalID: -597893060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_333
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25361ce2c74bfc54a8d93be14ee6965d
+      internalID: 233397280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-&-mouse_sheet_double_334
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88f068b21551e348834be21e1fe9fdb
+      internalID: -113204378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      keyboard-&-mouse_sheet_double_0: -997727061
+      keyboard-&-mouse_sheet_double_1: -1063932529
+      keyboard-&-mouse_sheet_double_10: 1409849603
+      keyboard-&-mouse_sheet_double_100: -1967420635
+      keyboard-&-mouse_sheet_double_101: 869425427
+      keyboard-&-mouse_sheet_double_102: 2107479114
+      keyboard-&-mouse_sheet_double_103: -2121093188
+      keyboard-&-mouse_sheet_double_104: 1989349719
+      keyboard-&-mouse_sheet_double_105: -867542702
+      keyboard-&-mouse_sheet_double_106: -1385983453
+      keyboard-&-mouse_sheet_double_107: -297375886
+      keyboard-&-mouse_sheet_double_108: 811121629
+      keyboard-&-mouse_sheet_double_109: -2018495936
+      keyboard-&-mouse_sheet_double_11: -1799167483
+      keyboard-&-mouse_sheet_double_110: -22119664
+      keyboard-&-mouse_sheet_double_111: 840241335
+      keyboard-&-mouse_sheet_double_112: 1916398631
+      keyboard-&-mouse_sheet_double_113: 1446867980
+      keyboard-&-mouse_sheet_double_114: 506614982
+      keyboard-&-mouse_sheet_double_115: 1626898549
+      keyboard-&-mouse_sheet_double_116: -968166304
+      keyboard-&-mouse_sheet_double_117: 1685660760
+      keyboard-&-mouse_sheet_double_118: 505513809
+      keyboard-&-mouse_sheet_double_119: 1473305061
+      keyboard-&-mouse_sheet_double_12: 127212431
+      keyboard-&-mouse_sheet_double_120: 288165835
+      keyboard-&-mouse_sheet_double_121: -2045581338
+      keyboard-&-mouse_sheet_double_122: 929211391
+      keyboard-&-mouse_sheet_double_123: 2061771558
+      keyboard-&-mouse_sheet_double_124: 995839717
+      keyboard-&-mouse_sheet_double_125: -261090534
+      keyboard-&-mouse_sheet_double_126: 1483999792
+      keyboard-&-mouse_sheet_double_127: 995028697
+      keyboard-&-mouse_sheet_double_128: 1134838430
+      keyboard-&-mouse_sheet_double_129: -586557668
+      keyboard-&-mouse_sheet_double_13: -888608049
+      keyboard-&-mouse_sheet_double_130: -1342460998
+      keyboard-&-mouse_sheet_double_131: 186320417
+      keyboard-&-mouse_sheet_double_132: -525339050
+      keyboard-&-mouse_sheet_double_133: 518207078
+      keyboard-&-mouse_sheet_double_134: 682112272
+      keyboard-&-mouse_sheet_double_135: -2042117078
+      keyboard-&-mouse_sheet_double_136: 154000611
+      keyboard-&-mouse_sheet_double_137: 2011139261
+      keyboard-&-mouse_sheet_double_138: -225521102
+      keyboard-&-mouse_sheet_double_139: -150399816
+      keyboard-&-mouse_sheet_double_14: -58696766
+      keyboard-&-mouse_sheet_double_140: 1519615127
+      keyboard-&-mouse_sheet_double_141: -1038120288
+      keyboard-&-mouse_sheet_double_142: 114362736
+      keyboard-&-mouse_sheet_double_143: -1959523744
+      keyboard-&-mouse_sheet_double_144: -2093205550
+      keyboard-&-mouse_sheet_double_145: 1357303879
+      keyboard-&-mouse_sheet_double_146: -1167865564
+      keyboard-&-mouse_sheet_double_147: 1346026773
+      keyboard-&-mouse_sheet_double_148: 743449439
+      keyboard-&-mouse_sheet_double_149: 12954448
+      keyboard-&-mouse_sheet_double_15: -46710299
+      keyboard-&-mouse_sheet_double_150: -1311249422
+      keyboard-&-mouse_sheet_double_151: -563378761
+      keyboard-&-mouse_sheet_double_152: -330030305
+      keyboard-&-mouse_sheet_double_153: -627792130
+      keyboard-&-mouse_sheet_double_154: 132560620
+      keyboard-&-mouse_sheet_double_155: 1942519357
+      keyboard-&-mouse_sheet_double_156: -558170542
+      keyboard-&-mouse_sheet_double_157: 996495848
+      keyboard-&-mouse_sheet_double_158: -1892863069
+      keyboard-&-mouse_sheet_double_159: -2121280857
+      keyboard-&-mouse_sheet_double_16: 880449999
+      keyboard-&-mouse_sheet_double_160: 1110126018
+      keyboard-&-mouse_sheet_double_161: 1709257796
+      keyboard-&-mouse_sheet_double_162: 598087947
+      keyboard-&-mouse_sheet_double_163: 1217140644
+      keyboard-&-mouse_sheet_double_164: -58542508
+      keyboard-&-mouse_sheet_double_165: -21252225
+      keyboard-&-mouse_sheet_double_166: 1846219304
+      keyboard-&-mouse_sheet_double_167: -1003520453
+      keyboard-&-mouse_sheet_double_168: 1754389867
+      keyboard-&-mouse_sheet_double_169: -698930554
+      keyboard-&-mouse_sheet_double_17: 2053774498
+      keyboard-&-mouse_sheet_double_170: 623690433
+      keyboard-&-mouse_sheet_double_171: 1897693943
+      keyboard-&-mouse_sheet_double_172: 1831916621
+      keyboard-&-mouse_sheet_double_173: 424707325
+      keyboard-&-mouse_sheet_double_174: -1613858761
+      keyboard-&-mouse_sheet_double_175: 122960651
+      keyboard-&-mouse_sheet_double_176: 383381969
+      keyboard-&-mouse_sheet_double_177: 898949423
+      keyboard-&-mouse_sheet_double_178: 1173124026
+      keyboard-&-mouse_sheet_double_179: -302892663
+      keyboard-&-mouse_sheet_double_18: -969303456
+      keyboard-&-mouse_sheet_double_180: -233934820
+      keyboard-&-mouse_sheet_double_181: 406253240
+      keyboard-&-mouse_sheet_double_182: -419974298
+      keyboard-&-mouse_sheet_double_183: -210692939
+      keyboard-&-mouse_sheet_double_184: -164284155
+      keyboard-&-mouse_sheet_double_185: 1363612679
+      keyboard-&-mouse_sheet_double_186: 869486219
+      keyboard-&-mouse_sheet_double_187: -507923833
+      keyboard-&-mouse_sheet_double_188: 1108911699
+      keyboard-&-mouse_sheet_double_189: 1549979937
+      keyboard-&-mouse_sheet_double_19: 2034246734
+      keyboard-&-mouse_sheet_double_190: -1031827837
+      keyboard-&-mouse_sheet_double_191: -1822547549
+      keyboard-&-mouse_sheet_double_192: -616280980
+      keyboard-&-mouse_sheet_double_193: -363283045
+      keyboard-&-mouse_sheet_double_194: -232788973
+      keyboard-&-mouse_sheet_double_195: -141937549
+      keyboard-&-mouse_sheet_double_196: -429394948
+      keyboard-&-mouse_sheet_double_197: 1927435425
+      keyboard-&-mouse_sheet_double_198: -770575821
+      keyboard-&-mouse_sheet_double_199: -730099090
+      keyboard-&-mouse_sheet_double_2: -451743648
+      keyboard-&-mouse_sheet_double_20: -1320045600
+      keyboard-&-mouse_sheet_double_200: 1548920403
+      keyboard-&-mouse_sheet_double_201: 848412559
+      keyboard-&-mouse_sheet_double_202: -1751643897
+      keyboard-&-mouse_sheet_double_203: 1040935347
+      keyboard-&-mouse_sheet_double_204: -1765493646
+      keyboard-&-mouse_sheet_double_205: 1262370002
+      keyboard-&-mouse_sheet_double_206: -1402323928
+      keyboard-&-mouse_sheet_double_207: -989256406
+      keyboard-&-mouse_sheet_double_208: 64762870
+      keyboard-&-mouse_sheet_double_209: -964398741
+      keyboard-&-mouse_sheet_double_21: -316421320
+      keyboard-&-mouse_sheet_double_210: -63883856
+      keyboard-&-mouse_sheet_double_211: 1540632879
+      keyboard-&-mouse_sheet_double_212: -372072949
+      keyboard-&-mouse_sheet_double_213: 1971452871
+      keyboard-&-mouse_sheet_double_214: -787409788
+      keyboard-&-mouse_sheet_double_215: -244642843
+      keyboard-&-mouse_sheet_double_216: 387912149
+      keyboard-&-mouse_sheet_double_217: 421080944
+      keyboard-&-mouse_sheet_double_218: -129339551
+      keyboard-&-mouse_sheet_double_219: -958196225
+      keyboard-&-mouse_sheet_double_22: -945344896
+      keyboard-&-mouse_sheet_double_220: 586261835
+      keyboard-&-mouse_sheet_double_221: 556705793
+      keyboard-&-mouse_sheet_double_222: -673452929
+      keyboard-&-mouse_sheet_double_223: -1396455128
+      keyboard-&-mouse_sheet_double_224: -963612944
+      keyboard-&-mouse_sheet_double_225: 1844716110
+      keyboard-&-mouse_sheet_double_226: -1210962814
+      keyboard-&-mouse_sheet_double_227: -650459708
+      keyboard-&-mouse_sheet_double_228: -756783116
+      keyboard-&-mouse_sheet_double_229: -729713687
+      keyboard-&-mouse_sheet_double_23: 182859115
+      keyboard-&-mouse_sheet_double_230: 243015596
+      keyboard-&-mouse_sheet_double_231: -1031341172
+      keyboard-&-mouse_sheet_double_232: -502200880
+      keyboard-&-mouse_sheet_double_233: 1732086194
+      keyboard-&-mouse_sheet_double_234: 247116986
+      keyboard-&-mouse_sheet_double_235: 2144049980
+      keyboard-&-mouse_sheet_double_236: 371957074
+      keyboard-&-mouse_sheet_double_237: 1940241132
+      keyboard-&-mouse_sheet_double_238: 1287890316
+      keyboard-&-mouse_sheet_double_239: -752306315
+      keyboard-&-mouse_sheet_double_24: 173810048
+      keyboard-&-mouse_sheet_double_240: -1096659087
+      keyboard-&-mouse_sheet_double_241: 821173488
+      keyboard-&-mouse_sheet_double_242: 2133719120
+      keyboard-&-mouse_sheet_double_243: 1141457092
+      keyboard-&-mouse_sheet_double_244: 1543418065
+      keyboard-&-mouse_sheet_double_245: 1756556474
+      keyboard-&-mouse_sheet_double_246: 1109835337
+      keyboard-&-mouse_sheet_double_247: 2088066398
+      keyboard-&-mouse_sheet_double_248: 1624593676
+      keyboard-&-mouse_sheet_double_249: 655239353
+      keyboard-&-mouse_sheet_double_25: -453577468
+      keyboard-&-mouse_sheet_double_250: 1844797026
+      keyboard-&-mouse_sheet_double_251: -1712686478
+      keyboard-&-mouse_sheet_double_252: -1665857115
+      keyboard-&-mouse_sheet_double_253: 2130688148
+      keyboard-&-mouse_sheet_double_254: 1341597628
+      keyboard-&-mouse_sheet_double_255: 1433431515
+      keyboard-&-mouse_sheet_double_256: -586040706
+      keyboard-&-mouse_sheet_double_257: -561473448
+      keyboard-&-mouse_sheet_double_258: -712978213
+      keyboard-&-mouse_sheet_double_259: 338750890
+      keyboard-&-mouse_sheet_double_26: -1635323934
+      keyboard-&-mouse_sheet_double_260: 1683643566
+      keyboard-&-mouse_sheet_double_261: -1223993082
+      keyboard-&-mouse_sheet_double_262: 1084692291
+      keyboard-&-mouse_sheet_double_263: -1401360330
+      keyboard-&-mouse_sheet_double_264: -1133284826
+      keyboard-&-mouse_sheet_double_265: -1815411047
+      keyboard-&-mouse_sheet_double_266: 943487193
+      keyboard-&-mouse_sheet_double_267: 1192233930
+      keyboard-&-mouse_sheet_double_268: -1404842933
+      keyboard-&-mouse_sheet_double_269: -1507829672
+      keyboard-&-mouse_sheet_double_27: -1550748861
+      keyboard-&-mouse_sheet_double_270: 1698103503
+      keyboard-&-mouse_sheet_double_271: -1063604900
+      keyboard-&-mouse_sheet_double_272: 1140125256
+      keyboard-&-mouse_sheet_double_273: 366741677
+      keyboard-&-mouse_sheet_double_274: 1243565389
+      keyboard-&-mouse_sheet_double_275: 2002629375
+      keyboard-&-mouse_sheet_double_276: -1893140897
+      keyboard-&-mouse_sheet_double_277: 261190979
+      keyboard-&-mouse_sheet_double_278: -259805945
+      keyboard-&-mouse_sheet_double_279: 1137537119
+      keyboard-&-mouse_sheet_double_28: 689967853
+      keyboard-&-mouse_sheet_double_280: -228989116
+      keyboard-&-mouse_sheet_double_281: 1372927854
+      keyboard-&-mouse_sheet_double_282: 816641836
+      keyboard-&-mouse_sheet_double_283: 676728286
+      keyboard-&-mouse_sheet_double_284: 892945952
+      keyboard-&-mouse_sheet_double_285: 517609046
+      keyboard-&-mouse_sheet_double_286: 1260088883
+      keyboard-&-mouse_sheet_double_287: 1120731007
+      keyboard-&-mouse_sheet_double_288: 1074238606
+      keyboard-&-mouse_sheet_double_289: -1711131075
+      keyboard-&-mouse_sheet_double_29: 1656104599
+      keyboard-&-mouse_sheet_double_290: -1058654696
+      keyboard-&-mouse_sheet_double_291: 474985892
+      keyboard-&-mouse_sheet_double_292: -747210600
+      keyboard-&-mouse_sheet_double_293: -1281232417
+      keyboard-&-mouse_sheet_double_294: -1262196596
+      keyboard-&-mouse_sheet_double_295: -1603154814
+      keyboard-&-mouse_sheet_double_296: -663855967
+      keyboard-&-mouse_sheet_double_297: 217606357
+      keyboard-&-mouse_sheet_double_298: -1547443809
+      keyboard-&-mouse_sheet_double_299: 2030649657
+      keyboard-&-mouse_sheet_double_3: 1310439719
+      keyboard-&-mouse_sheet_double_30: 731040862
+      keyboard-&-mouse_sheet_double_300: 223649160
+      keyboard-&-mouse_sheet_double_301: 575958339
+      keyboard-&-mouse_sheet_double_302: 840811280
+      keyboard-&-mouse_sheet_double_303: 95879737
+      keyboard-&-mouse_sheet_double_304: 1068687787
+      keyboard-&-mouse_sheet_double_305: 216920274
+      keyboard-&-mouse_sheet_double_306: 1034507161
+      keyboard-&-mouse_sheet_double_307: 2080433293
+      keyboard-&-mouse_sheet_double_308: 1993772924
+      keyboard-&-mouse_sheet_double_309: 1349658959
+      keyboard-&-mouse_sheet_double_31: 1035529761
+      keyboard-&-mouse_sheet_double_310: -771681573
+      keyboard-&-mouse_sheet_double_311: -792662539
+      keyboard-&-mouse_sheet_double_312: -751262205
+      keyboard-&-mouse_sheet_double_313: 2046793583
+      keyboard-&-mouse_sheet_double_314: 1843630199
+      keyboard-&-mouse_sheet_double_315: -230803927
+      keyboard-&-mouse_sheet_double_316: -920637283
+      keyboard-&-mouse_sheet_double_317: -135283426
+      keyboard-&-mouse_sheet_double_318: 922982775
+      keyboard-&-mouse_sheet_double_319: -1205242296
+      keyboard-&-mouse_sheet_double_32: 2081539996
+      keyboard-&-mouse_sheet_double_320: 1791078088
+      keyboard-&-mouse_sheet_double_321: -1931583016
+      keyboard-&-mouse_sheet_double_322: -136963357
+      keyboard-&-mouse_sheet_double_323: -1575988216
+      keyboard-&-mouse_sheet_double_324: -1755476016
+      keyboard-&-mouse_sheet_double_325: 1096518752
+      keyboard-&-mouse_sheet_double_326: 1220620886
+      keyboard-&-mouse_sheet_double_327: -1399049926
+      keyboard-&-mouse_sheet_double_328: -1631529679
+      keyboard-&-mouse_sheet_double_329: -1211659549
+      keyboard-&-mouse_sheet_double_33: 2039598586
+      keyboard-&-mouse_sheet_double_330: -1626107206
+      keyboard-&-mouse_sheet_double_331: 1161331462
+      keyboard-&-mouse_sheet_double_332: -597893060
+      keyboard-&-mouse_sheet_double_333: 233397280
+      keyboard-&-mouse_sheet_double_334: -113204378
+      keyboard-&-mouse_sheet_double_34: 513993045
+      keyboard-&-mouse_sheet_double_35: 1570782193
+      keyboard-&-mouse_sheet_double_36: 1031563761
+      keyboard-&-mouse_sheet_double_37: -1680581373
+      keyboard-&-mouse_sheet_double_38: -1141994478
+      keyboard-&-mouse_sheet_double_39: -219122117
+      keyboard-&-mouse_sheet_double_4: 573291514
+      keyboard-&-mouse_sheet_double_40: 518057009
+      keyboard-&-mouse_sheet_double_41: -1286874865
+      keyboard-&-mouse_sheet_double_42: -734368255
+      keyboard-&-mouse_sheet_double_43: -712211159
+      keyboard-&-mouse_sheet_double_44: 945687666
+      keyboard-&-mouse_sheet_double_45: 1630641738
+      keyboard-&-mouse_sheet_double_46: -1473950393
+      keyboard-&-mouse_sheet_double_47: -1435581042
+      keyboard-&-mouse_sheet_double_48: 126785911
+      keyboard-&-mouse_sheet_double_49: 2115522985
+      keyboard-&-mouse_sheet_double_5: 1767650649
+      keyboard-&-mouse_sheet_double_50: 1345978100
+      keyboard-&-mouse_sheet_double_51: 2137401369
+      keyboard-&-mouse_sheet_double_52: -1267012894
+      keyboard-&-mouse_sheet_double_53: 1153263235
+      keyboard-&-mouse_sheet_double_54: -425930390
+      keyboard-&-mouse_sheet_double_55: -1863396703
+      keyboard-&-mouse_sheet_double_56: 1752394908
+      keyboard-&-mouse_sheet_double_57: 1812753810
+      keyboard-&-mouse_sheet_double_58: -766018802
+      keyboard-&-mouse_sheet_double_59: 1133205205
+      keyboard-&-mouse_sheet_double_6: 1639965898
+      keyboard-&-mouse_sheet_double_60: 1800458852
+      keyboard-&-mouse_sheet_double_61: 1224892081
+      keyboard-&-mouse_sheet_double_62: 1936716037
+      keyboard-&-mouse_sheet_double_63: -739705238
+      keyboard-&-mouse_sheet_double_64: -1072431768
+      keyboard-&-mouse_sheet_double_65: 1707060795
+      keyboard-&-mouse_sheet_double_66: -740302390
+      keyboard-&-mouse_sheet_double_67: 772038722
+      keyboard-&-mouse_sheet_double_68: -323944217
+      keyboard-&-mouse_sheet_double_69: 1376794825
+      keyboard-&-mouse_sheet_double_7: -521423996
+      keyboard-&-mouse_sheet_double_70: -657431145
+      keyboard-&-mouse_sheet_double_71: 139328634
+      keyboard-&-mouse_sheet_double_72: 254731466
+      keyboard-&-mouse_sheet_double_73: -1139073315
+      keyboard-&-mouse_sheet_double_74: 1646534421
+      keyboard-&-mouse_sheet_double_75: -1669323362
+      keyboard-&-mouse_sheet_double_76: 2000361533
+      keyboard-&-mouse_sheet_double_77: 637367838
+      keyboard-&-mouse_sheet_double_78: 837933928
+      keyboard-&-mouse_sheet_double_79: -781050553
+      keyboard-&-mouse_sheet_double_8: 1448143171
+      keyboard-&-mouse_sheet_double_80: -562620454
+      keyboard-&-mouse_sheet_double_81: -196063289
+      keyboard-&-mouse_sheet_double_82: 1589538247
+      keyboard-&-mouse_sheet_double_83: -1127338769
+      keyboard-&-mouse_sheet_double_84: -1572709089
+      keyboard-&-mouse_sheet_double_85: -968337683
+      keyboard-&-mouse_sheet_double_86: 1445944871
+      keyboard-&-mouse_sheet_double_87: -642273256
+      keyboard-&-mouse_sheet_double_88: -2073089441
+      keyboard-&-mouse_sheet_double_89: 1870426761
+      keyboard-&-mouse_sheet_double_9: -463741276
+      keyboard-&-mouse_sheet_double_90: 1203964402
+      keyboard-&-mouse_sheet_double_91: -508759943
+      keyboard-&-mouse_sheet_double_92: 1286426066
+      keyboard-&-mouse_sheet_double_93: -1131900947
+      keyboard-&-mouse_sheet_double_94: -337482958
+      keyboard-&-mouse_sheet_double_95: 1600283179
+      keyboard-&-mouse_sheet_double_96: 1462807191
+      keyboard-&-mouse_sheet_double_97: 673853531
+      keyboard-&-mouse_sheet_double_98: 947577795
+      keyboard-&-mouse_sheet_double_99: 1204148059
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

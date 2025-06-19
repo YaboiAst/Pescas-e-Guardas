@@ -9,7 +9,7 @@ public class Fish
     public float Points { get; private set; }
     public DateTime TimeCaught { get; private set; }
     
-    public FishLocation LocationCaught { get; private set; }
+    public Location LocationCaught { get; private set; }
 
     public Fish(FishData fishData)
     {

@@ -23,9 +23,4 @@ public class waterManager : MonoBehaviour
         waterMaterial = water.GetComponent<Renderer>().sharedMaterial;
         WavesDisplacement = (Texture2D)waterMaterial.GetTexture("_WavesDisplacement");
     }
-
-    public float WaveDepth(Vector3 position)
-    {
-        
-    }
 }

@@ -3,9 +3,15 @@ using UnityEngine;
 public class BoatMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
-    [SerializeField] private float _rotationSpeed = 50f;
+    [SerializeField] private float _turnSpeed = 50f;
 
     private bool _canMove = true;
+
+    public void SetupMovement(BoatTypeData data)
+    {
+        _moveSpeed = data.MoveSpeed;
+        _turnSpeed = data.TurnSpeed;
+    }
 
     private void OnEnable()
     {
@@ -38,6 +44,6 @@ public class BoatMovement : MonoBehaviour
         transform.Translate(Vector3.forward * (moveInput * _moveSpeed * Time.deltaTime));
 
         float rotationInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up, rotationInput * _rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, rotationInput * _turnSpeed * Time.deltaTime);
     }
 }
