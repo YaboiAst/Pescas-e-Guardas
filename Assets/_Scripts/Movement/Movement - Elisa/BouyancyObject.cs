@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -70,6 +68,15 @@ public class BouyancyObject : MonoBehaviour
         {
             m_rigidbody.drag = airDrag;
             m_rigidbody.angularDrag = airangDrag;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        foreach (Transform floater in floaters)
+        {
+            Gizmos.DrawSphere(floater.transform.position, 0.5f);
         }
     }
 }

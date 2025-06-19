@@ -30,7 +30,7 @@ public class BoatController : MonoBehaviour, IDataPersistence
     {
         _health.SetupHealth(_boatData.BoatTypeData, _boatData.Health);
         _movement.SetupMovement(_boatData.BoatTypeData);
-        transform.position = _boatData.Position;
+        //transform.position = _boatData.Position;
     }
 
     private void OnCollisionEnter(Collision other)
