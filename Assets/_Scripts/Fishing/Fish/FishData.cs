@@ -11,7 +11,7 @@ public class FishData : ScriptableObject
     [TextArea]
     [SerializeField] private string _description;
     [SerializeField] private FishRarity _rarity;
-    [SerializeField] private float _basePoints;
+    [SerializeField] private int _basePoints;
     [SerializeField] private GameObject _fishPrefab;
     [SerializeField] private Sprite _icon;
     [MinMaxSlider(0.1f, 10.0f)]
@@ -23,7 +23,7 @@ public class FishData : ScriptableObject
     public string DisplayName => _displayName;
     public string Description => _description;
     public FishRarity Rarity => _rarity;
-    public float BasePoints => _basePoints;
+    public int BasePoints => _basePoints;
     public GameObject FishPrefab => _fishPrefab;
     public Sprite Icon => _icon;
     public float MinWeight => _weightRange.x;
