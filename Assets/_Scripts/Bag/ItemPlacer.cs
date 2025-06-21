@@ -7,8 +7,8 @@ public class ItemPlacer : MonoBehaviour
 {
     [SerializeField] private RectTransform _rect;
     [SerializeField] private Image _image;
-    [SerializeField] private RectTransform _blocksRoot;
     [SerializeField] private List<ItemPlacerBlock> blocksRects;
+    [SerializeField] private RectTransform _blocksRoot;
     [SerializeField] private GameObject _blockPrefab;
 
     private GridLayoutGroup _grid;
@@ -16,10 +16,12 @@ public class ItemPlacer : MonoBehaviour
     private bool _isOnGrid = false;
 
     [SerializeField] private ItemData _data;
+    
+    [SerializeField] private InventoryController _currentInventory;
 
     public ItemData GetItemData() => _data;
 
-    public void Initialize(Fish fish)
+    public void Initialize(Fish fish, InventoryController inventory)
     {
         _grid = _blocksRoot.GetComponent<GridLayoutGroup>();
 
@@ -41,7 +43,11 @@ public class ItemPlacer : MonoBehaviour
                 _data = new ItemData(fish, block.transform.localPosition, 0);
             }
         }
+        
+        SetInventory(inventory);
     }
+    
+    public void SetInventory(InventoryController inventory) => _currentInventory = inventory;
 
     public void SetItemData(ItemData data) => _data = data;
 
@@ -83,11 +89,60 @@ public class ItemPlacer : MonoBehaviour
         InventoryController.Instance.UpdatePlacement(this);
     }
 
+    // Returns the center point (in local space of _blocksRoot) of all active blocks
+    private Vector3 GetBlocksLocalCenter()
+    {
+        if (blocksRects == null || blocksRects.Count == 0)
+            return Vector3.zero;
+        Vector3 sum = Vector3.zero;
+        foreach (var block in blocksRects)
+        {
+            sum += block.transform.localPosition;
+        }
+        return sum / blocksRects.Count;
+    }
+
+    // Returns the local position of the top-left active block
+    private Vector3 GetTopLeftBlockLocalPosition()
+    {
+        if (blocksRects == null || blocksRects.Count == 0)
+            return Vector3.zero;
+        Vector3 topLeft = blocksRects[0].transform.localPosition;
+        foreach (var block in blocksRects)
+        {
+            Vector3 pos = block.transform.localPosition;
+            if (pos.x < topLeft.x || (Mathf.Approximately(pos.x, topLeft.x) && pos.y > topLeft.y))
+                topLeft = pos;
+        }
+        return topLeft;
+    }
+
+    // public void SnapToGrid(RectTransform tile)
+    // {
+    //     Vector3 tileCenter = tile.TransformPoint(tile.rect.center);
+    //     Vector3 topLeftLocal = GetTopLeftBlockLocalPosition();
+    //     Vector3 blocksLocalCenter = GetBlocksLocalCenter();
+    //     Vector3 offsetLocal = blocksLocalCenter - topLeftLocal;
+    //     Vector3 desiredWorldPos = tileCenter - _blocksRoot.TransformVector(offsetLocal);
+    //     _blocksRoot.position = desiredWorldPos;
+    // }
+    
     public void SnapToGrid(RectTransform tile)
     {
-        var newX = tile.position.x - (tile.rect.width / 2) + (_blocksRoot.rect.width / 2);
-        var newY = tile.position.y - (tile.rect.height / 2) + (_blocksRoot.rect.height / 2);
-        _blocksRoot.position = new Vector3(newX, newY, _blocksRoot.position.z);
+        Vector3 tileCenter = tile.TransformPoint(tile.rect.center);
+        Vector3 blocksLocalCenter = GetBlocksLocalCenter();
+        Vector3 blocksWorldCenter = _blocksRoot.TransformPoint(blocksLocalCenter);
+        Vector3 offset = tileCenter - blocksWorldCenter;
+        _blocksRoot.position += offset;
+
+        int restX = _data.Fish.FishData.Width % 2;
+        int restY = _data.Fish.FishData.Height % 2;
+        
+        Vector2 cellSize = _grid.cellSize;
+        
+        if (restX == 0) _blocksRoot.position -= new Vector3(cellSize.x / 2f, 0, 0);
+        
+        if (restY == 0) _blocksRoot.position -= new Vector3(0, cellSize.y / 2f, 0);
     }
 }
 
@@ -95,14 +150,14 @@ public class ItemPlacer : MonoBehaviour
 [Serializable]
 public class ItemData
 {
-    [SerializeField] private Fish _fishData;
-    public Fish FishData => _fishData;
+    [SerializeField] private Fish _fish;
+    public Fish Fish => _fish;
     public Vector2 Position { get; private set; }
     public float Rotation { get; private set; }
 
     public ItemData(Fish fishData, Vector2 position, float rotation)
     {
-        _fishData = fishData;
+        _fish = fishData;
         Position = position;
         Rotation = rotation;
     }

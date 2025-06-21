@@ -22,9 +22,8 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 1cda1bf120c12b341bac589b7732ddc4, type: 3}
   _weightRange: {x: 2, y: 6}
   _location: 0
-  HasCustomShape: 1
-  Width: 2
-  Height: 2
+  HasCustomShape: 0
+  Width: 3
+  Height: 1
   Shape:
-  - Cols: 0101
-  - Cols: 0001
+  - Cols: 010101

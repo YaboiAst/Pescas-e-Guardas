@@ -56,7 +56,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     private SelectionBuffer _tileBuffer;
     public int TotalPoints { get; private set; } = 0;
 
-    public static List<ItemPlacer> PlacedItems;
+    public List<ItemPlacer> PlacedItems;
     public static event Action OnItemPlaced;
 
     private void Awake()
@@ -79,12 +79,19 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         Instance.ValidateBuffer(item);
     }
 
-    public void PlaceItem(Fish fish)
+    public void CreateItem(Fish fish)
     {
         ItemPlacer item = Instantiate(_itemPrefab, _spawnParent).GetComponent<ItemPlacer>();
-        //item.transform.position = Vector3.zero;
-        item.Initialize(fish);
-        //item.SetItemInGrid();
+        item.Initialize(fish, this);
+    }
+    
+    public void AddItem(ItemPlacer item)
+    {
+        if (PlacedItems.Contains(item)) return;
+
+        PlacedItems.Add(item);
+        item.SetInventory(this);
+        item.SetPositionStatus(true);
     }
 
     public void AddToBuffer(GridTile tile) => _tileBuffer.Add(tile);
@@ -100,15 +107,30 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         foreach (var tile in _tileBuffer.buffer)
             tile.SetItemInTile(item);
 
-        PlacedItems.Add(item);
+        if (!PlacedItems.Contains(item)) 
+            PlacedItems.Add(item);
+        
         CalculatePoints();
+    }
+    
+    public bool RemoveItem(ItemPlacer item)
+    {
+        if (PlacedItems.Contains(item))
+        {
+            PlacedItems.Remove(item);
+            CalculatePoints();
+            return true;
+        }
+        
+        return false;
     }
 
     private void CalculatePoints()
     {
-         TotalPoints = 0;
+        TotalPoints = 0;
+        
         foreach (var item in PlacedItems) 
-            TotalPoints += item.GetItemData().FishData.Points;
+            TotalPoints += item.GetItemData().Fish.Points;
         
         OnItemPlaced?.Invoke();
     }

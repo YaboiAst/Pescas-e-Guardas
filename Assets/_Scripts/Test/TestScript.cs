@@ -6,5 +6,5 @@ public class TestScript : MonoBehaviour
    [SerializeField] private Fish _fish;
 
    [Button]
-   public void SpawnFish() => InventoryController.Instance.PlaceItem(_fish);
+   public void SpawnFish() => InventoryController.Instance.CreateItem(_fish);
 }

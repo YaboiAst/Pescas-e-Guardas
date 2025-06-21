@@ -109,6 +109,9 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         {
             _placer.GetRoot().position = _targetVisual.transform.position;
         }
+        else
+        {
+        }
     }
     
     private void Update()
