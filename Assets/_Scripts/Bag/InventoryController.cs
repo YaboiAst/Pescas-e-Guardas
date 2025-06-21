@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -42,6 +41,9 @@ public class SelectionBuffer
 public class InventoryController : MonoBehaviour, IDataPersistence
 {
     public static InventoryController Instance;
+    
+    [SerializeField] private GameObject _itemPrefab;
+    [SerializeField] private Transform _spawnParent;
 
     private Dictionary<Vector2Int, GridTile> _tiles;
 
@@ -77,6 +79,14 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         Instance.ValidateBuffer(item);
     }
 
+    public void PlaceItem(Fish fish)
+    {
+        ItemPlacer item = Instantiate(_itemPrefab, _spawnParent).GetComponent<ItemPlacer>();
+        //item.transform.position = Vector3.zero;
+        item.Initialize(fish);
+        //item.SetItemInGrid();
+    }
+
     public void AddToBuffer(GridTile tile) => _tileBuffer.Add(tile);
 
     public void ResetBuffer() => _tileBuffer.Clear();
@@ -103,7 +113,11 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         OnItemPlaced?.Invoke();
     }
 
-    public void LoadData(GameData data) => throw new NotImplementedException();
+    public void LoadData(GameData data)
+    {
+    }
 
-    public void SaveData(GameData data) => throw new NotImplementedException();
+    public void SaveData(GameData data)
+    {
+    }
 }

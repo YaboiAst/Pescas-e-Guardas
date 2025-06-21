@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class ItemPlacer : MonoBehaviour
 {
-    [SerializeField] private RectTransform blocksRoot;
+    [SerializeField] private RectTransform _rect;
+    [SerializeField] private Image _image;
+    [SerializeField] private RectTransform _blocksRoot;
     [SerializeField] private List<ItemPlacerBlock> blocksRects;
+    [SerializeField] private GameObject _blockPrefab;
+
+    private GridLayoutGroup _grid;
 
     private bool _isOnGrid = false;
 
@@ -14,15 +19,39 @@ public class ItemPlacer : MonoBehaviour
 
     public ItemData GetItemData() => _data;
 
+    public void Initialize(Fish fish)
+    {
+        _grid = _blocksRoot.GetComponent<GridLayoutGroup>();
+
+        _rect.sizeDelta = new Vector2(
+            fish.FishData.Width * _grid.cellSize.x,
+            fish.FishData.Height * _grid.cellSize.y
+        );
+
+        _image.sprite = fish.FishData.Icon;
+
+        foreach (ShapeRow row in fish.FishData.Shape)
+        {
+            foreach (bool rowCol in row.Cols)
+            {
+                GameObject block = Instantiate(_blockPrefab, _blocksRoot);
+                ItemPlacerBlock itemPlacerBlock = block.GetComponent<ItemPlacerBlock>();
+                if (rowCol) 
+                    blocksRects.Add(itemPlacerBlock);
+                _data = new ItemData(fish, block.transform.localPosition, 0);
+            }
+        }
+    }
+
     public void SetItemData(ItemData data) => _data = data;
-    
+
     public void SetPositionStatus(bool status) => _isOnGrid = status;
 
     public bool GetPositionStatus() => _isOnGrid;
 
     public RectTransform GetRoot()
     {
-        return blocksRoot;
+        return _blocksRoot;
     }
 
     public List<Rect> GetRects()
@@ -56,9 +85,9 @@ public class ItemPlacer : MonoBehaviour
 
     public void SnapToGrid(RectTransform tile)
     {
-        var newX = tile.position.x - (tile.rect.width / 2) + (blocksRoot.rect.width / 2);
-        var newY = tile.position.y - (tile.rect.height / 2) + (blocksRoot.rect.height / 2);
-        blocksRoot.position = new Vector3(newX, newY, blocksRoot.position.z);
+        var newX = tile.position.x - (tile.rect.width / 2) + (_blocksRoot.rect.width / 2);
+        var newY = tile.position.y - (tile.rect.height / 2) + (_blocksRoot.rect.height / 2);
+        _blocksRoot.position = new Vector3(newX, newY, _blocksRoot.position.z);
     }
 }
 

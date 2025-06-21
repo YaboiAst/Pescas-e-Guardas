@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-   [SerializeField] private AudioClip _som;
+   [SerializeField] private Fish _fish;
 
-   private void TocarSom()
-   {
-      SoundFXManager.Instance.PlaySoundFXClip(_som, this.transform, 1f);
-   }
+   [Button]
+   public void SpawnFish() => InventoryController.Instance.PlaceItem(_fish);
 }
