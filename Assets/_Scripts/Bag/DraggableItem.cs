@@ -111,6 +111,7 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         }
         else
         {
+            InventoryController.CheckGrid(_placer);
         }
     }
     

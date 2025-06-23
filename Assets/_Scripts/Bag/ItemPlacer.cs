@@ -38,8 +38,11 @@ public class ItemPlacer : MonoBehaviour
             {
                 GameObject block = Instantiate(_blockPrefab, _blocksRoot);
                 ItemPlacerBlock itemPlacerBlock = block.GetComponent<ItemPlacerBlock>();
-                if (rowCol) 
+                if (rowCol)
+                {
                     blocksRects.Add(itemPlacerBlock);
+                    itemPlacerBlock.GetComponent<Image>().enabled = true;
+                } 
                 _data = new ItemData(fish, block.transform.localPosition, 0);
             }
         }
@@ -95,11 +98,12 @@ public class ItemPlacer : MonoBehaviour
         if (blocksRects == null || blocksRects.Count == 0)
             return Vector3.zero;
         Vector3 sum = Vector3.zero;
-        foreach (var block in blocksRects)
+        foreach (Transform child in _blocksRoot)
         {
-            sum += block.transform.localPosition;
+            sum += child.localPosition;
+            
         }
-        return sum / blocksRects.Count;
+        return sum / _blocksRoot.childCount;
     }
 
     // Returns the local position of the top-left active block
@@ -140,9 +144,21 @@ public class ItemPlacer : MonoBehaviour
         
         Vector2 cellSize = _grid.cellSize;
         
-        if (restX == 0) _blocksRoot.position -= new Vector3(cellSize.x / 2f, 0, 0);
-        
-        if (restY == 0) _blocksRoot.position -= new Vector3(0, cellSize.y / 2f, 0);
+        if (Mathf.Approximately(_blocksRoot.rotation.eulerAngles.z % 180f, 90f) || Mathf.Approximately(_blocksRoot.rotation.eulerAngles.z % 180f, -90f))
+        {
+            // Rotated 90 or 270 degrees, swap x and y
+            if (restY == 0)
+                _blocksRoot.position -= new Vector3(cellSize.y / 2f, 0, 0);
+            if (restX == 0)
+                _blocksRoot.position -= new Vector3(0, cellSize.x / 2f, 0);
+        }
+        else
+        {
+            if (restX == 0)
+                _blocksRoot.position -= new Vector3(cellSize.x / 2f, 0, 0);
+            if (restY == 0)
+                _blocksRoot.position -= new Vector3(0, cellSize.y / 2f, 0);
+        }
     }
 }
 
