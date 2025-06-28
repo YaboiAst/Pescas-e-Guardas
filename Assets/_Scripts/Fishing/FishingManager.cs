@@ -22,6 +22,7 @@ public class FishingManager
             Debug.Log($"Voce pescou um {CurrentFish.Item.DisplayName} de raridade {CurrentFish.Item.Rarity}");
             Fish fish = new Fish(CurrentFish.Item);
             DiaryManager.Instance.RegisterFish(fish);
+            InventoryController.Instance.CreateItem(fish);
         }
         else
         {
