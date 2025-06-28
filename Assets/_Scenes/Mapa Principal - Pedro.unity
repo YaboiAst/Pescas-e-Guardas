@@ -7428,6 +7428,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2636127357308646455, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
+      propertyPath: width
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636127357308646455, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
+      propertyPath: height
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3866588266725760622, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
       propertyPath: m_Name
       value: Inventory
