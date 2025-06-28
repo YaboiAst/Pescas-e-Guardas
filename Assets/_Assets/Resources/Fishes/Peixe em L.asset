@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: Peixe em L
   m_EditorClassIdentifier: 
   _uniqueID: 136695d4-2363-4ca0-95fa-44c1d0450131
-  _displayName: Peixe em L
-  _description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at
-    ligula tellus. Morbi faucibus sem nunc, in tincidunt nunc pellentesque at. Proin
-    eleifend metus vel ipsum mattis, eu mollis dolor vehicula. '
+  _displayName: "Til\xE1pia"
+  _description: "Um peixe simples e comum. Encontrado por todo o oceano, fica um
+    del\xEDcia frito."
   _rarity: 0
-  _basePoints: 0
-  _icon: {fileID: 21300000, guid: 6109601a02a0d6b47a612087333e254a, type: 3}
+  _basePoints: 100
+  _icon: {fileID: 21300000, guid: e1df43358b09d3348a9e7d256f1453e6, type: 3}
   _weightRange: {x: 8, y: 10}
   _location: 0
   HasCustomShape: 1

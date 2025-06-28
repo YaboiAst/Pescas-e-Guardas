@@ -26,7 +26,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeFade: 0.104
-    - _Radius: 0.1374433
+    - _Radius: 0
     - _Thickness: 0.03
     m_Colors:
     - _Color: {r: 0.4297517, g: 0.8396226, b: 0.22574759, a: 1}

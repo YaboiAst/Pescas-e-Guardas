@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54af0f2288003894d87bd60b5594db90, type: 3}
-  m_Name: FishE
+  m_Name: Baiacu
   m_EditorClassIdentifier: 
   _uniqueID: b3a0b6ed-5772-4a5b-b7b4-58e264773225
-  _displayName: Pexe E
+  _displayName: Baiacu
   _description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at
     ligula tellus. Morbi faucibus sem nunc, in tincidunt nunc pellentesque at. Proin
     eleifend metus vel ipsum mattis, eu mollis dolor vehicula. '
-  _rarity: 4
-  _basePoints: 0
-  _icon: {fileID: 21300000, guid: 1cda1bf120c12b341bac589b7732ddc4, type: 3}
-  _weightRange: {x: 2, y: 6}
+  _rarity: 0
+  _basePoints: 100
+  _icon: {fileID: 21300000, guid: 93a17670e07673443b40843f223c82ba, type: 3}
+  _weightRange: {x: 2, y: 7}
   _location: 0
   HasCustomShape: 0
-  Width: 3
-  Height: 1
+  Width: 2
+  Height: 2
   Shape:
-  - Cols: 010101
+  - Cols: 0101
+  - Cols: 0101
