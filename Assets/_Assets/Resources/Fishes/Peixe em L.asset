@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54af0f2288003894d87bd60b5594db90, type: 3}
-  m_Name: FishD
+  m_Name: Peixe em L
   m_EditorClassIdentifier: 
   _uniqueID: 136695d4-2363-4ca0-95fa-44c1d0450131
-  _displayName: Pexe D
+  _displayName: Peixe em L
   _description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at
     ligula tellus. Morbi faucibus sem nunc, in tincidunt nunc pellentesque at. Proin
     eleifend metus vel ipsum mattis, eu mollis dolor vehicula. '
-  _rarity: 3
+  _rarity: 0
   _basePoints: 0
-  _icon: {fileID: 21300000, guid: 5ee8f55d2fced9e43a736646d65ffa33, type: 3}
+  _icon: {fileID: 21300000, guid: 6109601a02a0d6b47a612087333e254a, type: 3}
   _weightRange: {x: 8, y: 10}
   _location: 0
   HasCustomShape: 1
-  Width: 3
+  Width: 2
   Height: 2
   Shape:
-  - Cols: 010101
-  - Cols: 000100
+  - Cols: 0101
+  - Cols: 0001
