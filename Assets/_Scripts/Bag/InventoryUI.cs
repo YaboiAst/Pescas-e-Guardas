@@ -1,15 +1,15 @@
-
 using System;
 using TMPro;
 using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+public class InventoryUI : CanvasController
 {
     [SerializeField] private TMP_Text _pointsText;
 
     private void Start()
     {
         InventoryController.OnItemPlaced += UpdateUI;
+        HideCanvas();
     }
 
     private void OnDestroy()
@@ -17,5 +17,13 @@ public class InventoryUI : MonoBehaviour
         InventoryController.OnItemPlaced -= UpdateUI;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+            ToggleCanvas();
+    }
     private void UpdateUI() => _pointsText.SetText(InventoryController.Instance.TotalPoints.ToString());
+
+    public void ShowInventory() => ShowCanvas();
+
 }
