@@ -65,7 +65,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (!eventData.dragging) return;
         
-        var item = eventData.pointerDrag.GetComponent<ItemPlacer>();
+        ItemPlacer item = eventData.pointerDrag.GetComponent<ItemPlacer>();
         if (_rectT is null)
         {
             _rectT = GetComponent<RectTransform>();

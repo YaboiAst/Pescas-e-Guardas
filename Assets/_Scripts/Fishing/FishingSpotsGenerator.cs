@@ -34,9 +34,13 @@ public class FishingSpotsGenerator : MonoBehaviour
         ClearFishingSpots();
 
         List<Vector3> positions = PoissonDiskSample(_numberOfSpots, _range, _fishingSpotDistance);
-        
-        foreach (Vector3 position in positions) 
-            _spots.Add(ObjectPoolManager.SpawnGameObject(_fishingSpotPrefab, position, Quaternion.identity));
+
+        foreach (Vector3 position in positions)
+        {
+            GameObject spot = ObjectPoolManager.SpawnGameObject(_fishingSpotPrefab, position, Quaternion.identity);
+            spot.GetComponent<FishingSpot>().UpdateFishingSpot(_location);
+            _spots.Add(spot);
+        }
     }
 
     private List<Vector3> PoissonDiskSample(int count, float range, float minDist, int maxAttempts = 30)

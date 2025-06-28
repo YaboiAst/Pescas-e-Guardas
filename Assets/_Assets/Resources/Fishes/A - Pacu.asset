@@ -22,4 +22,9 @@ MonoBehaviour:
   _fishPrefab: {fileID: 0}
   _icon: {fileID: 21300000, guid: a105a48bae5384b4cb0713da4b087e24, type: 3}
   _weightRange: {x: 3, y: 5}
-  _possibleLocations: 0
+  _location: 0
+  HasCustomShape: 0
+  Width: 1
+  Height: 1
+  Shape:
+  - Cols: 01

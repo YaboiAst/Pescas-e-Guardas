@@ -19,6 +19,7 @@ public class Interactable : MonoBehaviour
 
     [SerializeField] private UnityEvent _onInteractionCompleted;
     [SerializeField] private UnityEvent _onLastInteractionCompleted;
+
     public Action OnPlayerEnterTrigger;
     public Action OnPlayerExitTrigger;
 
