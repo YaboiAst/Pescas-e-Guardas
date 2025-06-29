@@ -22,7 +22,7 @@ public class QuestInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P) && _canInteract)
         {
-            QuestManager.Instance.completeQuest();
+            QuestManager.Instance.CompleteQuest();
         }
     }
 }
