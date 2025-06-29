@@ -43,7 +43,6 @@ public class DialogueTextHUD : MonoBehaviour
 
     public void CallNextDialogue()
     {
-        // Debug.Log("NEXT");
         DialogueManager.OnNextDialogue?.Invoke();
     }
 }

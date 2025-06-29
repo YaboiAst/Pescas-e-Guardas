@@ -9,14 +9,12 @@ public class DialogueInteraction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(!other.CompareTag("Player")) return;
-        Debug.Log("testeA");
         _canInteract = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if(!other.CompareTag("Player")) return;
-        Debug.Log("testeA");
         _canInteract = false;
     }
     

@@ -8,18 +8,14 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
     private Queue<DialogueEvent> _dialogueQueue;
-
-
+    
     public static readonly UnityEvent<ScriptableDialogue> OnStartDialogue = new ();
     public static readonly UnityEvent<int> OnNextDialogueBlock = new();
     public static readonly UnityEvent OnFinishDialogue = new();
     
     public static readonly UnityEvent OnNextDialogue = new();
-   
     public static readonly DialogueInfoEvent OnDialogueEvent = new();
-
-
-
+    
     private ScriptableDialogue _currentDialogue;
     private DialogueBlock _currentDialogueBlock;
 
@@ -51,8 +47,7 @@ public class DialogueManager : MonoBehaviour
         _dialogueQueue = new();
         foreach (var dio in _currentDialogueBlock.dialogueBlock) {
             _dialogueQueue.Enqueue(dio);
-          }
-     
+        }
         
         ProcessDialogue();
     }    

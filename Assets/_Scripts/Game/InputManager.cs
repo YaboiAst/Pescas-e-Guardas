@@ -25,7 +25,6 @@ public class InputManager : MonoBehaviour
     // [SerializeField] private GameObject questRoot;
     // public Action<string> OnKeyPressed;
     
-    
     private void Update()
     {
         if (_debounceTimer > 0f)
