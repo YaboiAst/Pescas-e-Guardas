@@ -5,12 +5,11 @@ using UnityEngine.Events;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
-    public MyQuestInfo currentQuest { get; private set; }
     public QuestProgress currentProgress { get; private set; }
 
     //eventos 
     public static readonly UnityEvent OnFinishQuest = new();
-    public static readonly UnityEvent<MyQuestInfo> OnStartQuest = new UnityEvent<MyQuestInfo>();
+    public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
     private void Awake()
     {
@@ -22,22 +21,20 @@ public class QuestManager : MonoBehaviour
 
         Instance = this;
     }
-    public void updateQuest(MyQuestInfo quest)
+    public void AddQuest(MyQuestInfo quest)
     {
-        currentQuest = quest;
-        currentProgress = new QuestProgress(QuestProgress.questStatus.InProgress);
-        Debug.Log($"Miss„o '{quest.title}' iniciada com status {currentProgress.status}");
-        OnStartQuest?.Invoke(quest);
+        currentProgress = new QuestProgress(quest);
+        OnStartQuest?.Invoke(currentProgress);
+        Debug.Log($"Miss√£o '{quest.title}' iniciada com status {currentProgress.Status}");
     }
 
-    public void completeQuest()
+    public void CompleteQuest()
     {
-        if (currentQuest != null && currentProgress != null)
-        {
-            currentProgress.status = QuestProgress.questStatus.Completed;
-            Debug.Log($"Miss„o '{currentQuest.title}' concluÌda!");
-            OnFinishQuest?.Invoke();
-        }
+        if (!currentProgress.IsValid()) return;
+        
+        currentProgress.Status = QuestProgress.QuestStatus.Completed;
+        Debug.Log($"Miss√£o '{currentProgress.QuestData.title}' conclu√≠da!");
+        OnFinishQuest?.Invoke();
     }
 }
 

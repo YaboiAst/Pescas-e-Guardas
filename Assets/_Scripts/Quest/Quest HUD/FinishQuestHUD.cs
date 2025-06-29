@@ -9,7 +9,6 @@ public class FinishQuestHUD : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI congratulations;
 
-
     private void Awake()
     {
         this.gameObject.SetActive(false);
@@ -22,7 +21,7 @@ public class FinishQuestHUD : MonoBehaviour
     public void MissionAcomplished()
     {
         this.gameObject.SetActive(true);
-        congratulations.text = "Missão Concluída";
+        congratulations.text = "Missï¿½o Concluï¿½da";
     }
 }
 
