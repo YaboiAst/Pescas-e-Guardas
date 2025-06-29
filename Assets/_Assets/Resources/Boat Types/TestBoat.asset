@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Test Boat
   HealthPoints: 3
-  MoveSpeed: 30
-  TurnSpeed: 80
+  MoveSpeed: 20
+  TurnSpeed: 70

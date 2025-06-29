@@ -31,7 +31,7 @@ public class Tooltip : MonoBehaviour
     private void LateUpdate()
     {
         Vector2 mousePosition = Input.mousePosition;
-        
+
         if (IsMouseOverRect(_avoidPanel, mousePosition))
         {
             Vector3[] worldCorners = new Vector3[4];
@@ -67,6 +67,7 @@ public class Tooltip : MonoBehaviour
     {
         return RectTransformUtility.RectangleContainsScreenPoint(rect, screenPosition, null);
     }
+ 
 
     public void SetInfo(TooltipInfo info)
     {

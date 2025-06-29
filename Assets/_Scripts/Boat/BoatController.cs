@@ -35,7 +35,7 @@ public class BoatController : MonoBehaviour, IDataPersistence
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
             DamageBoat();
     }
 

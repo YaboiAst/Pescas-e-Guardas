@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.Serialization;
@@ -11,8 +12,8 @@ public class FishData : ScriptableObject
     [TextArea]
     [SerializeField] private string _description;
     [SerializeField] private FishRarity _rarity;
-    [SerializeField] private float _basePoints;
-    [SerializeField] private GameObject _fishPrefab;
+    [SerializeField] private int _basePoints;
+    //[SerializeField] private GameObject _fishPrefab;
     [SerializeField] private Sprite _icon;
     [MinMaxSlider(0.1f, 10.0f)]
     [SerializeField] private Vector2 _weightRange;
@@ -23,15 +24,40 @@ public class FishData : ScriptableObject
     public string DisplayName => _displayName;
     public string Description => _description;
     public FishRarity Rarity => _rarity;
-    public float BasePoints => _basePoints;
-    public GameObject FishPrefab => _fishPrefab;
+    public int BasePoints => _basePoints;
+    //public GameObject FishPrefab => _fishPrefab;
     public Sprite Icon => _icon;
     public float MinWeight => _weightRange.x;
     public float MaxWeight => _weightRange.y;
     public Location Location => _location;
     
+    [Header("Shape")] 
+    public bool HasCustomShape = false;
+
+    [Range(1, 10)] 
+    public int Width = 1;
+
+    [Range(1, 10)] 
+    public int Height = 1;
+
+    public List<ShapeRow> Shape = new List<ShapeRow>();
+
+    public bool IsPartOfShape(int x, int y)
+    {
+        if (y < 0 || y >= Height || x < 0 || x >= Width)
+        {
+            return false;
+        }
+
+        if (y < Shape.Count && x < Shape[y].Cols.Count)
+        {
+            return Shape[y].Cols[x];
+        }
+
+        return false;
+    }
     
-     #if UNITY_EDITOR
+#if UNITY_EDITOR
     private void OnValidate()
     {
         if (string.IsNullOrEmpty(_uniqueID))
@@ -41,26 +67,45 @@ public class FishData : ScriptableObject
             UnityEditor.EditorUtility.SetDirty(this);
     #endif
         }
+        
+        while (Shape.Count < Height)
+        {
+            Shape.Add(new ShapeRow());
+        }
+        while (Shape.Count > Height)
+        {
+            Shape.RemoveAt(Shape.Count - 1);
+        }
+
+        for (int i = 0; i < Shape.Count; i++)
+        {
+            while (Shape[i].Cols.Count < Width)
+                Shape[i].Cols.Add(false);
+            while (Shape[i].Cols.Count > Width)
+                Shape[i].Cols.RemoveAt(Shape[i].Cols.Count - 1);
+        }
+
+        if (HasCustomShape)
+            return;
+
+        for (int y = 0; y < Height; y++)
+        {
+            for (int x = 0; x < Width; x++)
+            {
+                if (y < Shape.Count && x < Shape[y].Cols.Count)
+                {
+                    Shape[y].Cols[x] = true;
+                }
+            }
+        }
     }
-    #endif
-    
-    // public bool ContainsLocation(FishLocation location)
-    // {
-    //     return (_possibleLocations & location) == location && location != FishLocation.None;
-    // }
-    //
-    // public FishLocation GetRandomLocation()
-    // {
-    //     Array values = System.Enum.GetValues(typeof(FishLocation));
-    //     List<FishLocation> possible = new System.Collections.Generic.List<FishLocation>();
-    //     foreach (FishLocation loc in values)
-    //     {
-    //         if (loc != FishLocation.None && (_possibleLocations & loc) == loc)
-    //             possible.Add(loc);
-    //     }
-    //     
-    //     return possible.Count == 0 ? FishLocation.None : possible[Random.Range(0, possible.Count)];
-    // }
+#endif
+}
+
+[System.Serializable]
+public class ShapeRow
+{
+    public List<bool> Cols = new List<bool>();
 }
 
 // public enum FishLocation
