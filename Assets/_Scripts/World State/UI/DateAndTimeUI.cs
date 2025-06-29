@@ -9,8 +9,8 @@ public class DateAndTimeUI : CanvasController
 
     private void Start()
     {
-        TimeManager.OnDayChange += UpdateDateText;
-        UpdateDateText(TimeManager.Service.DaysPassed);
+        TimeController.OnDayChange += UpdateDateText;
+        UpdateDateText(TimeController.Service.DaysPassed);
     }
 
     private void Update() => UpdateTimeText();
@@ -19,7 +19,7 @@ public class DateAndTimeUI : CanvasController
     {
 
         if (_timeText)
-            _timeText.text = TimeManager.Service.CurrentTime.ToString("HH:mm");
+            _timeText.text = TimeController.Service.CurrentTime.ToString("HH:mm");
     }
 
     private void UpdateDateText(int day)

@@ -4,12 +4,18 @@ public class CanvasController : MonoBehaviour
 {
     [SerializeField] protected GameObject _canvas;
     [SerializeField] protected CanvasGroup _canvasGroup;
+
+    [SerializeField] private bool _disableGO = true;
     
     protected bool IsOpen => _canvas.activeSelf;
 
     protected void ShowCanvas()
     {
-        _canvas.SetActive(true);
+
+        if (_disableGO)
+        {
+            _canvas.SetActive(true);
+        }
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
         _canvasGroup.alpha = 1;
@@ -20,6 +26,17 @@ public class CanvasController : MonoBehaviour
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
         _canvasGroup.alpha = 0;
-        _canvas.SetActive(false);
+        if (_disableGO)
+        {
+            _canvas.SetActive(false);
+        }
+    }
+
+    protected void ToggleCanvas()
+    {
+        if (IsOpen)
+            HideCanvas();
+        else
+            ShowCanvas();
     }
 }

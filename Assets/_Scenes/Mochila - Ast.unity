@@ -577,19 +577,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 0}
   _image: {fileID: 0}
-  _blocksRoot: {fileID: 0}
   blocksRects:
   - {fileID: 718881430}
   - {fileID: 1313077229}
   - {fileID: 1011721649}
+  _blocksRoot: {fileID: 0}
   _blockPrefab: {fileID: 0}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
-      _points: 200
+      _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!114 &360593646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,16 +1036,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 0}
   _image: {fileID: 0}
-  _blocksRoot: {fileID: 0}
   blocksRects: []
+  _blocksRoot: {fileID: 0}
   _blockPrefab: {fileID: 0}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
       _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!1001 &641363388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1485,16 +1483,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 0}
   _image: {fileID: 0}
-  _blocksRoot: {fileID: 0}
   blocksRects: []
+  _blocksRoot: {fileID: 0}
   _blockPrefab: {fileID: 0}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
       _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!1 &779466296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,16 +2504,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 0}
   _image: {fileID: 0}
-  _blocksRoot: {fileID: 0}
   blocksRects: []
+  _blocksRoot: {fileID: 0}
   _blockPrefab: {fileID: 0}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
       _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!1 &1271640616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,20 +3339,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 1785856270}
   _image: {fileID: 2112631487}
-  _blocksRoot: {fileID: 1829345302}
   blocksRects:
   - {fileID: 758544708}
   - {fileID: 874804666}
   - {fileID: 212048589}
   - {fileID: 1654938492}
+  _blocksRoot: {fileID: 1829345302}
   _blockPrefab: {fileID: 758544706}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
-      _points: 100
+      _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!114 &1785856273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3901,19 +3896,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 2133176874}
   _image: {fileID: 322742676}
-  _blocksRoot: {fileID: 276502996}
   blocksRects:
   - {fileID: 1602040528}
   - {fileID: 1871740066}
   - {fileID: 779466298}
+  _blocksRoot: {fileID: 276502996}
   _blockPrefab: {fileID: 1602040526}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
-      _points: 100
+      _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!114 &2133176876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4051,6 +4045,14 @@ PrefabInstance:
     - target: {fileID: 2465778928679382022, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636127357308646455, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
+      propertyPath: width
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636127357308646455, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
+      propertyPath: height
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3866588266725760622, guid: 7aa50849fbf248740b2e3fe4c31ebaa4, type: 3}
       propertyPath: m_Name

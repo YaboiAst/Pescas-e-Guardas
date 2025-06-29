@@ -69,7 +69,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minigameType: 0
   _lootTable:
-    LootDropItems: []
+    LootDropItems:
+    - Item: {fileID: 11400000, guid: 88600f119a5e1c945bc74b99fbbc7092, type: 2}
+      ProbabilityWeight: 50
+      ProbabilityPercent: 50
+      ProbabilityRangeFrom: 0
+      ProbabilityRangeTo: 50
+    - Item: {fileID: 11400000, guid: 89559212a0b14e546bafc08c09d9496b, type: 2}
+      ProbabilityWeight: 50
+      ProbabilityPercent: 50
+      ProbabilityRangeFrom: 50
+      ProbabilityRangeTo: 100
   _locationType: 0
 --- !u!114 &3705233696976883802
 MonoBehaviour:

@@ -11,14 +11,14 @@ public class KeyDateHandler : MonoBehaviour
 
     private void Start()
     {
-        TimeManager.OnDayChange += DayChanged;
-        TimeManager.OnHourChange += HandleCurrentKeyDates;
+        TimeController.OnDayChange += DayChanged;
+        TimeController.OnHourChange += HandleCurrentKeyDates;
     }
     
     private void OnDestroy()
     {
-        TimeManager.OnDayChange -= DayChanged;
-        TimeManager.OnHourChange -= HandleCurrentKeyDates;
+        TimeController.OnDayChange -= DayChanged;
+        TimeController.OnHourChange -= HandleCurrentKeyDates;
     }
 
     private void DayChanged(int day)

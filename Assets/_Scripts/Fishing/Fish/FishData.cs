@@ -13,7 +13,6 @@ public class FishData : ScriptableObject
     [SerializeField] private string _description;
     [SerializeField] private FishRarity _rarity;
     [SerializeField] private int _basePoints;
-    //[SerializeField] private GameObject _fishPrefab;
     [SerializeField] private Sprite _icon;
     [MinMaxSlider(0.1f, 10.0f)]
     [SerializeField] private Vector2 _weightRange;
@@ -45,14 +44,10 @@ public class FishData : ScriptableObject
     public bool IsPartOfShape(int x, int y)
     {
         if (y < 0 || y >= Height || x < 0 || x >= Width)
-        {
             return false;
-        }
 
         if (y < Shape.Count && x < Shape[y].Cols.Count)
-        {
             return Shape[y].Cols[x];
-        }
 
         return false;
     }

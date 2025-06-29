@@ -41,7 +41,7 @@ public class SelectionBuffer
 public class InventoryController : MonoBehaviour, IDataPersistence
 {
     public static InventoryController Instance;
-    
+
     [SerializeField] private GameObject _itemPrefab;
     [SerializeField] private Transform _spawnParent;
 
@@ -57,6 +57,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public int TotalPoints { get; private set; } = 0;
 
     public List<ItemPlacer> PlacedItems;
+    private InventoryUI _ui;
     public static event Action OnItemPlaced;
 
     private void Awake()
@@ -70,6 +71,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         ClearGrid.AddListener(ResetBuffer);
 
         PlacedItems = new List<ItemPlacer>();
+        _ui = GetComponentInParent<InventoryUI>();
     }
 
     public static void CheckGrid(ItemPlacer item)
@@ -83,8 +85,9 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     {
         ItemPlacer item = Instantiate(_itemPrefab, _spawnParent).GetComponent<ItemPlacer>();
         item.Initialize(fish, this);
+        _ui.ShowInventory();
     }
-    
+
     public void AddItem(ItemPlacer item)
     {
         if (PlacedItems.Contains(item)) return;
@@ -107,12 +110,12 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         foreach (var tile in _tileBuffer.buffer)
             tile.SetItemInTile(item);
 
-        if (!PlacedItems.Contains(item)) 
+        if (!PlacedItems.Contains(item))
             PlacedItems.Add(item);
-        
+
         CalculatePoints();
     }
-    
+
     public bool RemoveItem(ItemPlacer item)
     {
         if (PlacedItems.Contains(item))
@@ -121,21 +124,27 @@ public class InventoryController : MonoBehaviour, IDataPersistence
             CalculatePoints();
             return true;
         }
-        
+
         return false;
     }
 
     private void CalculatePoints()
     {
         TotalPoints = 0;
-        
-        foreach (var item in PlacedItems) 
+
+        foreach (var item in PlacedItems)
             TotalPoints += item.GetItemData().Fish.Points;
-        
+
         OnItemPlaced?.Invoke();
+
     }
 
-    public void LoadData(GameData data)
+    public void ShowInventory()
+    {
+
+    }
+
+public void LoadData(GameData data)
     {
     }
 
