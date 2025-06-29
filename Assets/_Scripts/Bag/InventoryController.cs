@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Serializable]
 public class SelectionBuffer
 {
     public List<GridTile> buffer { get; private set; }
