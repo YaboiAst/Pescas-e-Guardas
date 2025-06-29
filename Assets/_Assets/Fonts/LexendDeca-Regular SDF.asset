@@ -2681,7 +2681,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LexendDeca-Regular Atlas Material
-  m_Shader: {fileID: 4800000, guid: 7bcb8964f4bb5112c9b16fbfc82e3322, type: 3}
+  m_Shader: {fileID: 4800000, guid: c556976455f1bca4cb2b4f5f1779ff11, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
