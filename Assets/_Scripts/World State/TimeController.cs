@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class TimeManager : MonoBehaviour, IDataPersistence
+public class TimeController : MonoBehaviour, IDataPersistence
 {
     private static readonly int Blend = Shader.PropertyToID("_Blend");
     

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -29,28 +28,37 @@ public class SelectionBuffer
     {
         valid = !buffer.Any(tile => tile.IsOccupied);
         valid &= item.GetRects().Count <= buffer.Count;
-        
+
         var color = valid ? Color.green : Color.red;
         buffer.ForEach(tile => tile.PaintTile(color));
-        
+
         return valid;
     }
+
     public bool IsValid() => valid;
 }
 
-public class InventoryController : MonoBehaviour
+public class InventoryController : MonoBehaviour, IDataPersistence
 {
     public static InventoryController Instance;
-    
+
+    [SerializeField] private GameObject _itemPrefab;
+    [SerializeField] private Transform _spawnParent;
+
     private Dictionary<Vector2Int, GridTile> _tiles;
+
     public void InitializeGrid() => _tiles = new Dictionary<Vector2Int, GridTile>();
+
     public void AddTile(GridTile t) => _tiles.Add(t.GetCoord(), t);
 
-    public static readonly UnityEvent<ItemPlacer> CheckOverlap = new();
-    public static readonly UnityEvent ClearGrid = new();
+    public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
+    public static readonly UnityEvent ClearGrid = new UnityEvent();
     private SelectionBuffer _tileBuffer;
+    public int TotalPoints { get; private set; } = 0;
 
-    public static List<ItemPlacer> FishesInBag;
+    public List<ItemPlacer> PlacedItems;
+    private InventoryUI _ui;
+    public static event Action OnItemPlaced;
 
     private void Awake()
     {
@@ -61,8 +69,9 @@ public class InventoryController : MonoBehaviour
 
         _tileBuffer = new SelectionBuffer();
         ClearGrid.AddListener(ResetBuffer);
-        
-        FishesInBag = new List<ItemPlacer>();
+
+        PlacedItems = new List<ItemPlacer>();
+        _ui = GetComponentInParent<InventoryUI>();
     }
 
     public static void CheckGrid(ItemPlacer item)
@@ -72,15 +81,74 @@ public class InventoryController : MonoBehaviour
         Instance.ValidateBuffer(item);
     }
 
+    public void CreateItem(Fish fish)
+    {
+        ItemPlacer item = Instantiate(_itemPrefab, _spawnParent).GetComponent<ItemPlacer>();
+        item.Initialize(fish, this);
+        _ui.ShowInventory();
+    }
+
+    public void AddItem(ItemPlacer item)
+    {
+        if (PlacedItems.Contains(item)) return;
+
+        PlacedItems.Add(item);
+        item.SetInventory(this);
+        item.SetPositionStatus(true);
+    }
+
     public void AddToBuffer(GridTile tile) => _tileBuffer.Add(tile);
+
     public void ResetBuffer() => _tileBuffer.Clear();
+
     public void ValidateBuffer(ItemPlacer item) => _tileBuffer.Validate(item);
+
     public bool IsPositionValid() => _tileBuffer.IsValid();
+
     public void UpdatePlacement(ItemPlacer item = null)
     {
         foreach (var tile in _tileBuffer.buffer)
             tile.SetItemInTile(item);
-        
-        FishesInBag.Add(item);
+
+        if (!PlacedItems.Contains(item))
+            PlacedItems.Add(item);
+
+        CalculatePoints();
+    }
+
+    public bool RemoveItem(ItemPlacer item)
+    {
+        if (PlacedItems.Contains(item))
+        {
+            PlacedItems.Remove(item);
+            CalculatePoints();
+            return true;
+        }
+
+        return false;
+    }
+
+    private void CalculatePoints()
+    {
+        TotalPoints = 0;
+
+        foreach (var item in PlacedItems)
+            TotalPoints += item.GetItemData().Fish.Points;
+
+        OnItemPlaced?.Invoke();
+
+    }
+
+    public void ShowInventory()
+    {
+
+    }
+
+public void LoadData(GameData data)
+    {
+    }
+
+    public void SaveData(GameData data)
+    {
     }
 }

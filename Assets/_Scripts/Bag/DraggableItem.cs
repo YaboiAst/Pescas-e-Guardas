@@ -104,9 +104,14 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         _placer.SetPositionStatus(isOnGrid);
 
         this._targetVisual.transform.position = Input.mousePosition;
+        
         if (!isOnGrid)
         {
             _placer.GetRoot().position = _targetVisual.transform.position;
+        }
+        else
+        {
+            InventoryController.CheckGrid(_placer);
         }
     }
     

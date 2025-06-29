@@ -11,7 +11,7 @@ public class InteractionPanel : MonoBehaviour
     {
         _completedText.gameObject.SetActive(false);
         _hintText.enabled = false;
-        var interactionManager = FindFirstObjectByType<InteractionManager>(FindObjectsInactive.Exclude);
+        InteractionManager interactionManager = FindFirstObjectByType<InteractionManager>(FindObjectsInactive.Exclude);
         interactionManager.CurrentInteractableChanged += UpdateInteractionText;
         Interactable.AnyInteractionComplete += ShowCompletedInteractionText;
     }
@@ -30,7 +30,7 @@ public class InteractionPanel : MonoBehaviour
         } 
         else
         {
-            var interactionType = interactable.InteractionType;
+            InteractionType interactionType = interactable.InteractionType;
             _completedText.SetText(interactionType.CompletedInteraction);
             _hintText.enabled = true;
         }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FishingSpot : MonoBehaviour
@@ -6,8 +7,13 @@ public class FishingSpot : MonoBehaviour
     
     [SerializeField] private FishLootTable _lootTable;
     [SerializeField] private Location _locationType;
+    private Interactable _interactable;
 
     private FishData _currentFish;
+
+    private void Start()
+    {
+    }
 
     private void OnValidate() => _lootTable.ValidateTable();
 
