@@ -11,6 +11,8 @@ public class QuestManager : MonoBehaviour
     public static readonly UnityEvent OnFinishQuest = new();
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
+    //adicionar evento do progresso 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

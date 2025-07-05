@@ -5,7 +5,9 @@ using UnityEngine;
 public class DialogueInteraction : MonoBehaviour
 {
     [SerializeField] private List<ScriptableDialogue> dialogues;
+
     private bool _canInteract;
+
     private void OnTriggerEnter(Collider other)
     {
         if(!other.CompareTag("Player")) return;

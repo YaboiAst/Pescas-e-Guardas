@@ -22,14 +22,12 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         instance ??= this;
-    }
-
-    private void Start()
-    {
         OnStartDialogue.AddListener(InitDialogue);
         OnNextDialogue.AddListener(ProcessDialogue);
         OnNextDialogueBlock.AddListener(LoadBlock);
     }
+
+
 
     private ScriptableQuest _questToStart;
 
