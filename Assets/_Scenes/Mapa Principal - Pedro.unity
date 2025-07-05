@@ -1908,7 +1908,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[0].Item
@@ -1916,6 +1916,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 88600f119a5e1c945bc74b99fbbc7092, type: 2}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a595ebf3e742074484c5f15ef557663, type: 2}
+    - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
+      propertyPath: _lootTable.LootDropItems.Array.data[2].Item
       value: 
       objectReference: {fileID: 11400000, guid: 1a595ebf3e742074484c5f15ef557663, type: 2}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
@@ -1927,8 +1931,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
+      propertyPath: _lootTable.LootDropItems.Array.data[2].ProbabilityWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[0].ProbabilityPercent
-      value: 50
+      value: 33.333332
       objectReference: {fileID: 0}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[0].ProbabilityRangeTo
@@ -1936,15 +1944,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[1].ProbabilityPercent
-      value: 50
+      value: 33.333332
       objectReference: {fileID: 0}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[1].ProbabilityRangeTo
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
+      propertyPath: _lootTable.LootDropItems.Array.data[2].ProbabilityPercent
+      value: 33.333332
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
+      propertyPath: _lootTable.LootDropItems.Array.data[2].ProbabilityRangeTo
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: _lootTable.LootDropItems.Array.data[1].ProbabilityRangeFrom
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327578836917621040, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
+      propertyPath: _lootTable.LootDropItems.Array.data[2].ProbabilityRangeFrom
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7825427056805968979, guid: 1b8909b513f65b348b691a365f77a8da, type: 3}
       propertyPath: m_LocalPosition.x
