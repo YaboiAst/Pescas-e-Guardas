@@ -24,7 +24,7 @@ MonoBehaviour:
         textLine: Por favor
         whosTalking: Pescador
         whosTalkingIcon: {fileID: 21300000, guid: 686336d3f9a8e2849be11e7d0c0592de, type: 3}
-    questToStart: {fileID: 0}
+    questToStart: {fileID: 11400000, guid: 524826900c85cf64889fd9a8eddee878, type: 2}
     overrideJump: 0
     jumpToBlock: 0
   - dialogueBlock:

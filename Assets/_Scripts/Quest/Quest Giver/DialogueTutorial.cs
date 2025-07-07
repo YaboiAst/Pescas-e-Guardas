@@ -10,7 +10,6 @@ public class DialogueTutorial : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("a");
         DialogueManager.OnStartDialogue?.Invoke(dialogues[0]);
         DialogueManager.OnFinishDialogue.AddListener(() => {Indicador.SetActive(true);});
     }

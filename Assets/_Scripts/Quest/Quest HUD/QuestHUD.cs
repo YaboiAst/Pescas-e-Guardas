@@ -19,7 +19,7 @@ public class QuestHUD : MonoBehaviour
         QuestManager.OnStartQuest.AddListener(Description);
 
         description.text = "";
-        title.text = "";
+        //title.text = "";
         objectiveDescription.text = "";
     }
 
@@ -30,7 +30,7 @@ public class QuestHUD : MonoBehaviour
 
         var questData = quest.QuestData;
         description.text = questData.description;
-        title.text = questData.title;
+        //title.text = questData.title;
         objectiveDescription.text = questData.objectiveDescription;
     }
 }
