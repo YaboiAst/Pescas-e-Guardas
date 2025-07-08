@@ -42,10 +42,21 @@ public class ItemPlacer : MonoBehaviour
                 {
                     blocksRects.Add(itemPlacerBlock);
                     itemPlacerBlock.GetComponent<Image>().enabled = true;
-                } 
+                }
                 _data = new ItemData(fish, block.transform.localPosition, 0);
             }
         }
+
+        TooltipInfo info = new TooltipInfo
+        {
+            Header = fish.FishData.DisplayName,
+            Content = fish.FishData.Description,
+            Elements = new List<TooltipElementInfo>(),
+            Actions = new List<TooltipActionInfo>(),
+
+        };
+
+        //GetComponent<TooltipTriggerUI>().SetTooltipInfo(info);
         
         SetInventory(inventory);
     }

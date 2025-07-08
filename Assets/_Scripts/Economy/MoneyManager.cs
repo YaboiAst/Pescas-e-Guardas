@@ -31,10 +31,8 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
             ModifyMoneyAmount(-amount);
             return true;
         }
-        else
-        {
-            return false;
-        }
+
+        return false;
     }
 
     public bool CanBuy(int value) => value <= _currentMoney;

@@ -14,7 +14,6 @@ public struct TooltipInfo
     public List<TooltipActionInfo> Actions;
     [TextArea]
     public string Content;
-    
 }
 
 [Serializable]
