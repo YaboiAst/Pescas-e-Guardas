@@ -150,17 +150,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rect: {fileID: 8525250395911848273}
   _image: {fileID: 3607681997860342380}
-  _blocksRoot: {fileID: 8697377621065659725}
   blocksRects: []
+  _blocksRoot: {fileID: 8697377621065659725}
   _blockPrefab: {fileID: 5801261638519148351, guid: 9397fd877fcaff746a70efb9268a3aa2, type: 3}
-  _aa: {fileID: 0}
-  _bb: {fileID: 0}
-  _cc: {fileID: 0}
   _data:
-    _fishData:
+    _fish:
       _fishData: {fileID: 0}
       _weight: 0
-      _points: 300
+      _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!114 &5950264813126528966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,11 +172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _info:
-    Icon: {fileID: 21300000, guid: a105a48bae5384b4cb0713da4b087e24, type: 3}
+    Icon: {fileID: 0}
     Header: Pexe C
-    Elements:
-    - Name: Points
-      Value: 300
+    Elements: []
     Actions: []
     Content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae
       fermentum tellus. Praesent et ullamcorper nunc. Vivamus molestie lacus ut facilisis

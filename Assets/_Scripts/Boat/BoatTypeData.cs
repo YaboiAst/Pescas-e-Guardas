@@ -7,4 +7,6 @@ public class BoatTypeData : ScriptableObject
     public int HealthPoints;
     public float MoveSpeed;
     public float TurnSpeed;
+
+
 }
