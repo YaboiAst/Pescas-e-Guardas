@@ -33,12 +33,12 @@ public class MinigameKey : Minigame
             Duration = 20f
         };
         
-        StartMinigame(settings, null);
+        PrepMinigame(settings, null);
     }
     
-    public override void StartMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
+    public override void PrepMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
     {
-        base.StartMinigame(settings, completeMinigame);
+        base.PrepMinigame(settings, completeMinigame);
         _speed *= 5f;
         _targetAreaSize *= 1.8f;
         GenerateNewTargetArea();

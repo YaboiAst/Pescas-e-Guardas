@@ -10,9 +10,17 @@ public class FishingManager
         CurrentLootTable = lootTable;
         CurrentFish = CurrentLootTable.GetLootDropItem();
         
-        MinigameManager.Instance.StartMinigame(50, MinigameType.Circle, OnMinigameComplete);
-        
-        FishingSpotProbabilitiesUI.Instance.GenerateUI(CurrentLootTable);
+        CommonMinigameUI.Instance.ShowUI(CurrentLootTable);
+    }
+
+    public static void PrepFishMinigame()
+    {
+        MinigameManager.Instance.PrepMinigame(50, MinigameType.Circle, OnMinigameComplete);
+    }
+    
+    public static void PlayFishMinigame()
+    {
+        MinigameManager.Instance.PlayMinigame();
     }
     
     private static void OnMinigameComplete(MinigameResult result)
@@ -29,7 +37,6 @@ public class FishingManager
             Debug.Log("Voce fracassou e nao pegou o peixe");
         }
         
-        FishingSpotProbabilitiesUI.Instance.ClearUI();
         CurrentFish = null;
     }
 }

@@ -20,15 +20,15 @@ public class MinigameManager : MonoBehaviour
 
     #if UNITY_EDITOR
     [Command("start_minigame","Starts a minigame using default settings")]
-    public void StartMinigame(MinigameType type)
+    public void PrepMinigame(MinigameType type)
     {
-        StartMinigame(50, type, (MinigameResult result) =>
+        PrepMinigame(50, type, (MinigameResult result) =>
         {
             Debug.Log("Minigame Finished");
         });
     }
   #endif
-    public void StartMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
+    public void PrepMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
     {
         switch (settings.Type)
         {
@@ -54,10 +54,10 @@ public class MinigameManager : MonoBehaviour
                 throw new ArgumentOutOfRangeException(nameof(settings.Type), settings.Type, null);
         }
         
-        _currentMinigame.StartMinigame(settings, completeMinigame);
+        _currentMinigame.PrepMinigame(settings, completeMinigame);
     }
     
-    public void StartMinigame(int difficulty, MinigameType type, Action<MinigameResult> completeMinigame)
+    public void PrepMinigame(int difficulty, MinigameType type, Action<MinigameResult> completeMinigame)
     {
         switch (type)
         {
@@ -85,9 +85,14 @@ public class MinigameManager : MonoBehaviour
 
         MinigameSettings minigameSettings = GenerateMinigameSettings(difficulty, type);
 
-        _currentMinigame.StartMinigame(minigameSettings, completeMinigame);
+        _currentMinigame.PrepMinigame(minigameSettings, completeMinigame);
     }
 
+    public void PlayMinigame()
+    {
+        _currentMinigame.StartMinigame();
+    }
+    
     private MinigameSettings GenerateMinigameSettings(int difficulty, MinigameType type)
     {
                 const float MIN_SPEED = 10f, MAX_SPEED = 100f;

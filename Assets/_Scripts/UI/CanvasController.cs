@@ -11,7 +11,6 @@ public class CanvasController : MonoBehaviour
 
     protected void ShowCanvas()
     {
-
         if (_disableGO)
         {
             _canvas.SetActive(true);

@@ -28,12 +28,12 @@ public class MinigameBar : Minigame
             DecreaseTimer = 0f,
             Duration = 20f
         };
-        StartMinigame(settings, null);
+        PrepMinigame(settings, null);
     }
 
-    public override void StartMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
+    public override void PrepMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
     {
-        base.StartMinigame(settings, completeMinigame);
+        base.PrepMinigame(settings, completeMinigame);
         _speed *= 10;
         _targetArea.DOScaleX(1, 0.2f);
         GenerateNewTargetArea(false);
