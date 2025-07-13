@@ -14,4 +14,4 @@ public class DialogueTutorial : MonoBehaviour
         DialogueManager.OnFinishDialogue.AddListener(() => {Indicador.SetActive(true);});
     }
 
-  }
+}

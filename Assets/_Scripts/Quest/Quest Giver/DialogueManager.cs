@@ -4,11 +4,12 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
     private Queue<DialogueEvent> _dialogueQueue;
-    
+  
     public static readonly UnityEvent<ScriptableDialogue> OnStartDialogue = new ();
     public static readonly UnityEvent<int> OnNextDialogueBlock = new();
     public static readonly UnityEvent OnFinishDialogue = new();
@@ -34,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     private void InitDialogue(ScriptableDialogue dialogueToParse)
     {
         _currentDialogue = dialogueToParse;
-        _questToStart = dialogueToParse.dialogueBlocks[0].questToStart;
+        _questToStart = dialogueToParse.questToStart;
         OnNextDialogueBlock?.Invoke(0);
     }
     
