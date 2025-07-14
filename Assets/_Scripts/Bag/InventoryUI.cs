@@ -25,5 +25,6 @@ public class InventoryUI : CanvasController
     private void UpdateUI() => _pointsText.SetText(InventoryController.Instance.TotalPoints.ToString());
 
     public void ShowInventory() => ShowCanvas();
+    public void HideInventory() => HideCanvas();
 
 }

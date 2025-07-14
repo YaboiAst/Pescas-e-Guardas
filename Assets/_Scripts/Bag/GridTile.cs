@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Vector2Int _coord;
     public Vector2Int GetCoord() => _coord;
@@ -64,9 +64,9 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // METHODS CALLED BY USER INTERACTION
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!eventData.dragging) return;
+        var item = InventoryController.Instance._currentSelectedItem;
+        if (item is null) return;
         
-        ItemPlacer item = eventData.pointerDrag.GetComponent<ItemPlacer>();
         if (_rectT is null)
         {
             _rectT = GetComponent<RectTransform>();
@@ -77,13 +77,23 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         item.SnapToGrid(this._rectT);
         
         // Overlap check
+        item.SetPositionStatus(true);
         InventoryController.CheckGrid(item);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!eventData.dragging) return;
+        var item = InventoryController.Instance._currentSelectedItem;
+        if (item is null) return;
+        
+        item.SetPositionStatus(false);
         InventoryController.ClearGrid?.Invoke();
+    }
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        var item = InventoryController.Instance._currentSelectedItem;
+       item?.HandleClick(eventData);
     }
     
     // UTILS
