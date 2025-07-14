@@ -55,7 +55,6 @@ public class MinigameCircle : Minigame
         base.PrepMinigame(settings, completeMinigame);
         _speed *= 10;
         _speed = 5 / (_speed / 100);
-        ResetMinigame();
         Restart();
     }
 

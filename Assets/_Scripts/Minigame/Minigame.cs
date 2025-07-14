@@ -78,9 +78,6 @@ public class Minigame : MonoBehaviour
         _durationTimer = settings.Duration;
         
         _timer = _decreaseTimer;
-        // _isStopped = false;
-        
-        _progressAmount = 0;
         
         OnMinigameComplete = completeMinigame;
         
@@ -91,7 +88,6 @@ public class Minigame : MonoBehaviour
         DOTween.Kill("duration");
         
         ResetMinigame();
-        //Debug.Log("Minigame Started");
         OnMinigameUpdated?.Invoke(true);
     }
 
@@ -104,7 +100,7 @@ public class Minigame : MonoBehaviour
     protected virtual void FailMinigame()
     {
         CompleteMinigame();
-        //Debug.Log("Minigame Failed");
+        Debug.Log("Minigame Failed");
     }
 
     protected virtual void WonMinigame()
@@ -115,18 +111,18 @@ public class Minigame : MonoBehaviour
     
     protected virtual void CompleteMinigame()
     {
-        ResetUI();
-        return;
+        _isStopped = true;
         
-        ResetUI();
         OnMinigameComplete?.Invoke(MinigameResult.Won);
         OnMinigameUpdated?.Invoke(false);
-        _canvas.gameObject.SetActive(false);
+
+        ResetUI();
+        ResetMinigame();
+        
+        // _canvas.gameObject.SetActive(false);
     }
     private void ResetUI()
     {
-        _isStopped = true;
-        
         _progressBar.DOSizeDelta(new Vector2(0, _progressBar.sizeDelta.y), 0.3f).SetEase(Ease.OutQuint);
         _durationTimeBar.fillAmount = 1;
         DOTween.Kill("duration");
@@ -134,6 +130,7 @@ public class Minigame : MonoBehaviour
 
     protected virtual void ResetMinigame()
     {
+        SetProgressAmount(0);
         _progressBar.sizeDelta = new Vector2(0, _progressBar.sizeDelta.y);
         //Debug.Log("Minigame Reseted");
     }

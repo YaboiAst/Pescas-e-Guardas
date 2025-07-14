@@ -92,6 +92,14 @@ public class MinigameManager : MonoBehaviour
     {
         _currentMinigame.StartMinigame();
     }
+
+    public void CloseMinigame()
+    {
+        _minigameBar.SetActive(false);
+        _minigameKey.SetActive(false);
+        _minigameCircle.SetActive(false);
+        _currentMinigame = null;
+    }
     
     private MinigameSettings GenerateMinigameSettings(int difficulty, MinigameType type)
     {
