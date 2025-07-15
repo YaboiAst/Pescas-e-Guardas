@@ -18,7 +18,7 @@ MonoBehaviour:
     del\xEDcia frito."
   _rarity: 4
   _basePoints: 1000
-  _icon: {fileID: 21300000, guid: f94e96dc0f4684e4780545c12693c3a9, type: 3}
+  _icon: {fileID: 21300000, guid: 3091b91b00037a441bc831290c9cb11d, type: 3}
   _weightRange: {x: 8, y: 10}
   _location: 0
   HasCustomShape: 1
