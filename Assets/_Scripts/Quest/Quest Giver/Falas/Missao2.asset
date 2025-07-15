@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03de658b25a4819498e6e44fac154cae, type: 3}
+  m_Name: Missao2
+  m_EditorClassIdentifier: 
+  questToStart: {fileID: 11400000, guid: 0f1829c792af7bf42bc6f38939da7d45, type: 2}
+  Id: 0
+  dialogueBlocks:
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Obrigada!!
+        whosTalking: Polvo
+        whosTalkingIcon: {fileID: 21300000, guid: c042410bbce24934e9cdd8258d43a378, type: 3}
+    - type: 0
+      textLine:
+        textLine: Pesque mais alguns peixes por favor
+        whosTalking: Polvo
+        whosTalkingIcon: {fileID: 21300000, guid: c042410bbce24934e9cdd8258d43a378, type: 3}
+    overrideJump: 0
+    jumpToBlock: 0

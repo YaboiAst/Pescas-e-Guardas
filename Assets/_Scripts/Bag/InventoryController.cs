@@ -60,6 +60,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     
     public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
     public static readonly UnityEvent ClearGrid = new UnityEvent();
+    public static readonly UnityEvent OnProgressQuest = new();
     private SelectionBuffer _tileBuffer;
     public int TotalPoints { get; private set; } = 0;
 
@@ -144,6 +145,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
             TotalPoints += item.GetItemData().Fish.Points;
 
         OnItemPlaced?.Invoke();
+        OnProgressQuest.Invoke();
 
     }
 
