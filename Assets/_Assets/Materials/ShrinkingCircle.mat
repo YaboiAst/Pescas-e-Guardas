@@ -25,7 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Radius: 0.495
+    - _Radius: 1
     - _Thickness: 0.03
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
