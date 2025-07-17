@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
@@ -24,6 +25,9 @@ public class InputManager : MonoBehaviour
     // [SerializeField] private GameObject bagRoot;
     // [SerializeField] private GameObject questRoot;
     // public Action<string> OnKeyPressed;
+
+    public static readonly UnityEvent<string> OnInputPressed = new();
+    public static readonly UnityEvent OnMapInput = new();
     
     private void Update()
     {
@@ -38,6 +42,12 @@ public class InputManager : MonoBehaviour
             if (Input.GetButtonUp(_keyPool[i]))
             {
                 Debug.Log($"Calling: {_keyPool[i]}");
+                if (_keyPool[i] == MAP_KEY)
+                {
+                    OnMapInput?.Invoke();
+                }
+                
+                OnInputPressed?.Invoke(_keyPool[i]);
                 _debounceTimer = debounceTime;
                 return;
             }
