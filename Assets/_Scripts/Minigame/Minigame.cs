@@ -98,12 +98,14 @@ public class Minigame : MonoBehaviour
 
     protected virtual void FailMinigame()
     {
+        OnMinigameComplete?.Invoke(MinigameResult.Fail);
         CompleteMinigame();
         //Debug.Log("Minigame Failed");
     }
 
     protected virtual void WonMinigame()
     {
+        OnMinigameComplete?.Invoke(MinigameResult.Won);
         CompleteMinigame();
         //Debug.Log("Minigame Completed");
     }
@@ -111,7 +113,6 @@ public class Minigame : MonoBehaviour
     protected virtual void CompleteMinigame()
     {
         ResetUI();
-        OnMinigameComplete?.Invoke(MinigameResult.Won);
         OnMinigameUpdated?.Invoke(false);
         _canvas.gameObject.SetActive(false);
     }
