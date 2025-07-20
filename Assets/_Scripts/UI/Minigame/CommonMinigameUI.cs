@@ -51,7 +51,8 @@ public class CommonMinigameUI : CanvasController
     
     private void Update()
     {
-        if (minigameStarted) return;
+        if (minigameStarted)
+            return;
 
         if (Input.GetKeyDown(_playInteractionKey))
         {
@@ -60,6 +61,7 @@ public class CommonMinigameUI : CanvasController
         }
         else if (Input.GetKeyDown(_closeInteractionKey))
         {
+            MinigameManager.Instance.StopMinigame();
             HideUI();
         }
     }

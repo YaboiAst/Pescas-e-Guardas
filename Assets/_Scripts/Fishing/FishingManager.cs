@@ -8,7 +8,7 @@ public class FishingManager
 
     public static readonly UnityEvent OnFishComplete = new();
 
-    public static void StartFishing(ref FishLootTable lootTable)
+    public static void StartFishing(FishLootTable lootTable)
     {
         CurrentLootTable = lootTable;
         CommonMinigameUI.Instance.ShowUI(CurrentLootTable);

@@ -20,11 +20,11 @@ public class FishingSpot : MonoBehaviour
     public void UpdateFishingSpot(Location location)
     {
         //_lootTable.UpdateLootTable(fishData, _fishLocationType);
+        _lootTable.ValidateTable();
     }
-    
+
     public void Interact()
     {
-        _lootTable.ValidateTable();
-        FishingManager.StartFishing(ref _lootTable);
+        FishingManager.StartFishing(_lootTable);
     }
 }

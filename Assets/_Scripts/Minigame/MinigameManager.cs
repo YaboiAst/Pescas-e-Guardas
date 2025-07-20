@@ -14,12 +14,13 @@ public class MinigameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null)
+        if(!Instance)
             Instance = this;   
     }
 
     #if UNITY_EDITOR
     [Command("start_minigame","Starts a minigame using default settings")]
+  #endif
     public void PrepMinigame(MinigameType type)
     {
         PrepMinigame(50, type, (MinigameResult result) =>
@@ -27,7 +28,6 @@ public class MinigameManager : MonoBehaviour
             Debug.Log("Minigame Finished");
         });
     }
-  #endif
     public void PrepMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
     {
         switch (settings.Type)
@@ -137,5 +137,10 @@ public class MinigameManager : MonoBehaviour
                 };
         
                 return settings;
+    }
+    public void StopMinigame()
+    {
+        _currentMinigame.StopMinigame();
+        CloseMinigame();
     }
 }

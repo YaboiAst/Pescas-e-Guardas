@@ -67,7 +67,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blend: 0.61313015
+    - _Blend: 0.95180994
     - _CubemapPosition: 0
     - _CubemapTransition: 0
     - _Cubemapp: 1
