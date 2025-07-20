@@ -79,7 +79,7 @@ namespace PedronsaDev.Console.Components
 			_pauseGameOnConsole = m_Preferences.PauseGameOnConsole;
 
 #if !UNITY_EDITOR
-			SmartConsole.RefreshAutocomplete();
+			//SmartConsole.RefreshAutocomplete();
 #endif
 		}
 

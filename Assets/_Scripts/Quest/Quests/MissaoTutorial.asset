@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78a06b624d52d574a96048b74b1381db, type: 3}
-  m_Name: MissaoTeste
+  m_Name: MissaoTutorial
   m_EditorClassIdentifier: 
   questInfo:
     questGiver: 'Pescador '
     title: Aprenda a pescar
-    Points: 1000
+    Points: 100
     description: 'Aprenda a se tornar um pescador '
-    objectiveDescription: Consiga 1000 pontos e retorne ao porto
+    objectiveDescription: Consiga 100 pontos e retorne ao porto

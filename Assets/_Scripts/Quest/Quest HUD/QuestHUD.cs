@@ -15,13 +15,13 @@ public class QuestHUD : MonoBehaviour
     
     private void Awake()
     {
-        this.gameObject.SetActive(false);
         QuestManager.OnStartQuest.AddListener(Description);
         QuestManager.OnFinishQuest.AddListener(EndQuest);
 
         description.text = "";
         //title.text = "";
         objectiveDescription.text = "";
+        this.gameObject.SetActive(false);
     }
 
     private void Description(QuestProgress quest)
