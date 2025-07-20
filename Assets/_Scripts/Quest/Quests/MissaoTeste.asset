@@ -15,7 +15,6 @@ MonoBehaviour:
   questInfo:
     questGiver: 'Pescador '
     title: Aprenda a pescar
-    ID: 1
     Points: 1000
     description: 'Aprenda a se tornar um pescador '
     objectiveDescription: Consiga 1000 pontos e retorne ao porto
