@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8545051607441691144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7825427056805968979}
+  - component: {fileID: 5084375110743506930}
+  - component: {fileID: 4327578836917621040}
+  - component: {fileID: 3705233696976883802}
+  m_Layer: 0
+  m_Name: Fishing Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7825427056805968979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545051607441691144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5084375110743506930
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545051607441691144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4327578836917621040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545051607441691144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969a3dbd962ca9e40bed2fe866046690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minigameType: 0
+  _lootTable:
+    LootDropItems:
+    - Item: {fileID: 11400000, guid: 88600f119a5e1c945bc74b99fbbc7092, type: 2}
+      ProbabilityWeight: 50
+      ProbabilityPercent: 50
+      ProbabilityRangeFrom: 0
+      ProbabilityRangeTo: 50
+    - Item: {fileID: 11400000, guid: 89559212a0b14e546bafc08c09d9496b, type: 2}
+      ProbabilityWeight: 50
+      ProbabilityPercent: 50
+      ProbabilityRangeFrom: 50
+      ProbabilityRangeTo: 100
+  _locationType: 0
+--- !u!114 &3705233696976883802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545051607441691144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581a790c14473d247891b1f58b5129c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeToInteract: 0
+  _interactionRange: 20
+  _maxInteractions: 0
+  _onInteractionCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4327578836917621040}
+        m_TargetAssemblyTypeName: FishingSpot, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onLastInteractionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  _interactionType: {fileID: 11400000, guid: effede98faa9db9409700c9e8cb2007f, type: 2}

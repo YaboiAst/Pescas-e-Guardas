@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Serializable]
 public class SelectionBuffer
 {
     public List<GridTile> buffer { get; private set; }
@@ -28,7 +29,8 @@ public class SelectionBuffer
     {
         valid = !buffer.Any(tile => tile.IsOccupied);
         valid &= item.GetRects().Count <= buffer.Count;
-
+        valid &= buffer.Count > 0;
+        
         var color = valid ? Color.green : Color.red;
         buffer.ForEach(tile => tile.PaintTile(color));
 
@@ -51,8 +53,14 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 
     public void AddTile(GridTile t) => _tiles.Add(t.GetCoord(), t);
 
+    public ItemPlacer _currentSelectedItem { get; private set; }
+    public static void SelectItem(ItemPlacer item) => Instance._currentSelectedItem ??= item;
+    public static void DeselectItem() => Instance._currentSelectedItem = null;
+    public static bool IsItemSelected() => Instance._currentSelectedItem is not null;
+    
     public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
     public static readonly UnityEvent ClearGrid = new UnityEvent();
+    public static readonly UnityEvent OnProgressQuest = new();
     private SelectionBuffer _tileBuffer;
     public int TotalPoints { get; private set; } = 0;
 
@@ -85,6 +93,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     {
         ItemPlacer item = Instantiate(_itemPrefab, _spawnParent).GetComponent<ItemPlacer>();
         item.Initialize(fish, this);
+        SelectItem(item);
         _ui.ShowInventory();
     }
 
@@ -136,6 +145,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
             TotalPoints += item.GetItemData().Fish.Points;
 
         OnItemPlaced?.Invoke();
+        OnProgressQuest.Invoke();
 
     }
 
@@ -144,7 +154,12 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 
     }
 
-public void LoadData(GameData data)
+    public static void HideInventory()
+    {
+        Instance._ui.HideInventory();
+    }
+    
+    public void LoadData(GameData data)
     {
     }
 

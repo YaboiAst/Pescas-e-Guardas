@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MissaoTeste
   m_EditorClassIdentifier: 
   questInfo:
-    questGiver: Patati e Patata
-    title: "Os palha\xE7os assassinos"
-    pointReward: 100000
-    description: "Os irm\xE3os Patati e Patata querem muito dar de presente um peixe
-      pedra para as criancinhas ajude ele a pescar "
-    objectiveDescription: Pesque um Peixe-Pedra
+    questGiver: 'Pescador '
+    title: Aprenda a pescar
+    ID: 1
+    Points: 1000
+    description: 'Aprenda a se tornar um pescador '
+    objectiveDescription: Consiga 1000 pontos e retorne ao porto

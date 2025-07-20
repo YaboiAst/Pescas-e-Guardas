@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public GameState CurrentState { get; private set; } = GameState.Playing;
+    public bool IsTutorialMode { get; private set; } = false;
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -46,6 +47,11 @@ public class GameManager : MonoBehaviour
             ResumeGame();
         else
             PauseGame();
+    }
+
+    public void SetTutorialMode(bool isTutorial)
+    {
+        IsTutorialMode = isTutorial;
     }
 }
 

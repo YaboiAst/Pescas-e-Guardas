@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ItemPlacer : MonoBehaviour
@@ -12,6 +13,7 @@ public class ItemPlacer : MonoBehaviour
     [SerializeField] private GameObject _blockPrefab;
 
     private GridLayoutGroup _grid;
+    private DraggableItem _drag;
 
     private bool _isOnGrid = false;
 
@@ -59,6 +61,9 @@ public class ItemPlacer : MonoBehaviour
         //GetComponent<TooltipTriggerUI>().SetTooltipInfo(info);
         
         SetInventory(inventory);
+        
+        _drag = this.GetComponent<DraggableItem>();
+        _drag.InitializeDrag();
     }
     
     public void SetInventory(InventoryController inventory) => _currentInventory = inventory;
@@ -103,6 +108,11 @@ public class ItemPlacer : MonoBehaviour
         InventoryController.Instance.UpdatePlacement(this);
     }
 
+    public void HandleClick(PointerEventData eventData)
+    {
+        _drag.OnPointerClick(eventData);
+    }
+    
     // Returns the center point (in local space of _blocksRoot) of all active blocks
     private Vector3 GetBlocksLocalCenter()
     {
