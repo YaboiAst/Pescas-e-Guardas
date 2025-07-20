@@ -14,6 +14,8 @@ public class QuestManager : MonoBehaviour
 
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
+    private bool IsComplete = false;
+
       private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -25,7 +27,7 @@ public class QuestManager : MonoBehaviour
         Instance = this;
 
         InventoryController.OnProgressQuest.AddListener(CheckQuestProgress);
-        DialogueInteraction.OnInteracted.AddListener(CheckQuestProgress);
+        DialogueInteraction.OnInteracted.AddListener(CheckQuestIsCompleted);
     }
     public void AddQuest(MyQuestInfo quest)
     {
@@ -56,6 +58,14 @@ public class QuestManager : MonoBehaviour
         Debug.Log($"O jogador tem '{current}' pontos. Ele precisa de '{goal}' pontos.");
 
         if (current >= goal)
+        {
+            IsComplete = true;
+        }
+    }
+
+    private void CheckQuestIsCompleted()
+    {
+        if (IsComplete)
         {
             CompleteQuest();
         }
