@@ -78,47 +78,54 @@ public class Minigame : MonoBehaviour
         _durationTimer = settings.Duration;
         
         _timer = _decreaseTimer;
-        
+
         OnMinigameComplete = completeMinigame;
-        
+
         SetProgressAmount(0);
         _isStopped = true;
-        
+
         _durationTimeBar.fillAmount = 1;
         DOTween.Kill("duration");
-        
+
         ResetMinigame();
         OnMinigameUpdated?.Invoke(true);
     }
 
     public virtual void StartMinigame()
     {
+        _durationTimer = _duration;
         _isStopped = false;
         _durationTimeBar.DOFillAmount(0, _duration).SetEase(Ease.Linear).SetId("duration");
     }
-    
+
+    public void StopMinigame()
+    {
+        FailMinigame();
+    }
+
     protected virtual void FailMinigame()
     {
+        OnMinigameComplete?.Invoke(MinigameResult.Fail);
         CompleteMinigame();
-        Debug.Log("Minigame Failed");
+        //Debug.Log("Minigame Failed");
     }
 
     protected virtual void WonMinigame()
     {
+        OnMinigameComplete?.Invoke(MinigameResult.Won);
         CompleteMinigame();
-        Debug.Log("Minigame Completed");
+        //Debug.Log("Minigame Completed");
     }
-    
+
     protected virtual void CompleteMinigame()
     {
         _isStopped = true;
-        
-        OnMinigameComplete?.Invoke(MinigameResult.Won);
+
         OnMinigameUpdated?.Invoke(false);
 
         ResetUI();
         ResetMinigame();
-        
+
         // _canvas.gameObject.SetActive(false);
     }
     private void ResetUI()

@@ -23,7 +23,7 @@ public class DialogueInteraction : MonoBehaviour
     private bool _canInteract;
     private void Awake()
     {
-        
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -31,25 +31,10 @@ public class DialogueInteraction : MonoBehaviour
         }
         Instance = this;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(!other.CompareTag("Player")) return;
-        _canInteract = true;
-    }
 
-    private void OnTriggerExit(Collider other)
+    public void Interact()
     {
-        if(!other.CompareTag("Player")) return;
-        _canInteract = false;
-    }
-    
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && _canInteract)
-        {
-            OnInteracted?.Invoke();
-            DialogueManager.OnStartDialogue?.Invoke(dialoguesGroups[currentWorldLevelIndex].dialogues[currentDialogueIndex]);
-        }
-       
+        OnInteracted.Invoke();
+        DialogueManager.OnStartDialogue?.Invoke(dialoguesGroups[currentWorldLevelIndex].dialogues[currentDialogueIndex]);
     }
 }

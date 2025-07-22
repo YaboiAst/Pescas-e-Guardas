@@ -29,7 +29,7 @@ public class FishingSpotsGenerator : MonoBehaviour
 
 
     [Button]
-    private void GenerateFishingSpots()
+    public void GenerateFishingSpots()
     {
         ClearFishingSpots();
 

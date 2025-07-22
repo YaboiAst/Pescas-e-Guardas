@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,8 +12,8 @@ public class DialogueTextHUD : MonoBehaviour
     {
         DialogueManager.OnDialogueEvent.AddListener(WriteText);
         DialogueManager.OnFinishDialogue.AddListener(() => {
-            Cursor.visible = false;
-            Cursor.lockState = UnityEngine.CursorLockMode.Locked;
+            //Cursor.visible = false;
+            //Cursor.lockState = UnityEngine.CursorLockMode.Locked;
             gameObject.SetActive(false);
         });
         
