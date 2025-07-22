@@ -23,7 +23,6 @@ public class BoatMovement : MonoBehaviour
         Minigame.OnMinigameUpdated -= MinigameUpdated;
     }
 
-
     private void MinigameUpdated(bool hasStarted)
     {
         if(hasStarted)

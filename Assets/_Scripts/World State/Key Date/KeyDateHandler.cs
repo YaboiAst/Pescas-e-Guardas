@@ -1,0 +1,49 @@
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class KeyDateHandler : MonoBehaviour
+{
+    [SerializeField] private List<KeyDate> _keyDates;
+
+    [SerializeField] private List<KeyDate> _currentKeyDates;
+
+    #if UNITY_EDITOR
+    private void OnValidate() => _keyDates = Extensions.GetAllInstances<KeyDate>().ToList();
+    #endif
+    private void Start()
+    {
+        TimeController.OnDayChange += DayChanged;
+        TimeController.OnHourChange += HandleCurrentKeyDates;
+    }
+    
+    private void OnDestroy()
+    {
+        TimeController.OnDayChange -= DayChanged;
+        TimeController.OnHourChange -= HandleCurrentKeyDates;
+    }
+
+    private void DayChanged(int day)
+    {
+        _currentKeyDates = new List<KeyDate>();
+        
+        foreach (KeyDate keyDate in _keyDates)
+        {
+            if (keyDate.ShouldTriggerToday(day)) 
+                _currentKeyDates.Add(keyDate);
+        }
+    }
+    
+    private void HandleCurrentKeyDates(int hour)
+    {
+        if (_currentKeyDates.Count == 0) return;
+        
+        foreach (KeyDate keyDate in _currentKeyDates)
+        {
+            if (keyDate.Hour == hour) 
+                keyDate.TriggerDate();
+        }
+    }
+
+    public List<KeyDate> GetKeyDatesList() => _keyDates;
+}

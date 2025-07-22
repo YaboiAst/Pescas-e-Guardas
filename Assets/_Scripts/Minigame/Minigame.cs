@@ -62,7 +62,7 @@ public class Minigame : MonoBehaviour
 
     }
 
-    public virtual void StartMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
+    public virtual void PrepMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
     {
         _speed = settings.Speed;
         _targetAreaSize = settings.TargetAreaSize;
@@ -78,47 +78,58 @@ public class Minigame : MonoBehaviour
         _durationTimer = settings.Duration;
         
         _timer = _decreaseTimer;
-        _isStopped = false;
-        
-        _progressAmount = 0;
-        
+
         OnMinigameComplete = completeMinigame;
-        
+
         SetProgressAmount(0);
-        
+        _isStopped = true;
+
         _durationTimeBar.fillAmount = 1;
         DOTween.Kill("duration");
-        _durationTimeBar.DOFillAmount(0, _duration).SetEase(Ease.Linear).SetId("duration");
-        _progressBar.sizeDelta = new Vector2(0, _progressBar.sizeDelta.y);
-        
+
         ResetMinigame();
-        //Debug.Log("Minigame Started");
         OnMinigameUpdated?.Invoke(true);
+    }
+
+    public virtual void StartMinigame()
+    {
+        _durationTimer = _duration;
+        _isStopped = false;
+        _durationTimeBar.DOFillAmount(0, _duration).SetEase(Ease.Linear).SetId("duration");
+    }
+
+    public void StopMinigame()
+    {
+        FailMinigame();
     }
 
     protected virtual void FailMinigame()
     {
+        OnMinigameComplete?.Invoke(MinigameResult.Fail);
         CompleteMinigame();
         //Debug.Log("Minigame Failed");
     }
 
     protected virtual void WonMinigame()
     {
+        OnMinigameComplete?.Invoke(MinigameResult.Won);
         CompleteMinigame();
         //Debug.Log("Minigame Completed");
     }
-    
+
     protected virtual void CompleteMinigame()
     {
-        ResetUI();
-        OnMinigameComplete?.Invoke(MinigameResult.Won);
+        _isStopped = true;
+
         OnMinigameUpdated?.Invoke(false);
-        _canvas.gameObject.SetActive(false);
+
+        ResetUI();
+        ResetMinigame();
+
+        // _canvas.gameObject.SetActive(false);
     }
     private void ResetUI()
     {
-        _isStopped = true;
-        
         _progressBar.DOSizeDelta(new Vector2(0, _progressBar.sizeDelta.y), 0.3f).SetEase(Ease.OutQuint);
         _durationTimeBar.fillAmount = 1;
         DOTween.Kill("duration");
@@ -126,6 +137,7 @@ public class Minigame : MonoBehaviour
 
     protected virtual void ResetMinigame()
     {
+        SetProgressAmount(0);
         _progressBar.sizeDelta = new Vector2(0, _progressBar.sizeDelta.y);
         //Debug.Log("Minigame Reseted");
     }

@@ -34,3 +34,4 @@ MonoBehaviour:
   SaveConsoleOutput: 0
   CacheReloadOnPlayMode: 1
   PersistConsole: 0
+  PauseGameOnConsole: 0

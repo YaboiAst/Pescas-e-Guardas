@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Interactable/Iteraction Type" )]
+[CreateAssetMenu(menuName = "Interactable/Interaction Type" )]
 public class InteractionType : ScriptableObject
 {
     public KeyCode Hotkey = KeyCode.E;
