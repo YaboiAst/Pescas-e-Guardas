@@ -82,6 +82,23 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         _ui = GetComponentInParent<InventoryUI>();
     }
 
+    private void Start()
+    {
+        QuestManager.OnFinishQuest.AddListener(ClearInventory);
+    }
+    private void ClearInventory()
+    {
+        for (int i = PlacedItems.Count - 1; i >= 0; i--)
+        {
+            ItemPlacer item = PlacedItems[i];
+            if (item)
+                Destroy(item.gameObject);
+        }
+
+        PlacedItems.Clear();
+
+        CalculatePoints();
+    }
     public static void CheckGrid(ItemPlacer item)
     {
         Instance.ResetBuffer();

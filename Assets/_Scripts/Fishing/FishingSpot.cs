@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FishingSpot : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class FishingSpot : MonoBehaviour
 
     private FishData _currentFish;
 
+    private int _fishingAttempts = 3;
+
+
     private void Start()
     {
     }
@@ -20,11 +24,26 @@ public class FishingSpot : MonoBehaviour
     public void UpdateFishingSpot(Location location)
     {
         //_lootTable.UpdateLootTable(fishData, _fishLocationType);
+        _fishingAttempts = Random.Range(3, 5);
         _lootTable.ValidateTable();
     }
 
+    public void UseFishingAttempt()
+    {
+        _fishingAttempts--;
+        if (_fishingAttempts < 0)
+            _fishingAttempts = 0;
+    }
+
+    public bool CanFish() => _fishingAttempts > 0;
+
     public void Interact()
     {
-        FishingManager.StartFishing(_lootTable);
+        FishingManager.StartFishing(_lootTable, this);
+    }
+    public void DestroySpot()
+    {
+        _interactable.RemoveFromRange();
+        ObjectPoolManager.ReturnObjectToPool(this.gameObject);
     }
 }

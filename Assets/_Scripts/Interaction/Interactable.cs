@@ -163,6 +163,12 @@ public class Interactable : MonoBehaviour
         AnyInteractionComplete?.Invoke(this, _interactionType.CompletedInteraction);
     }
 
+    public void RemoveFromRange()
+    {
+        if (s_interactablesInRange.Remove(this))
+            InteractablesInRangeChanged?.Invoke(s_interactablesInRange.Any());
+    }
+
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {

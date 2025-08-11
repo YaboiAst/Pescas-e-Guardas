@@ -10,7 +10,7 @@ public class QuestManager : MonoBehaviour
 
     public ScriptableDialogue nextQuest;
 
-    public static readonly UnityEvent OnFinishQuest = new();
+    public static UnityEvent OnFinishQuest = new();
 
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
@@ -39,11 +39,13 @@ public class QuestManager : MonoBehaviour
 
     public void CompleteQuest()
     {
-        if (!CurrentProgress.IsValid()) return;
+        if (!CurrentProgress.IsValid())
+            return;
         
         CurrentProgress.Status = QuestProgress.QuestStatus.Completed;
         Debug.Log($"Missão '{CurrentProgress.QuestData.title}' concluída!");
         OnFinishQuest?.Invoke();
+
         UpdateQuest();
     }
         
