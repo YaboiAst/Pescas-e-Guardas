@@ -10,6 +10,10 @@ public class QuestManager : MonoBehaviour
 
     public ScriptableDialogue nextQuest;
 
+    public ProgressBar bar;
+
+    public float progress = 0;
+
     public static UnityEvent OnFinishQuest = new();
 
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
@@ -41,7 +45,9 @@ public class QuestManager : MonoBehaviour
     {
         if (!CurrentProgress.IsValid())
             return;
-        
+
+        bar.AlterarProgresso(0);
+
         CurrentProgress.Status = QuestProgress.QuestStatus.Completed;
         Debug.Log($"Missão '{CurrentProgress.QuestData.title}' concluída!");
         OnFinishQuest?.Invoke();
@@ -58,6 +64,10 @@ public class QuestManager : MonoBehaviour
         int current = InventoryController.Instance.TotalPoints;
         int goal = CurrentProgress.QuestData.Points;
         Debug.Log($"O jogador tem '{current}' pontos. Ele precisa de '{goal}' pontos.");
+
+        progress = (float)current / goal;
+
+        bar.AlterarProgresso(progress);
 
         if (current >= goal)
         {
