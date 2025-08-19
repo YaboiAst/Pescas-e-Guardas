@@ -55,7 +55,7 @@ public class QuestManager : MonoBehaviour
         if (CurrentProgress == null) return;
         if (CurrentProgress.Status != QuestProgress.QuestStatus.InProgress) return;
 
-        int current = InventoryController.Instance.TotalPoints;
+        int current = InventoryPoints.Instance.TotalPoints;
         int goal = CurrentProgress.QuestData.Points;
         Debug.Log($"O jogador tem '{current}' pontos. Ele precisa de '{goal}' pontos.");
 

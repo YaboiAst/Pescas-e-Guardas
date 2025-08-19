@@ -8,13 +8,13 @@ public class InventoryUI : CanvasController
 
     private void Start()
     {
-        InventoryController.OnItemPlaced += UpdateUI;
+        InventoryPoints.OnPointsUpdated += UpdateUI;
         HideCanvas();
     }
 
     private void OnDestroy()
     {
-        InventoryController.OnItemPlaced -= UpdateUI;
+        InventoryPoints.OnPointsUpdated -= UpdateUI;
     }
 
     private void Update()
@@ -22,7 +22,7 @@ public class InventoryUI : CanvasController
         if (Input.GetKeyDown(KeyCode.B))
             ToggleCanvas();
     }
-    private void UpdateUI() => _pointsText.SetText(InventoryController.Instance.TotalPoints.ToString());
+    private void UpdateUI() => _pointsText.SetText(InventoryPoints.Instance.TotalPoints.ToString());
 
     public void ShowInventory() => ShowCanvas();
     public void HideInventory() => HideCanvas();

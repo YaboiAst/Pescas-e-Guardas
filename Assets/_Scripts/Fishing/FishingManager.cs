@@ -22,30 +22,30 @@ public class FishingManager
         MinigameManager.Instance.PrepMinigame(50, MinigameType.Circle, OnMinigameComplete);
     }
     
-    public static void PlayFishMinigame()
+    public static bool PlayFishMinigame()
     {
         if (_spot.CanFish())
         {
             _spot.UseFishingAttempt();
             CurrentFish = CurrentLootTable.GetLootDropItem();
             MinigameManager.Instance.PlayMinigame();
+            return true;
         }
+
+        return false;
     }
 
     public static void CloseFishMinigame()
     {
         MinigameManager.Instance.CloseMinigame();
+        if (_spot)
+        {
+            _spot.ShowInteraction();
+        }
     }
     
     private static void OnMinigameComplete(MinigameResult result)
     {
-        if (!_spot.CanFish())
-        {
-            CloseFishMinigame();
-            CommonMinigameUI.Instance.HideUI();
-            _spot.DestroySpot();
-        }
-
         if (result == MinigameResult.Won)
         {
             Debug.Log($"Voce pescou um {CurrentFish.Item.DisplayName} de raridade {CurrentFish.Item.Rarity}");
@@ -57,6 +57,14 @@ public class FishingManager
         else
         {
             Debug.Log("Voce fracassou e nao pegou o peixe");
+        }
+
+        if (!_spot.CanFish())
+        {
+            CloseFishMinigame();
+            CommonMinigameUI.Instance.HideOnlyMinigameUI();
+            _spot.DestroySpot();
+            _spot = null;
         }
 
         CurrentFish = null;

@@ -60,22 +60,12 @@ public class Interactable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !WasFullyInteracted)
-        {
-            s_interactablesInRange.Add(this);
-            InteractablesInRangeChanged?.Invoke(true);
-            OnPlayerEnterTrigger?.Invoke();
-        }
+            AddToRange();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            if (s_interactablesInRange.Remove(this))
-                InteractablesInRangeChanged?.Invoke(s_interactablesInRange.Any());
-            
-            OnPlayerExitTrigger?.Invoke();
-        }
+        if (other.CompareTag("Player")) RemoveFromRange();
     }
 
     public void Interact()
@@ -162,11 +152,19 @@ public class Interactable : MonoBehaviour
         _onInteractionCompleted?.Invoke();
         AnyInteractionComplete?.Invoke(this, _interactionType.CompletedInteraction);
     }
+    public void AddToRange()
+    {
+        s_interactablesInRange.Add(this);
+        InteractablesInRangeChanged?.Invoke(true);
+        OnPlayerEnterTrigger?.Invoke();
+    }
 
     public void RemoveFromRange()
     {
         if (s_interactablesInRange.Remove(this))
             InteractablesInRangeChanged?.Invoke(s_interactablesInRange.Any());
+
+        OnPlayerExitTrigger?.Invoke();
     }
 
 #if UNITY_EDITOR

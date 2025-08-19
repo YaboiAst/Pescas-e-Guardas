@@ -17,6 +17,7 @@ public class FishingSpot : MonoBehaviour
 
     private void Start()
     {
+        _interactable = GetComponent<Interactable>();
     }
 
     private void OnValidate() => _lootTable.ValidateTable();
@@ -40,10 +41,13 @@ public class FishingSpot : MonoBehaviour
     public void Interact()
     {
         FishingManager.StartFishing(_lootTable, this);
+        _interactable.RemoveFromRange();
     }
     public void DestroySpot()
     {
         _interactable.RemoveFromRange();
         ObjectPoolManager.ReturnObjectToPool(this.gameObject);
+        //Destroy(this);
     }
+    public void ShowInteraction() => _interactable.AddToRange();
 }

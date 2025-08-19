@@ -45,6 +45,16 @@ public class CommonMinigameUI : CanvasController
         InventoryController.HideInventory();
         HideCanvas();
     }
+
+
+    public void HideOnlyMinigameUI()
+    {
+        if (minigameStarted || !IsOpen) return;
+
+        FishingManager.CloseFishMinigame();
+        _probabilitiesUI.ClearUI();
+        HideCanvas();
+    }
     
     private void Update()
     {
@@ -53,8 +63,7 @@ public class CommonMinigameUI : CanvasController
 
         if (Input.GetKeyDown(_playInteractionKey))
         {
-            minigameStarted = true;
-            FishingManager.PlayFishMinigame();
+            minigameStarted = FishingManager.PlayFishMinigame();;
         }
         else if (Input.GetKeyDown(_closeInteractionKey))
         {

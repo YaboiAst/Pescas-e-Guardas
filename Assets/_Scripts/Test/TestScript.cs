@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-   [SerializeField] private Fish _fish;
+   [SerializeField] private Upgrade _upgrade;
 
    [Button]
-   public void SpawnFish() => InventoryController.Instance.CreateItem(_fish);
+   public void EquipUpgrade() => UpgradeManager.Equip(_upgrade);
 }

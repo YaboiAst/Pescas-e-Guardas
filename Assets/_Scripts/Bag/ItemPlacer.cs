@@ -51,6 +51,35 @@ public class ItemPlacer : MonoBehaviour
 
         var elements = new List<TooltipElementInfo>();
 
+        string rarityColor;
+        switch (fish.FishData.Rarity)
+        {
+            case FishRarity.Common:
+                rarityColor = "#FFFFFF";
+                break;
+            case FishRarity.Uncommon:
+                rarityColor = "#1EFF00";
+                break;
+            case FishRarity.Rare:
+                rarityColor = "#0070DD";
+                break;
+            case FishRarity.Epic:
+                rarityColor = "#A335EE";
+                break;
+            case FishRarity.Legendary:
+                rarityColor = "#FF8000";
+                break;
+            default:
+                rarityColor = "#FFFFFF";
+                break;
+        }
+
+        var rarity = new TooltipElementInfo
+        {
+            Name = "Rarity",
+            Value = $"<color={rarityColor}>{fish.FishData.Rarity.ToString()}</color>"
+        };
+
         var weight = new TooltipElementInfo
         {
             Name = "Weight"
@@ -61,6 +90,7 @@ public class ItemPlacer : MonoBehaviour
         else
             weight.Value = $"{fish.Weight * 100}g";
 
+        elements.Add(rarity);
         elements.Add(weight);
 
         TooltipInfo info = new TooltipInfo
