@@ -18,4 +18,7 @@ public class CursorLockMode : MonoBehaviour
     {
         Cursor.lockState = UnityEngine.CursorLockMode.None;
     }
+
+    public static UnityEngine.CursorLockMode None { get; set; }
+    public static UnityEngine.CursorLockMode Locked { get; set; }
 }
