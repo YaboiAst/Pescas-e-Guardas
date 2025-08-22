@@ -45,6 +45,18 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             if (!_gridRect.Overlaps(itemRect)) continue;
             
+            var screenPos = RectTransformUtility.WorldToScreenPoint(null, _tileVisual.rectTransform.position);
+            var pointerData = new PointerEventData(EventSystem.current) { position = screenPos };
+
+            var results = new List<RaycastResult>();
+            var raycaster = _tileVisual.canvas.GetComponent<GraphicRaycaster>();
+            raycaster.Raycast(pointerData, results);
+            if (results.Count > 0)
+            {
+                // O primeiro resultado é o que realmente está recebendo o clique
+                if (results[0].gameObject != _tileVisual.gameObject) continue;
+            }
+
             InventoryController.Instance.AddToBuffer(this);
             return;
         }

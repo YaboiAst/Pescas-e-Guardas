@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -46,11 +47,10 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 
     [SerializeField] private GameObject _itemPrefab;
     [SerializeField] private Transform _spawnParent;
+    [SerializeField] private BagData currentBag;
 
     private Dictionary<Vector2Int, GridTile> _tiles;
-
     public void InitializeGrid() => _tiles = new Dictionary<Vector2Int, GridTile>();
-
     public void AddTile(GridTile t) => _tiles.Add(t.GetCoord(), t);
 
     public ItemPlacer _currentSelectedItem { get; private set; }
@@ -60,13 +60,16 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     
     public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
     public static readonly UnityEvent ClearGrid = new UnityEvent();
+    public static event Action OnItemPlaced;
     private SelectionBuffer _tileBuffer;
     public int TotalPoints { get; private set; } = 0;
 
     public List<ItemPlacer> PlacedItems;
     private InventoryUI _ui;
-    public static event Action OnItemPlaced;
+    private GridGeneration _gridGenerator;
 
+    public Vector2 GridCellSize => _gridGenerator.gridRectSize;
+    
     private void Awake()
     {
         if (Instance is null)
@@ -79,6 +82,9 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 
         PlacedItems = new List<ItemPlacer>();
         _ui = GetComponentInParent<InventoryUI>();
+        
+        _gridGenerator = GetComponent<GridGeneration>();
+        _gridGenerator.SetBag(currentBag);
     }
 
     public static void CheckGrid(ItemPlacer item)
@@ -96,23 +102,10 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         _ui.ShowInventory();
     }
 
-    public void AddItem(ItemPlacer item)
-    {
-        if (PlacedItems.Contains(item)) return;
-
-        PlacedItems.Add(item);
-        item.SetInventory(this);
-        item.SetPositionStatus(true);
-    }
-
     public void AddToBuffer(GridTile tile) => _tileBuffer.Add(tile);
-
     public void ResetBuffer() => _tileBuffer.Clear();
-
     public void ValidateBuffer(ItemPlacer item) => _tileBuffer.Validate(item);
-
     public bool IsPositionValid() => _tileBuffer.IsValid();
-
     public void UpdatePlacement(ItemPlacer item = null)
     {
         foreach (var tile in _tileBuffer.buffer)
@@ -124,6 +117,14 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         CalculatePoints();
     }
 
+    public void AddItem(ItemPlacer item)
+    {
+        if (PlacedItems.Contains(item)) return;
+
+        PlacedItems.Add(item);
+        item.SetInventory(this);
+        item.SetPositionStatus(true);
+    }
     public bool RemoveItem(ItemPlacer item)
     {
         if (PlacedItems.Contains(item))
@@ -144,14 +145,12 @@ public class InventoryController : MonoBehaviour, IDataPersistence
             TotalPoints += item.GetItemData().Fish.Points;
 
         OnItemPlaced?.Invoke();
-
     }
 
-    public void ShowInventory()
+    public static void ShowInventory()
     {
-
+        Instance._ui.ShowInventory();
     }
-
     public static void HideInventory()
     {
         Instance._ui.HideInventory();
@@ -160,8 +159,15 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
     }
-
     public void SaveData(GameData data)
     {
+    }
+    
+    [Button("Test bag")]
+    public void TestBag()
+    { 
+        HideInventory();
+        _gridGenerator?.SetBag(currentBag);
+        ShowInventory();
     }
 }
