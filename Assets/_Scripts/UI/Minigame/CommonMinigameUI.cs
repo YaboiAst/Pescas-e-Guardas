@@ -27,13 +27,17 @@ public class CommonMinigameUI : CanvasController
         FishingManager.OnFishComplete.AddListener(() => minigameStarted = false);
     }
     
-    public void ShowUI(FishLootTable lootTable)
+    public void ShowUI(FishLootTable lootTable = null)
     {
-        if (IsOpen) return;
+        if (IsOpen)
+            return;
         
         minigameStarted = false;
         ShowCanvas();
-        _probabilitiesUI.GenerateUI(lootTable);
+        if (lootTable != null)
+        {
+            _probabilitiesUI.GenerateUI(lootTable);
+        }
         FishingManager.PrepFishMinigame();
     }
     public void HideUI()

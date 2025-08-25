@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEditor;
@@ -5,7 +6,8 @@ using UnityEngine;
 
 public class FishingSpotsGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject _fishingSpotPrefab;
+    [SerializeField] private GameObjectTable _table;
+    //[SerializeField] private GameObject _fishingSpotPrefab;
     [SerializeField] private Location _location;
     [SerializeField] private int _numberOfSpots = 10;
     [SerializeField] private float _range = 100f;
@@ -13,6 +15,8 @@ public class FishingSpotsGenerator : MonoBehaviour
 
     private readonly List<GameObject> _spots = new List<GameObject>();
 
+
+    private void OnValidate() => _table.ValidateTable();
 
     private void Start()
     {
@@ -39,8 +43,12 @@ public class FishingSpotsGenerator : MonoBehaviour
 
         foreach (Vector3 position in positions)
         {
-            GameObject spot = ObjectPoolManager.SpawnGameObject(_fishingSpotPrefab, position, Quaternion.identity);
-            spot.GetComponent<FishingSpot>().UpdateFishingSpot(_location);
+            var spotItem = _table.GetLootDropItem();
+            GameObject spot = ObjectPoolManager.SpawnGameObject(spotItem.Item, position, Quaternion.identity);
+
+            if (spot.TryGetComponent<FishingSpot>(out FishingSpot fishingSpot))
+                fishingSpot.UpdateFishingSpot(_location);
+
             _spots.Add(spot);
         }
     }

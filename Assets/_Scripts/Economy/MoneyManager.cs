@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour, IDataPersistence
 {
+
+
+    public static MoneyManager Instance { get; private set; }
+
     [SerializeField] private int _currentMoney = 0;
 
     public static event Action<int> OnMoneyChange;
+
+    private void Awake() => Instance = this;
 
     [Command("set_money", "Sets the current money amount to value")]
     public void SetMoneyAmount(int amount)
@@ -23,6 +29,9 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
         
         OnMoneyChange?.Invoke(amount);
     }
+
+    public void AddMoney(int amount) => ModifyMoneyAmount(amount);
+    public void RemoveMoney(int amount) => ModifyMoneyAmount(-amount);
 
     public bool TrySpend(int amount)
     {
