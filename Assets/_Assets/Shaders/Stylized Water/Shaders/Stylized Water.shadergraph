@@ -625,11 +625,7 @@
             "m_Id": "b50e1c025b374d799b73848c78f9e074"
         }
     ],
-    "m_StickyNoteDatas": [
-        {
-            "m_Id": "5453342165da4b75aeb52a80451dd947"
-        }
-    ],
+    "m_StickyNoteDatas": [],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -8188,26 +8184,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
-    "m_ObjectId": "5453342165da4b75aeb52a80451dd947",
-    "m_Title": "Fog",
-    "m_Content": "When using linear fog, switch the input of the T(3) slot of the Lerp node to the output of the Linear Fog group.",
-    "m_TextSize": 0,
-    "m_Theme": 1,
-    "m_Position": {
-        "serializedVersion": "2",
-        "x": -226.0,
-        "y": -1172.0,
-        "width": 200.0,
-        "height": 100.0
-    },
-    "m_Group": {
-        "m_Id": ""
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.ScreenPositionNode",
     "m_ObjectId": "54c050c5219a4ac6ba9a49f801285cfb",
     "m_Group": {
@@ -13993,7 +13969,7 @@
             "r": 0.22452819347381593,
             "g": 0.887431263923645,
             "b": 1.0,
-            "a": 0.4431372582912445
+            "a": 0.4627451002597809
         },
         "key1": {
             "r": 0.054901957511901858,
@@ -14151,7 +14127,7 @@
             "r": 0.03611956164240837,
             "g": 0.04120219498872757,
             "b": 0.07169800996780396,
-            "a": 1.0
+            "a": 0.9843137264251709
         },
         "key1": {
             "r": 0.001789834350347519,
