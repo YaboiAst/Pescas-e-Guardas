@@ -4,6 +4,7 @@ public class BoatMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private float _turnSpeed = 50f;
+    [SerializeField] private LayerMask _landLayerMask;
 
     private bool _canMove = true;
 
@@ -40,9 +41,27 @@ public class BoatMovement : MonoBehaviour
             return;
 
         float moveInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * (moveInput * _moveSpeed * Time.deltaTime));
-
         float rotationInput = Input.GetAxis("Horizontal");
+
+        float rayDistance = 2f;
+        bool canMoveDirection = true;
+
+        if (moveInput > 0f)
+        {
+            Ray ray = new Ray(transform.position, transform.forward);
+            if (Physics.Raycast(ray, rayDistance, _landLayerMask))
+                canMoveDirection = false;
+        }
+        else if (moveInput < 0f)
+        {
+            Ray ray = new Ray(transform.position, -transform.forward);
+            if (Physics.Raycast(ray, rayDistance, _landLayerMask))
+                canMoveDirection = false;
+        }
+
+        if (canMoveDirection && moveInput != 0f)
+            transform.Translate(Vector3.forward * (moveInput * _moveSpeed * Time.deltaTime));
+
         transform.Rotate(Vector3.up, rotationInput * _turnSpeed * Time.deltaTime);
     }
 }
