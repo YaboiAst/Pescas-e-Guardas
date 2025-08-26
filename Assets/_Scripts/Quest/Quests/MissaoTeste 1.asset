@@ -15,6 +15,6 @@ MonoBehaviour:
   questInfo:
     questGiver: Polvo
     title: Pescando mais
-    Points: 1000
+    Points: 100
     description: Pesque mais
-    objectiveDescription: Consiga 1000 pontos e retorne ao porto
+    objectiveDescription: Consiga 100 pontos e retorne ao porto

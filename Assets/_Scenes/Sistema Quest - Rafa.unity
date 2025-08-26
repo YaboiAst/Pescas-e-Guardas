@@ -4081,6 +4081,42 @@ PrefabInstance:
       propertyPath: bar
       value: 
       objectReference: {fileID: 1861184990}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: nextQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: ad7505513250f4a479d22ecfb59e4a68, type: 2}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[0].worldLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[1].worldLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[0].dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[1].dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[0].dialogues.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a090d1866c2c1d4cb7c214ac135c790, type: 2}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[0].dialogues.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a090d1866c2c1d4cb7c214ac135c790, type: 2}
+    - target: {fileID: 263455884154650003, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
+      propertyPath: dialoguesGroups.Array.data[1].dialogues.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ad7505513250f4a479d22ecfb59e4a68, type: 2}
     - target: {fileID: 4820129396107053624, guid: 1ae1b810977e45d47929baf75267ed52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5356,21 +5392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d6d299a62a7614eb74f68f2c0ef81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWorldLevelIndex: 0
-  currentDialogueIndex: 0
-  dialoguesGroups:
-  - worldLevel: 0
-    dialogues:
-    - {fileID: 11400000, guid: 93e95b3755dba8149853590f4fe438ae, type: 2}
-  - worldLevel: 0
-    dialogues:
-    - {fileID: 11400000, guid: 0a090d1866c2c1d4cb7c214ac135c790, type: 2}
-  - worldLevel: 0
-    dialogues:
-    - {fileID: 11400000, guid: ad7505513250f4a479d22ecfb59e4a68, type: 2}
-  - worldLevel: 0
-    dialogues:
-    - {fileID: 11400000, guid: a5886a51a34da2c409fda6c0c8441c6b, type: 2}
 --- !u!135 &932008494
 SphereCollider:
   m_ObjectHideFlags: 0
