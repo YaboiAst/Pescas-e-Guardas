@@ -53,7 +53,7 @@ public class FishingSpotsGenerator : MonoBehaviour
         }
     }
 
-    private List<Vector3> PoissonDiskSample(int count, float range, float minDist, int maxAttempts = 30)
+    private List<Vector3> PoissonDiskSample(int count, float range, float minDist, int maxAttempts = 50)
     {
         List<Vector3> points = new List<Vector3>();
         List<Vector3> spawnPoints = new List<Vector3>();

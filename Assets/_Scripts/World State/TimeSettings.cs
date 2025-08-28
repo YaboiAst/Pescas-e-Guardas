@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 [Serializable]
 public class TimeSettings
 {
-    public float TimeMultiplier = 1000;
+    public float TimeMultiplier = 1;
     public int StartDay;
     public int StartHour;
     public int StartMinute;

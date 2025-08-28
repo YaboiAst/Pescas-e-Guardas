@@ -100,7 +100,7 @@ public class TimeController : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        _service = new TimeService(data.TimeSettings);
+        _service = new TimeService(_timeSettings);
     }
 
     public void SaveData(GameData data)

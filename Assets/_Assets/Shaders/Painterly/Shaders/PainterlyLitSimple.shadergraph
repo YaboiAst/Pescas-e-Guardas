@@ -41,6 +41,9 @@
         },
         {
             "m_Id": "00e5fe06a6f54e9f8fdc2b06e6e348e9"
+        },
+        {
+            "m_Id": "184ba36df3654904aa22337183905675"
         }
     ],
     "m_Keywords": [],
@@ -839,6 +842,29 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.BooleanShaderProperty",
+    "m_ObjectId": "184ba36df3654904aa22337183905675",
+    "m_Guid": {
+        "m_GuidSerialized": "12fd0a3a-6117-4749-bdf3-8c4845fd5f10"
+    },
+    "m_Name": "TerrainCompatible",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "TerrainCompatible",
+    "m_DefaultReferenceName": "_TerrainCompatible",
+    "m_OverrideReferenceName": "TerrainCompatible",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": true
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "1b1d69d6515b4a43bed2153d848c9275",
     "m_Group": {
@@ -1021,7 +1047,7 @@
     "m_DefaultValue": {
         "x": 0.0,
         "y": 0.0,
-        "z": 1.0
+        "z": 0.0
     },
     "m_Labels": []
 }
@@ -3943,9 +3969,6 @@
     "m_AlphaClip": false,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
-    "m_DisableTint": false,
-    "m_AdditionalMotionVectorMode": 0,
-    "m_AlembicMotionVectors": false,
     "m_SupportsLODCrossFade": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
@@ -4043,7 +4066,11 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "fb3545254c7745189e12aaa3b17b0fe8",
     "m_Name": "",
-    "m_ChildObjectList": []
+    "m_ChildObjectList": [
+        {
+            "m_Id": "184ba36df3654904aa22337183905675"
+        }
+    ]
 }
 
 {

@@ -16,7 +16,7 @@ public class UpgradeEditor : Editor
 
     private void OnEnable()
     {
-        _nameProp = serializedObject.FindProperty("Name");
+        _nameProp = serializedObject.FindProperty("DisplayName");
         _descProp = serializedObject.FindProperty("Description");
         _costProp = serializedObject.FindProperty("Cost");
         _effectsProp = serializedObject.FindProperty("Effects");
