@@ -43,13 +43,42 @@ public class ItemPlacer : MonoBehaviour
                 {
                     blocksRects.Add(itemPlacerBlock);
                     itemPlacerBlock.GetComponent<Image>().enabled = true;
-                } 
+                }
                 _data = new ItemData(fish, block.transform.localPosition, 0);
             }
         }
+        
         _image.sprite = fish.FishData.Icon;
+
+        var elements = new List<TooltipElementInfo>();
+
+        var weight = new TooltipElementInfo
+        {
+            Name = "Weight"
+        };
+
+        if (fish.Weight > 1f)
+            weight.Value = $"{fish.Weight}kg";
+        else
+            weight.Value = $"{fish.Weight * 100}g";
+
+        elements.Add(weight);
+
+        TooltipInfo info = new TooltipInfo
+        {
+            Header = fish.FishData.DisplayName,
+            Content = fish.FishData.Description,
+            Elements = elements,
+            Actions = new List<TooltipActionInfo>(),
+            Icon = fish.FishData.Icon
+        };
+
+
+        SetInventory(inventory);
+        
         _drag = this.GetComponent<DraggableItem>();
         _drag.InitializeDrag();
+        GetComponent<TooltipTriggerUI>().SetTooltipInfo(info);
     }
     
     public void SetInventory(InventoryController inventory) => _currentInventory = inventory;

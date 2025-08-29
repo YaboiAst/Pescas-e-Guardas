@@ -6,23 +6,9 @@ public class QuestInteraction : MonoBehaviour
 {
     [SerializeField] private List<ScriptableQuest> dialogues;
     private bool _canInteract;
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!other.CompareTag("Player")) return;
-        _canInteract = true;
-    }
 
-    private void OnTriggerExit(Collider other)
+    public void Interact()
     {
-        if (!other.CompareTag("Player")) return;
-        _canInteract = false;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P) && _canInteract)
-        {
-            QuestManager.Instance.CompleteQuest();
-        }
+        QuestManager.Instance.CompleteQuest();
     }
 }

@@ -52,7 +52,7 @@ public class WorldStateController : MonoBehaviour
         if (_currentCounter != prevWeather)
             OnWeatherChange?.Invoke(Weather);
 
-        Debug.unityLogger.Log("Weather Changed: " + Weather);
+        //Debug.unityLogger.Log("Weather Changed: " + Weather);
     }
 
     [Button]

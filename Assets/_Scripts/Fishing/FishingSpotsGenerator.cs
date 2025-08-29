@@ -17,7 +17,9 @@ public class FishingSpotsGenerator : MonoBehaviour
     private void Start()
     {
         GenerateFishingSpots();
+        QuestManager.OnStartQuest.AddListener(QuestStarted);
     }
+    private void QuestStarted(QuestProgress progress) => GenerateFishingSpots();
 
     private void ClearFishingSpots()
     {
@@ -29,7 +31,7 @@ public class FishingSpotsGenerator : MonoBehaviour
 
 
     [Button]
-    private void GenerateFishingSpots()
+    public void GenerateFishingSpots()
     {
         ClearFishingSpots();
 

@@ -1,28 +1,42 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueInteraction : MonoBehaviour
 {
-    [SerializeField] private List<ScriptableDialogue> dialogues;
+    public static DialogueInteraction Instance;   
+
+    public static readonly UnityEvent OnInteracted = new();
+
     private bool _canInteract;
-    private void OnTriggerEnter(Collider other)
+    private void Awake()
     {
-        if(!other.CompareTag("Player")) return;
-        _canInteract = true;
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
 
-    private void OnTriggerExit(Collider other)
+    public void Interact()
     {
-        if(!other.CompareTag("Player")) return;
-        _canInteract = false;
-    }
-    
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && _canInteract)
+        
+        if (QuestManager.HasQuestActive)
         {
-            DialogueManager.OnStartDialogue?.Invoke(dialogues[0]);
+            return;
         }
+
+        if (QuestManager.QuestCompleted)
+        {
+            QuestManager.OnFinishQuest?.Invoke();
+        }
+        else 
+        {
+            QuestManager.OnNextQuest?.Invoke();
+        }
+                    
     }
 }

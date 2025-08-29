@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CommonMinigameUI : CanvasController
@@ -39,7 +36,7 @@ public class CommonMinigameUI : CanvasController
         _probabilitiesUI.GenerateUI(lootTable);
         FishingManager.PrepFishMinigame();
     }
-    private void HideUI()
+    public void HideUI()
     {
         if (minigameStarted || !IsOpen) return;
         
@@ -51,7 +48,8 @@ public class CommonMinigameUI : CanvasController
     
     private void Update()
     {
-        if (minigameStarted) return;
+        if (minigameStarted)
+            return;
 
         if (Input.GetKeyDown(_playInteractionKey))
         {
@@ -60,6 +58,7 @@ public class CommonMinigameUI : CanvasController
         }
         else if (Input.GetKeyDown(_closeInteractionKey))
         {
+            MinigameManager.Instance.StopMinigame();
             HideUI();
         }
     }

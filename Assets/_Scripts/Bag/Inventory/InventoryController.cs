@@ -61,6 +61,8 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
     public static readonly UnityEvent ClearGrid = new UnityEvent();
     public static event Action OnItemPlaced;
+    public static readonly UnityEvent OnProgressQuest = new();
+
     private SelectionBuffer _tileBuffer;
     public int TotalPoints { get; private set; } = 0;
 
@@ -87,6 +89,23 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         _gridGenerator.SetBag(currentBag);
     }
 
+    private void Start()
+    {
+        QuestManager.OnFinishQuest.AddListener(ClearInventory);
+    }
+    private void ClearInventory()
+    {
+        for (int i = PlacedItems.Count - 1; i >= 0; i--)
+        {
+            ItemPlacer item = PlacedItems[i];
+            if (item)
+                Destroy(item.gameObject);
+        }
+
+        PlacedItems.Clear();
+
+        CalculatePoints();
+    }
     public static void CheckGrid(ItemPlacer item)
     {
         Instance.ResetBuffer();
@@ -145,6 +164,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
             TotalPoints += item.GetItemData().Fish.Points;
 
         OnItemPlaced?.Invoke();
+        OnProgressQuest.Invoke();
     }
 
     public static void ShowInventory()

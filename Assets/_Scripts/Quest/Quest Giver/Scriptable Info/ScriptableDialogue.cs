@@ -19,7 +19,7 @@ public class DialogueEvent
 public class DialogueBlock
 {
     [AllowNesting] public List<DialogueEvent> dialogueBlock;
-    public ScriptableQuest questToStart;
+    
 
     [Space(5)]
     public bool overrideJump;
@@ -31,5 +31,6 @@ public class DialogueBlock
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/New Dialogue")]
 public class ScriptableDialogue : ScriptableObject
 {
+    public ScriptableQuest questToStart;
     public List<DialogueBlock> dialogueBlocks;
 }

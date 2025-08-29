@@ -20,8 +20,8 @@ public class Interactable : MonoBehaviour
     [SerializeField] private UnityEvent _onInteractionCompleted;
     [SerializeField] private UnityEvent _onLastInteractionCompleted;
 
-    public Action OnPlayerEnterTrigger;
-    public Action OnPlayerExitTrigger;
+    public event Action OnPlayerEnterTrigger;
+    public event Action OnPlayerExitTrigger;
 
     // [SerializeField] private bool _requireMinigame;
     // [SerializeField] private MinigameSettings _minigameSettings;
@@ -142,7 +142,7 @@ public class Interactable : MonoBehaviour
         if (_allConditions == null)
             return false;
 
-        foreach (var condition in _allConditions)
+        foreach (IMet condition in _allConditions)
         {
             if (condition.Met() == false)
             {
@@ -161,6 +161,12 @@ public class Interactable : MonoBehaviour
         InteractablesInRangeChanged?.Invoke(s_interactablesInRange.Any());
         _onInteractionCompleted?.Invoke();
         AnyInteractionComplete?.Invoke(this, _interactionType.CompletedInteraction);
+    }
+
+    public void RemoveFromRange()
+    {
+        if (s_interactablesInRange.Remove(this))
+            InteractablesInRangeChanged?.Invoke(s_interactablesInRange.Any());
     }
 
 #if UNITY_EDITOR

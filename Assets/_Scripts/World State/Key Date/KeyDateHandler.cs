@@ -7,8 +7,10 @@ public class KeyDateHandler : MonoBehaviour
     [SerializeField] private List<KeyDate> _keyDates;
 
     [SerializeField] private List<KeyDate> _currentKeyDates;
-    private void OnValidate() => _keyDates = Extensions.GetAllInstances<KeyDate>().ToList();
 
+    #if UNITY_EDITOR
+    private void OnValidate() => _keyDates = Extensions.GetAllInstances<KeyDate>().ToList();
+    #endif
     private void Start()
     {
         TimeController.OnDayChange += DayChanged;
