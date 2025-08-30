@@ -22,7 +22,10 @@ public class InventoryUI : CanvasController
         if (Input.GetKeyDown(KeyCode.B))
             ToggleCanvas();
     }
-    private void UpdateUI() => _pointsText.SetText(InventoryPoints.Instance.TotalPoints.ToString());
+    private void UpdateUI()
+    {
+        _pointsText.SetText($"Pontuação: {InventoryPoints.Instance.TotalPoints}");
+    }
 
     public void ShowInventory() => ShowCanvas();
     public void HideInventory() => HideCanvas();

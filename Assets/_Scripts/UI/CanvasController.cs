@@ -8,11 +8,11 @@ public class CanvasController : MonoBehaviour
 
     [SerializeField] private bool _disableGO = true;
 
-    private static CanvasController _lastCanvasOpened;
+    //private static CanvasController _lastCanvasOpened;
 
     protected bool IsOpen;
 
-    protected void ShowCanvas()
+    protected virtual void ShowCanvas()
     {
         if (_disableGO)
         {
@@ -23,10 +23,10 @@ public class CanvasController : MonoBehaviour
         _canvasGroup.alpha = 1;
         IsOpen = true;
 
-        _lastCanvasOpened = this;
+        //_lastCanvasOpened = this;
     }
     
-    protected void HideCanvas()
+    protected virtual void HideCanvas()
     {
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
@@ -47,9 +47,9 @@ public class CanvasController : MonoBehaviour
             ShowCanvas();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            _lastCanvasOpened.HideCanvas();
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Escape))
+    //         _lastCanvasOpened.HideCanvas();
+    // }
 }

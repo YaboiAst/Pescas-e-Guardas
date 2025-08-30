@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -21,7 +22,11 @@ public class DiaryUI : CanvasController
             ToggleDiary();
     }
 
-    private void Start() => HideCanvas();
+    private IEnumerator Start()
+    {
+        yield return null;
+        HideCanvas();
+    }
 
     public void BindDatas(List<EntryData> entries)
     {

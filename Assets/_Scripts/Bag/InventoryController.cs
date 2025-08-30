@@ -40,7 +40,7 @@ public class SelectionBuffer
     public bool IsValid() => valid;
 }
 
-public class InventoryController : MonoBehaviour, IDataPersistence
+public class InventoryController : MonoBehaviour
 {
     public static InventoryController Instance;
 
@@ -185,13 +185,5 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public static void HideInventory()
     {
         Instance._ui.HideInventory();
-    }
-    
-    public void LoadData(GameData data)
-    {
-    }
-
-    public void SaveData(GameData data)
-    {
     }
 }

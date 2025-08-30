@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class TimeController : MonoBehaviour, IDataPersistence
+public class TimeController : MonoBehaviour
 {
     private static readonly int Blend = Shader.PropertyToID("_Blend");
     
@@ -52,6 +52,11 @@ public class TimeController : MonoBehaviour, IDataPersistence
         remove => _service.OnDayChange -= value;
     }
 
+    private void Awake()
+    {
+        _service = new TimeService(_timeSettings);
+    }
+
     private void Start()
     {
         _volume.profile.TryGet(out _colorAdjustments);
@@ -96,18 +101,5 @@ public class TimeController : MonoBehaviour, IDataPersistence
     {
         float rotation = _service.CalculateSunAngle();
         _sun.transform.rotation = Quaternion.AngleAxis(rotation, Vector3.right);
-    }
-
-    public void LoadData(GameData data)
-    {
-        _service = new TimeService(_timeSettings);
-    }
-
-    public void SaveData(GameData data)
-    {
-        data.TimeSettings = new TimeSettings(
-            _service.DaysPassed, 
-            _service.CurrentTime.Hour, 
-            _service.CurrentTime.Minute);
     }
 }

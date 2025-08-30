@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DiaryManager : MonoBehaviour, IDataPersistence
+public class DiaryManager : MonoBehaviour
 {
     public static DiaryManager Instance { get; private set; }
     private List<EntryData> _allEntries = new List<EntryData>();
@@ -19,8 +19,19 @@ public class DiaryManager : MonoBehaviour, IDataPersistence
         }
         
         Instance = this;
+    }
+
+    private void Start()
+    {
+        foreach (FishData fishData in FishManager.AllFishes)
+        {
+            EntryData entry = new EntryData(fishData);
+            _allEntries.Add(entry);
+        }
 
         _diaryUI = GetComponent<DiaryUI>();
+
+        _diaryUI.BindDatas(_allEntries);
     }
 
     public bool IsDiscovered(FishData fish)
@@ -38,29 +49,6 @@ public class DiaryManager : MonoBehaviour, IDataPersistence
             data.FishCaught(fish);
         else
             Debug.LogError("The fish you caught isn't in the Diary");
-    }
-
-    public void LoadData(GameData data)
-    {
-        if (data.AllEntries.Count < 1)
-        {
-            foreach (FishData fishData in FishManager.AllFishes)
-            {
-                EntryData entry = new EntryData(fishData);
-                _allEntries.Add(entry);
-            }
-        }
-        else
-        {
-            _allEntries = data.AllEntries;
-        }
-        
-        _diaryUI.BindDatas(_allEntries);
-    }
-
-    public void SaveData(GameData data)
-    {
-        data.AllEntries = _allEntries;
     }
 }
 

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-public class ShopItemUI : MonoBehaviour
+public class UpgradeObjectUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text _nameText;
-    [SerializeField] private TMP_Text _priceText;
     [SerializeField] private Upgrade _upgrade;
+    [SerializeField] private Sprite _promptIcon;
     private TooltipTriggerUI _tooltip;
 
     public Upgrade Upgrade => _upgrade;
@@ -17,7 +17,6 @@ public class ShopItemUI : MonoBehaviour
     {
         _upgrade = upgrade;
         _nameText.text = upgrade.DisplayName;
-        _priceText.text = $"${upgrade.Cost}";
 
         TooltipInfo tooltipInfo = new TooltipInfo
         {
@@ -30,11 +29,19 @@ public class ShopItemUI : MonoBehaviour
         _tooltip.SetTooltipInfo(tooltipInfo);
     }
 
-    public void OnBuyButtonPressed()
+    public void OnButtonPressed()
     {
         _tooltip.KillTooltip();
-
-        if(MoneyManager.Instance.TrySpend(Cost) && UpgradeManager.Equip(_upgrade))
+        ModalWindowManager.Instance.ModalWindow.ShowAsPrompt(
+            "Remover Upgrade",
+            _promptIcon,
+            $"Deseja remover o upgrade {_upgrade.DisplayName}?",
+            "Sim",
+            "Não", confirmAction: () =>
+        {
+            UpgradeManager.Unequip(_upgrade);
+            GetComponentInParent<UpgradeUI>().UpgradeUnequipped(this);
             Destroy(gameObject);
+        }, declineAction: () => {  });
     }
 }

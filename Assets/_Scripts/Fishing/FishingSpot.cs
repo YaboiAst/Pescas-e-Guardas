@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,7 +18,8 @@ public class FishingSpot : Spot
 
     public void UpdateFishingSpot(Location location)
     {
-        //_lootTable.UpdateLootTable(fishData, _fishLocationType);
+        List<FishData> randomFishes = FishManager.GetRandomFishes(3);
+        _lootTable.UpdateLootTable(randomFishes);
 
         FishingAttempts = Random.Range(3, 5);
         _lootTable.ValidateTable();

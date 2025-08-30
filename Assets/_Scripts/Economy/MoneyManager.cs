@@ -2,7 +2,7 @@ using System;
 using PedronsaDev.Console;
 using UnityEngine;
 
-public class MoneyManager : MonoBehaviour, IDataPersistence
+public class MoneyManager : MonoBehaviour
 {
 
 
@@ -48,14 +48,4 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
     public bool CanBuy(int value) => value <= _currentMoney;
 
     public int GetCurrentMoneyAmount() => _currentMoney;
-
-    public void LoadData(GameData data)
-    {
-        //_currentMoney = data.MoneyAmount;
-    }
-
-    public void SaveData(GameData data)
-    {
-        //data.MoneyAmount = _currentMoney;
-    }
 }

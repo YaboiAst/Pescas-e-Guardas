@@ -7,8 +7,9 @@ public class ShopController : CanvasController
 {
     [SerializeField] private GameObject _shopItemPrefab;
     [SerializeField] private Transform _itemsParent;
-
     [SerializeField] private List<ShopItemUI> _items = new List<ShopItemUI>();
+
+    public static bool ShopOpen;
 
     private void OnEnable() => PopulateShop();
 
@@ -37,8 +38,26 @@ public class ShopController : CanvasController
         PopulateShop();
     }
 
+    protected override void ShowCanvas()
+    {
+        base.ShowCanvas();
+        ShopOpen = true;
+    }
+
+    protected override void HideCanvas()
+    {
+        base.HideCanvas();
+        ShopOpen = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && IsOpen)
+            HideCanvas();
+    }
+
 }
-public class UpgradeDatabase
+public static class UpgradeDatabase
 {
     public static IEnumerable<Upgrade> GetRandomUpgrades(int amount)
     {

@@ -417,12 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lootTable:
-    LootDropItems:
-    - Item: {fileID: 11400000, guid: c33734535ef15004db796855be7767a3, type: 2}
-      ProbabilityWeight: 30
-      ProbabilityPercent: 100
-      ProbabilityRangeFrom: 0
-      ProbabilityRangeTo: 30
+    LootDropItems: []
   _locationType: 0
 --- !u!114 &3705233696976883802
 MonoBehaviour:

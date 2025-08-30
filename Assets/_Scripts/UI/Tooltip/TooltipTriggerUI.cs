@@ -8,18 +8,17 @@ public class TooltipTriggerUI : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private Tween _call;
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        _call = DOVirtual.DelayedCall(1.3f, () => { TooltipSystem.Instance.Show(_info); });
-    }
+    public void OnPointerEnter(PointerEventData eventData) => _call = DOVirtual.DelayedCall(1.3f, () => { TooltipSystem.Instance.Show(_info); });
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData) => KillTooltip();
+    public void KillTooltip()
     {
-        if (_call != null)
-        {
-            _call.Kill();
-            TooltipSystem.Instance.Hide();
-        }
+
+        if (_call == null)
+            return;
+
+        _call.Kill();
+        TooltipSystem.Instance.Hide();
     }
 
     public void SetTooltipInfo(TooltipInfo info) => _info = info;
