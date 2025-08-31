@@ -11,9 +11,9 @@ public class FishLootTable : GenericLootDropTable<FishItem,FishData>
         
         foreach (var fishData in FishManager.AllFishes.Where(t => t.Location == locationType))
         {
-            if (fishData != null)
+            if (fishData)
             {
-                var item = new FishItem();
+                FishItem item = new FishItem();
                 LootDropItems.Add(item);
             }
         }
@@ -27,35 +27,24 @@ public class FishLootTable : GenericLootDropTable<FishItem,FishData>
     {
         ClearLootTable();
 
-        foreach (var fishData in randomFishes)
+        foreach (FishData fishData in randomFishes)
         {
-            if (fishData != null)
+            if (fishData)
             {
-                var item = new FishItem();
+                FishItem item = new FishItem();
 
-                int weight = 0;
-                switch (fishData.Rarity)
+                int weight = fishData.Rarity switch
                 {
-                    case FishRarity.Common:
-                        weight = 50;
-                        break;
-                    case FishRarity.Uncommon:
-                        weight = 30;
-                        break;
-                    case FishRarity.Rare:
-                        weight = 15;
-                        break;
-                    case FishRarity.Epic:
-                        weight = 4;
-                        break;
-                    case FishRarity.Legendary:
-                        weight = 1;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+                    FishRarity.Common => 50,
+                    FishRarity.Uncommon => 30,
+                    FishRarity.Rare => 15,
+                    FishRarity.Epic => 4,
+                    FishRarity.Legendary => 1,
+                    _ => throw new ArgumentOutOfRangeException()
+                };
 
                 item.ProbabilityWeight = weight;
+                item.Item = fishData;
                 LootDropItems.Add(item);
             }
         }
