@@ -8,10 +8,13 @@ public class ShopController : CanvasController
     [SerializeField] private GameObject _shopItemPrefab;
     [SerializeField] private Transform _itemsParent;
     [SerializeField] private List<ShopItemUI> _items = new List<ShopItemUI>();
+    [SerializeField] private int _itemsToShow = 6;
 
     public static bool ShopOpen;
 
-    private void OnEnable() => PopulateShop();
+    private void Start() => QuestManager.OnFinishQuest.AddListener(PopulateShop);
+
+    //private void OnEnable() => PopulateShop();
 
     [Button("Populate Shop")]
     private void PopulateShop()
@@ -22,7 +25,7 @@ public class ShopController : CanvasController
         }
         _items.Clear();
 
-        IEnumerable<Upgrade> upgrades = UpgradeDatabase.GetRandomUpgrades(6);
+        IEnumerable<Upgrade> upgrades = UpgradeDatabase.GetRandomUpgrades(_itemsToShow);
         foreach (Upgrade upgrade in upgrades)
         {
             GameObject itemGO = Instantiate(_shopItemPrefab, _itemsParent);
@@ -35,7 +38,7 @@ public class ShopController : CanvasController
     public void Interact()
     {
         ShowCanvas();
-        PopulateShop();
+        //PopulateShop();
     }
 
     protected override void ShowCanvas()

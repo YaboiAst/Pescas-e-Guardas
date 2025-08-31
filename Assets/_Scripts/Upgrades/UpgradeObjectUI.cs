@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public class UpgradeObjectUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text _nameText;
@@ -25,7 +26,7 @@ public class UpgradeObjectUI : MonoBehaviour
             Actions = new List<TooltipActionInfo>(),
             Elements = new List<TooltipElementInfo>()
         };
-
+        GetComponent<Image>().sprite = upgrade.Icon;
         _tooltip.SetTooltipInfo(tooltipInfo);
     }
 

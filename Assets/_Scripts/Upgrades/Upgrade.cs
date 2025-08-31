@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrades/New Upgrade", order = 0)]
 public class Upgrade : ScriptableObject
 {
+    public Sprite Icon;
     public string DisplayName;
     [TextArea] public string Description;
     public int Cost;

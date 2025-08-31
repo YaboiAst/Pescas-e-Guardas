@@ -99,6 +99,11 @@ public class InventoryController : MonoBehaviour
         }
 
         PlacedItems.Clear();
+        _tileBuffer = new SelectionBuffer();
+        PlacedItems = new List<ItemPlacer>();
+
+        foreach (KeyValuePair<Vector2Int, GridTile> tile in _tiles)
+            tile.Value.Clear();
 
         CalculatePoints();
     }

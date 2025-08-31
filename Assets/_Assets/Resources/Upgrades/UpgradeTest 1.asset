@@ -15,7 +15,14 @@ MonoBehaviour:
   DisplayName: Upgrade A
   Description: N sei o que n sei q la
   Cost: 900
-  Effects: []
+  Effects:
+  - rid: 776905744856907776
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 776905744856907776
+      type: {class: FishRarityEffect, ns: , asm: Assembly-CSharp}
+      data:
+        _rarity: 0
+        _flatPerFish: 0
+        _multPerFish: 1
