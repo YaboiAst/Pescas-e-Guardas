@@ -178,16 +178,6 @@ MonoBehaviour:
       MethodName: PrintHelp
       Parameters: []
       Flags: 24
-  - Name: load_game
-    Description: Loads the game at saved state
-    TargetType: 0
-    Group: Default
-    SerializableMethod:
-      Type:
-        Data: 005e4461746150657273697374656e63654d616e616765722c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
-      MethodName: LoadGame
-      Parameters: []
-      Flags: 20
   - Name: load_scene
     Description: Loads a scene by name
     TargetType: 0
@@ -293,16 +283,6 @@ MonoBehaviour:
       MethodName: ResumeGame
       Parameters: []
       Flags: 24
-  - Name: save_game
-    Description: Saves the game at current state
-    TargetType: 0
-    Group: Default
-    SerializableMethod:
-      Type:
-        Data: 005e4461746150657273697374656e63654d616e616765722c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
-      MethodName: SaveGame
-      Parameters: []
-      Flags: 20
   - Name: set_active_scene
     Description: Sets the active scene by name
     TargetType: 0

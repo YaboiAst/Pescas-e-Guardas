@@ -1,50 +1,77 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class FishingManager
 {
     public static FishLootTable CurrentLootTable { get; private set; }
     public static FishItem CurrentFish { get; private set; }
 
+    private static Spot _spot;
+
     public static readonly UnityEvent OnFishComplete = new();
 
-    public static void StartFishing(FishLootTable lootTable)
+    public static void StartFishing(Spot fishingSpot, FishLootTable lootTable = null)
     {
+        _spot = fishingSpot;
         CurrentLootTable = lootTable;
         CommonMinigameUI.Instance.ShowUI(CurrentLootTable);
     }
 
     public static void PrepFishMinigame()
     {
-        MinigameManager.Instance.PrepMinigame(50, MinigameType.Circle, OnMinigameComplete);
+        int randomMinigame = Random.Range(0, 2);
+        MinigameType type = randomMinigame switch
+        {
+            0 => MinigameType.Key,
+            1 => MinigameType.Circle,
+            _ => MinigameType.Key
+        };
+
+        int difficulty = Random.Range(60, 85);
+
+        Debug.Log(difficulty);
+
+        MinigameManager.Instance.PrepMinigame(difficulty, type, OnMinigameComplete);
     }
-    
-    public static void PlayFishMinigame()
+
+    public static bool PlayFishMinigame()
     {
-        CurrentFish = CurrentLootTable.GetLootDropItem();
-        MinigameManager.Instance.PlayMinigame();
+        if (_spot.CanFish())
+        {
+            _spot.UseFishingAttempt();
+            MinigameManager.Instance.PlayMinigame();
+            return true;
+        }
+
+        return false;
     }
 
     public static void CloseFishMinigame()
     {
         MinigameManager.Instance.CloseMinigame();
+        if (_spot)
+        {
+            _spot.ShowInteraction();
+        }
     }
-    
+
     private static void OnMinigameComplete(MinigameResult result)
     {
+        _spot.OnMinigameComplete(result);
         if (result == MinigameResult.Won)
-        {
-            Debug.Log($"Voce pescou um {CurrentFish.Item.DisplayName} de raridade {CurrentFish.Item.Rarity}");
-            Fish fish = new Fish(CurrentFish.Item);
-            DiaryManager.Instance.RegisterFish(fish);
-            InventoryController.Instance.CreateItem(fish);
             OnFishComplete?.Invoke();
-        }
         else
-        {
             Debug.Log("Voce fracassou e nao pegou o peixe");
+
+        if (!_spot.CanFish())
+        {
+            CloseFishMinigame();
+            CommonMinigameUI.Instance.HideOnlyMinigameUI();
+            _spot.DestroySpot();
+            _spot = null;
         }
-        
+
         CurrentFish = null;
     }
 }

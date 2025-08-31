@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using NaughtyAttributes;
 
 public abstract class GenericLootDropItem<T>

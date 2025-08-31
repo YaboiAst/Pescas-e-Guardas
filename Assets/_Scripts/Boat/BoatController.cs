@@ -2,7 +2,7 @@ using System;
 using Cinemachine;
 using UnityEngine;
 
-public class BoatController : MonoBehaviour, IDataPersistence
+public class BoatController : MonoBehaviour
 {
     [SerializeField] private BoatTypeData _debugBoatType;
     [SerializeField] private BoatData _boatData;
@@ -20,6 +20,7 @@ public class BoatController : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+        _boatData.BoatTypeData = _debugBoatType;
         SetupBoat();
         _health.OnBoatDestroy += DestroyBoat;
     }
@@ -48,20 +49,6 @@ public class BoatController : MonoBehaviour, IDataPersistence
     private void DestroyBoat()
     {
         Debug.Log("Boat Destroyed");
-    }
-
-    public void LoadData(GameData data)
-    {
-        if (data.BoatData.BoatTypeData) 
-            _boatData = data.BoatData;
-        else
-            _boatData.BoatTypeData = _debugBoatType;
-    }
-
-    public void SaveData(GameData data)
-    {
-        _boatData.Position = transform.position;
-        data.BoatData = _boatData;
     }
 }
 
