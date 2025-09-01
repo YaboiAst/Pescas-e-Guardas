@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public class ShopItemUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private Upgrade _upgrade;
+    [SerializeField] private Image _image;
     private TooltipTriggerUI _tooltip;
 
     public Upgrade Upgrade => _upgrade;
@@ -26,6 +28,8 @@ public class ShopItemUI : MonoBehaviour
             Actions = new List<TooltipActionInfo>(),
             Elements = new List<TooltipElementInfo>()
         };
+
+        _image.sprite = upgrade.Icon;
 
         _tooltip.SetTooltipInfo(tooltipInfo);
     }
