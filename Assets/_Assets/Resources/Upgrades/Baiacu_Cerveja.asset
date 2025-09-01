@@ -15,7 +15,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 1d40a369acf777e439fef172d7bbc78e, type: 3}
   DisplayName: Baiacu na cerveja
   Description: Os baiacus com uma cervejinha valem 2x mais
-  Cost: 850
+  Cost: 100
   Effects:
   - rid: 184974162678251529
   references:

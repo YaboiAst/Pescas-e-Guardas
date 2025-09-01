@@ -15,7 +15,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 129c72532b193f94899be107593bbb71, type: 3}
   DisplayName: "Velocidade das \xE1guas"
   Description: "Adicione +500 pontos na sua pontua\xE7\xE3o final"
-  Cost: 1500
+  Cost: 100
   Effects:
   - rid: 184974162678251528
   references:
