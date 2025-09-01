@@ -141,6 +141,10 @@ public class InventoryController : MonoBehaviour
 
     public void UpdatePlacement(ItemPlacer item = null)
     {
+        bool contains = PlacedItems.Contains(item);
+        if (!contains)
+            PlacedItems.Add(item);
+
         foreach (var tile in _tileBuffer.buffer)
             tile.SetItemInTile(item);
 
@@ -148,12 +152,10 @@ public class InventoryController : MonoBehaviour
         foreach (ItemPlacer placedItem in PlacedItems)
             fishes.Add(placedItem.GetItemData().Fish.FishData);
 
-        if (!PlacedItems.Contains(item))
-        {
-            PlacedItems.Add(item);
-            InventoryPoints.Instance.NewFishAdded(fishes);
+        InventoryPoints.Instance.NewFishAdded(fishes);
+
+        if (!contains)
             CalculatePoints();
-        }
     }
 
     public bool RemoveItem(ItemPlacer item)

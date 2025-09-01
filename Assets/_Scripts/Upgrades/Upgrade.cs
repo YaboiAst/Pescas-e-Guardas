@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrades/New Upgrade", order = 0)]
@@ -83,14 +84,26 @@ public class FishRarityEffect : Effect
 
     public override void OnScore(PointsContext ctx)
     {
-        if (ctx?.Fishes == null) return;
-        if (!ctx.Fishes.TryGetValue(_rarity, out var count) || count <= 0) return;
+        if (ctx?.FishesByRarity == null) return;
+        if (!ctx.FishesByRarity.TryGetValue(_rarity, out var count) || count <= 0) return;
 
-        if (_flatPerFish != 0)
-            ctx.Add += _flatPerFish * count;
+        IEnumerable<FishData> fishDatas = ctx.Fishes.Where(t => t.Rarity == _rarity);
 
-        if (!Mathf.Approximately(_multPerFish, 1f) && _multPerFish > 0f)
-            ctx.Mult *= Mathf.Pow(_multPerFish, count);
+        int add = 0;
+
+        foreach (FishData fishData in fishDatas)
+        {
+            add += _flatPerFish;
+            add *= Mathf.RoundToInt(fishData.BasePoints * (_multPerFish - 1f));
+        }
+
+        ctx.Add += add;
+
+        // if (_flatPerFish != 0)
+        //     ctx.Add += _flatPerFish * count;
+        //
+        // if (!Mathf.Approximately(_multPerFish, 1f) && _multPerFish > 0f)
+        //     ctx.Mult *= Mathf.Pow(_multPerFish, count);
     }
 }
 
@@ -108,11 +121,11 @@ public class LuckEffect : Effect
 
     public override void OnEquip()
     {
-        FishingManager.LuckChance += _chanceIncrease;
+        FishingManager.LuckChance += _chanceIncrease / 100f;
     }
 
     public override void OnUnequip()
     {
-        FishingManager.LuckChance -= _chanceIncrease;
+        FishingManager.LuckChance -= _chanceIncrease / 100f;
     }
 }
