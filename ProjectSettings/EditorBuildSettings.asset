@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/_Scenes/Menu in\xEDcio.unity"
+    guid: a7df45f027f5612448fe5dc528f0dcd6
+  - enabled: 1
     path: Assets/_Scenes/Main/main.Mapa.unity
     guid: 036f48802107c1daca5fd374ef0bf3b3
   m_configObjects: {}
