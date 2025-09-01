@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78a06b624d52d574a96048b74b1381db, type: 3}
-  m_Name: MissaoTutorial
+  m_Name: Missao 5
   m_EditorClassIdentifier: 
   questInfo:
     questGiver: 'Pescador '
-    title: "Miss\xE3o 1 \u2013 Primeiros Arp\xF5es"
-    Points: 200
-    description: 'Aprenda a se tornar um pescador '
-    objectiveDescription: Consiga 100 pontos e retorne ao porto
+    title: "Miss\xE3o 5 \u2013 A Lenda do Mar"
+    Points: 5000
+    description: "Encontre as grandes lendas que nadam por a\xED"
+    objectiveDescription: Consiga 5000 pontos e retorne ao porto

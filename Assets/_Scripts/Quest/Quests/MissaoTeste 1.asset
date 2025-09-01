@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MissaoTeste 1
   m_EditorClassIdentifier: 
   questInfo:
-    questGiver: Polvo
-    title: Pescando mais
-    Points: 1000
-    description: Pesque mais
-    objectiveDescription: Consiga 1000 pontos e retorne ao porto
+    questGiver: Pescador
+    title: "Miss\xE3o 2 \u2013 Hora do Jantar"
+    Points: 500
+    description: "Pesque o suficiente para uma boa refei\xE7\xE3o"
+    objectiveDescription: Consiga 500 pontos e retorne ao porto

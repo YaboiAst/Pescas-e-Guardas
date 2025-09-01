@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uniqueID: abe7ee73-f61a-4e6e-ae7d-74a6afe8506b
   _displayName: "Tubar\xE3o"
-  _description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at
-    ligula tellus. Morbi faucibus sem nunc, in tincidunt nunc pellentesque at. Proin
-    eleifend metus vel ipsum mattis, eu mollis dolor vehicula. '
+  _description: "O terror dos mares. Enorme, intimidador e quase imposs\xEDvel de
+    encaixar no barco. Quem pega um, se consagra."
   _rarity: 4
-  _basePoints: 1000
+  _basePoints: 2000
   _icon: {fileID: 21300000, guid: 3091b91b00037a441bc831290c9cb11d, type: 3}
   _weightRange: {x: 8, y: 10}
   _location: 0

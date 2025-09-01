@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54af0f2288003894d87bd60b5594db90, type: 3}
-  m_Name: Peixe Comprido
+  m_Name: Truta
   m_EditorClassIdentifier: 
   _uniqueID: b3a0b6ed-5772-4a5b-b7b4-58e264773225
-  _displayName: Baiacu
-  _description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at
-    ligula tellus. Morbi faucibus sem nunc, in tincidunt nunc pellentesque at. Proin
-    eleifend metus vel ipsum mattis, eu mollis dolor vehicula. '
-  _rarity: 2
+  _displayName: Truta
+  _description: "\xC1gil e forte, adora nadar contra a correnteza. Seu corpo alongado
+    \xE9 f\xE1cil de reconhecer."
+  _rarity: 1
   _basePoints: 100
-  _icon: {fileID: 21300000, guid: 93a17670e07673443b40843f223c82ba, type: 3}
+  _icon: {fileID: 21300000, guid: 2fcbd5fdc1a31f546bf07848d358a6d4, type: 3}
   _weightRange: {x: 2, y: 7}
   _location: 0
   HasCustomShape: 0
-  Width: 2
-  Height: 2
+  Width: 3
+  Height: 1
   Shape:
-  - Cols: 0101
-  - Cols: 0101
+  - Cols: 010101
