@@ -8,7 +8,6 @@ TagManager:
   - PontosDePesca
   - Ilhas
   - Obstacle
-  - minimap camera
   layers:
   - Default
   - TransparentFX

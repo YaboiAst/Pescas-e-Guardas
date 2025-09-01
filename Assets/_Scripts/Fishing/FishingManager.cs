@@ -33,7 +33,7 @@ public class FishingManager
 
         int difficulty = Random.Range(70, 85);
 
-        //Debug.Log(difficulty);
+        Debug.Log(difficulty);
 
         MinigameManager.Instance.PrepMinigame(difficulty, type, OnMinigameComplete);
     }

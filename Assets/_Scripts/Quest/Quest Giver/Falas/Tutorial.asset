@@ -25,11 +25,3 @@ MonoBehaviour:
         whosTalkingIcon: {fileID: 21300000, guid: 686336d3f9a8e2849be11e7d0c0592de, type: 3}
     overrideJump: 0
     jumpToBlock: 0
-  - dialogueBlock:
-    - type: 0
-      textLine:
-        textLine: OBG
-        whosTalking: Pescador
-        whosTalkingIcon: {fileID: 21300000, guid: 686336d3f9a8e2849be11e7d0c0592de, type: 3}
-    overrideJump: 0
-    jumpToBlock: 0

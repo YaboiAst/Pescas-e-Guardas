@@ -38,7 +38,7 @@ public abstract class GenericLootDropTable<T,U> where T: GenericLootDropItem<U>
         }        
     }
 
-    public T GetLootDropItem(float luckModifier)
+    public T GetLootDropItem(float luckModifier = 0f)
     {
         _luckModifier = Mathf.Clamp(luckModifier, -1f, 1f);
 

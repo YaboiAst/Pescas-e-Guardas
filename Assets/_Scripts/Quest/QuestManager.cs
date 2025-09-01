@@ -1,42 +1,22 @@
 using System;
-using System.Collections.Generic;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class QuestBucket
-{
-    public int worldLevel;
-    public List<ScriptableDialogue> dialogues;
-}
 
 public class QuestManager : MonoBehaviour
 {
-    [SerializeField] public List<QuestBucket> dialoguesGroups;
     public static QuestManager Instance { get; private set; }
     public QuestProgress CurrentProgress { get; private set; }
 
-    public int currentWorldLevelIndex = 0;
-    public int currentDialogueIndex = 0;
+    public ScriptableDialogue nextQuest;
 
-    public static bool HasQuestActive => Instance?.CurrentProgress is { Status: QuestProgress.QuestStatus.InProgress };
-    public static bool QuestCompleted => Instance?.CurrentProgress is { Status: QuestProgress.QuestStatus.Completed };
-
-    public ProgressBar bar;
-
-    public float progress = 0;
-
-    public static readonly UnityEvent OnFinishQuest = new();
-
-    public static readonly UnityEvent OnNextQuest = new();
+    public static UnityEvent OnFinishQuest = new();
 
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
-    public bool IsComplete = false;
-    public bool isClaimed = false;
+    private bool IsComplete = false;
 
-    private void Awake()
+      private void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -45,31 +25,14 @@ public class QuestManager : MonoBehaviour
         }
 
         Instance = this;
-        CurrentProgress = null;
-        OnNextQuest.AddListener(NextQuest);
-        OnFinishQuest.AddListener(CompleteQuest);
 
         InventoryController.OnProgressQuest.AddListener(CheckQuestProgress);
         DialogueInteraction.OnInteracted.AddListener(CheckQuestIsCompleted);
-        DialogueManager.OnFinishDialogue.AddListener(() => isClaimed = !isClaimed);
     }
-
-    public static void ParseInteraction()
-    {
-        if (HasQuestActive)
-            return;
-
-        if (QuestCompleted)
-            OnFinishQuest?.Invoke();
-        else 
-            OnNextQuest?.Invoke();
-    }
-    
     public void AddQuest(MyQuestInfo quest)
     {
         CurrentProgress = new QuestProgress(quest);
         CurrentProgress.Status = QuestProgress.QuestStatus.InProgress;
-        
         OnStartQuest?.Invoke(CurrentProgress);
         Debug.Log($"Missão '{quest.title}' iniciada com status {CurrentProgress.Status}");
     }
@@ -78,18 +41,14 @@ public class QuestManager : MonoBehaviour
     {
         if (!CurrentProgress.IsValid())
             return;
-
-        bar.AlterarProgresso(0);
-
-        CurrentProgress.Status = QuestProgress.QuestStatus.Claimed;
+        
+        CurrentProgress.Status = QuestProgress.QuestStatus.Completed;
         Debug.Log($"Missão '{CurrentProgress.QuestData.title}' concluída!");
-        // OnFinishQuest?.Invoke();
+        OnFinishQuest?.Invoke();
 
-        IsComplete = false;
-        isClaimed = false;
-        DialogueManager.OnNextDialogueBlock?.Invoke(1);
+        UpdateQuest();
     }
-
+        
 
     private void CheckQuestProgress()
     {
@@ -97,37 +56,15 @@ public class QuestManager : MonoBehaviour
         if (CurrentProgress.Status != QuestProgress.QuestStatus.InProgress) return;
 
         int current = InventoryPoints.Instance.TotalPoints;
-        int goal = CurrentProgress.QuestData.objectivePoints;
+        int goal = CurrentProgress.QuestData.Points;
         Debug.Log($"O jogador tem '{current}' pontos. Ele precisa de '{goal}' pontos.");
-
-        progress = (float)current / goal;
-
-        bar.AlterarProgresso(progress);
 
         if (current >= goal)
         {
             IsComplete = true;
-            CurrentProgress.Status = QuestProgress.QuestStatus.Completed;
         }
     }
 
-    private void NextQuest()
-    {
-        if (CurrentProgress == null)
-        {
-            currentWorldLevelIndex = 0;
-            currentDialogueIndex = 0;
-        }
-        else 
-        {
-            if (!isClaimed)
-                return;
-            UpdateQuest();
-        }
-        var currentDialogue = dialoguesGroups[currentWorldLevelIndex].dialogues[currentDialogueIndex];
-        AddQuest(currentDialogue.questToStart.questInfo);
-        DialogueManager.OnStartDialogue?.Invoke(currentDialogue);
-    }
     private void CheckQuestIsCompleted()
     {
         if (IsComplete)
@@ -138,21 +75,24 @@ public class QuestManager : MonoBehaviour
 
     private void UpdateQuest()
     {
-   
-        int maxWorldLevelIndex = dialoguesGroups.Count - 1;
+        DialogueInteraction di = DialogueInteraction.Instance;
+
+        if (di == null) return;
+
+        int maxWorldLevelIndex = di.dialoguesGroups.Count - 1;
                
 
-        if (currentWorldLevelIndex <= maxWorldLevelIndex)
+        if ( di.currentWorldLevelIndex <= maxWorldLevelIndex)
         {
-            int maxDialogueIndex = dialoguesGroups[currentWorldLevelIndex].dialogues.Count - 1;
-            if (currentDialogueIndex < maxDialogueIndex)
+            int maxDialogueIndex = di.dialoguesGroups[di.currentWorldLevelIndex].dialogues.Count - 1;
+            if (di.currentDialogueIndex < maxDialogueIndex)
             {
-                currentDialogueIndex++;
+                di.currentDialogueIndex++;
             }
             else
             {
-                currentWorldLevelIndex++;
-                currentDialogueIndex = 0;
+                di.currentWorldLevelIndex++;
+                di.currentDialogueIndex = 0;
             }
         }
         else

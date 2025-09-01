@@ -61,8 +61,7 @@ public class InventoryPoints : MonoBehaviour
         {
             dic[fish.Rarity]++;
         }
-        _currentContext.FishesByRarity = dic;
-        _currentContext.Fishes = fishes;
+        _currentContext.Fishes = dic;
     }
 
     public int CalculateScore(int bp)
@@ -95,10 +94,7 @@ public class PointsContext
     public PointsContext(int basePoints) => BasePoints = basePoints;
 
     [SerializeField]
-    public SerializableDictionary<FishRarity, int> FishesByRarity = new SerializableDictionary<FishRarity, int>();
-
-    [SerializeField]
-    public List<FishData> Fishes = new List<FishData>();
+    public SerializableDictionary<FishRarity, int> Fishes = new SerializableDictionary<FishRarity, int>();
 
     public int FinalScore => Mathf.RoundToInt((BasePoints + Add) * Mult);
 }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Missao2
   m_EditorClassIdentifier: 
   questToStart: {fileID: 11400000, guid: 0f1829c792af7bf42bc6f38939da7d45, type: 2}
+  Id: 0
   dialogueBlocks:
   - dialogueBlock:
     - type: 0
@@ -22,18 +23,5 @@ MonoBehaviour:
           algo mais impressionante?"
         whosTalking: Lao Feng
         whosTalkingIcon: {fileID: 21300000, guid: 9b49fbd0d2ae9c84db3196cf1dfb4873, type: 3}
-    overrideJump: 0
-    jumpToBlock: 0
-  - dialogueBlock:
-    - type: 0
-      textLine:
-        textLine: hftyhfthdtfxh
-        whosTalking: Polvo
-        whosTalkingIcon: {fileID: 21300000, guid: c042410bbce24934e9cdd8258d43a378, type: 3}
-    - type: 0
-      textLine:
-        textLine: htfxhtfhxfthfth
-        whosTalking: Polvo
-        whosTalkingIcon: {fileID: 21300000, guid: c042410bbce24934e9cdd8258d43a378, type: 3}
     overrideJump: 0
     jumpToBlock: 0

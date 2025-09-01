@@ -3,9 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class DialogueGroup
+{
+    public int worldLevel;
+    public List<ScriptableDialogue> dialogues;
+}
+
 public class DialogueInteraction : MonoBehaviour
 {
-    public static DialogueInteraction Instance;   
+    public static DialogueInteraction Instance;
+
+    public int currentWorldLevelIndex = 0;
+    public int currentDialogueIndex = 0;
+
+    [SerializeField] public List<DialogueGroup> dialoguesGroups;
 
     public static readonly UnityEvent OnInteracted = new();
 
@@ -23,6 +35,7 @@ public class DialogueInteraction : MonoBehaviour
 
     public void Interact()
     {
-        QuestManager.ParseInteraction();
+        OnInteracted.Invoke();
+        DialogueManager.OnStartDialogue?.Invoke(dialoguesGroups[currentWorldLevelIndex].dialogues[currentDialogueIndex]);
     }
 }

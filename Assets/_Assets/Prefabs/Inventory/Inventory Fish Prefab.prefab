@@ -85,9 +85,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8525250395911848273}
   - component: {fileID: 2749655948642012164}
-  - component: {fileID: 7189498732711375761}
   - component: {fileID: 5886203035794895380}
-  - component: {fileID: 3305861527904303907}
+  - component: {fileID: 7189498732711375761}
   - component: {fileID: 5950264813126528966}
   m_Layer: 5
   m_Name: Inventory Fish Prefab
@@ -125,28 +124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2436259530282009151}
   m_CullTransparentMesh: 1
---- !u!114 &7189498732711375761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2436259530282009151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475e9b4acc5b850429cd449faf8c23ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 3607681997860342380}
-  blocksRects: []
-  _blocksRoot: {fileID: 8697377621065659725}
-  _blockPrefab: {fileID: 5801261638519148351, guid: 9397fd877fcaff746a70efb9268a3aa2, type: 3}
-  _data:
-    _fish:
-      _fishData: {fileID: 0}
-      _weight: 0
-      _points: 0
-  _currentInventory: {fileID: 0}
 --- !u!114 &5886203035794895380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e8a392c8b4cc8138063e0b5654e29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3305861527904303907
+--- !u!114 &7189498732711375761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,11 +145,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2436259530282009151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e089b62498ea0448f43d10cdf4d284, type: 3}
+  m_Script: {fileID: 11500000, guid: 475e9b4acc5b850429cd449faf8c23ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemLayoutGrid: {fileID: 116203969052408105}
-  rect: {fileID: 8525250395911848273}
+  _rect: {fileID: 8525250395911848273}
+  _image: {fileID: 3607681997860342380}
+  blocksRects: []
+  _blocksRoot: {fileID: 8697377621065659725}
+  _blockPrefab: {fileID: 5801261638519148351, guid: 9397fd877fcaff746a70efb9268a3aa2, type: 3}
+  _data:
+    _fish:
+      _fishData: {fileID: 0}
+      _weight: 0
+      _points: 0
+  _currentInventory: {fileID: 0}
 --- !u!114 &5950264813126528966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,11 +172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _info:
-    Icon: {fileID: 21300000, guid: a105a48bae5384b4cb0713da4b087e24, type: 3}
+    Icon: {fileID: 0}
     Header: Pexe C
-    Elements:
-    - Name: Points
-      Value: 300
+    Elements: []
     Actions: []
     Content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae
       fermentum tellus. Praesent et ullamcorper nunc. Vivamus molestie lacus ut facilisis

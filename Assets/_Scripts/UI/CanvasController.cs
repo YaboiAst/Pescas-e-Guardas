@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CanvasController : MonoBehaviour
 {
@@ -13,8 +12,6 @@ public class CanvasController : MonoBehaviour
 
     protected bool IsOpen;
 
-    public static readonly UnityEvent OnUIOpen = new(), OnUIClosed = new();
-    
     protected virtual void ShowCanvas()
     {
         if (_disableGO)
@@ -25,8 +22,8 @@ public class CanvasController : MonoBehaviour
         _canvasGroup.blocksRaycasts = true;
         _canvasGroup.alpha = 1;
         IsOpen = true;
-        
-        OnUIOpen?.Invoke();
+
+        //_lastCanvasOpened = this;
     }
     
     protected virtual void HideCanvas()
@@ -38,9 +35,8 @@ public class CanvasController : MonoBehaviour
         {
             _canvas.SetActive(false);
         }
+
         IsOpen = false;
-        
-        OnUIClosed?.Invoke();
     }
 
     protected void ToggleCanvas()

@@ -45,18 +45,6 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             if (!_gridRect.Overlaps(itemRect)) continue;
             
-            var screenPos = RectTransformUtility.WorldToScreenPoint(null, _tileVisual.rectTransform.position);
-            var pointerData = new PointerEventData(EventSystem.current) { position = screenPos };
-
-            var results = new List<RaycastResult>();
-            var raycaster = _tileVisual.canvas.GetComponent<GraphicRaycaster>();
-            raycaster.Raycast(pointerData, results);
-            if (results.Count > 0)
-            {
-                // O primeiro resultado é o que realmente está recebendo o clique
-                if (results[0].gameObject != _tileVisual.gameObject) continue;
-            }
-
             InventoryController.Instance.AddToBuffer(this);
             return;
         }
@@ -77,7 +65,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        var item = InventoryController.Instance.CurrentSelectedItem;
+        var item = InventoryController.Instance._currentSelectedItem;
         if (item is null) return;
         
         if (_rectT is null)
@@ -96,7 +84,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        var item = InventoryController.Instance.CurrentSelectedItem;
+        var item = InventoryController.Instance._currentSelectedItem;
         if (item is null) return;
         
         item.SetPositionStatus(false);
@@ -105,7 +93,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        var item = InventoryController.Instance.CurrentSelectedItem;
+        var item = InventoryController.Instance._currentSelectedItem;
        item?.HandleClick(eventData);
     }
     

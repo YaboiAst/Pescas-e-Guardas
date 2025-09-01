@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(DraggableItem)), RequireComponent(typeof(ItemResizer))]
 public class ItemPlacer : MonoBehaviour
 {
+    [SerializeField] private RectTransform _rect;
     [SerializeField] private Image _image;
     [SerializeField] private List<ItemPlacerBlock> blocksRects;
     [SerializeField] private RectTransform _blocksRoot;
     [SerializeField] private GameObject _blockPrefab;
 
+    private GridLayoutGroup _grid;
     private DraggableItem _drag;
-    private ItemResizer _resizer;
 
     private bool _isOnGrid = false;
 
@@ -25,14 +25,15 @@ public class ItemPlacer : MonoBehaviour
 
     public void Initialize(Fish fish, InventoryController inventory)
     {
-        SetInventory(inventory);
-        
-        _resizer = this.GetComponent<ItemResizer>();
-        _resizer.Resize(
-            Mathf.CeilToInt(inventory.GridCellSize.x),
-            new Vector2(fish.FishData.Width, fish.FishData.Height)
-            );
-        
+        _grid = _blocksRoot.GetComponent<GridLayoutGroup>();
+
+        _rect.sizeDelta = new Vector2(
+            fish.FishData.Width * _grid.cellSize.x,
+            fish.FishData.Height * _grid.cellSize.y
+        );
+
+        _image.sprite = fish.FishData.Icon;
+
         foreach (ShapeRow row in fish.FishData.Shape)
         {
             foreach (bool rowCol in row.Cols)
@@ -47,8 +48,6 @@ public class ItemPlacer : MonoBehaviour
                 _data = new ItemData(fish, block.transform.localPosition, 0);
             }
         }
-        
-        _image.sprite = fish.FishData.Icon;
 
         var elements = new List<TooltipElementInfo>();
 
@@ -105,7 +104,7 @@ public class ItemPlacer : MonoBehaviour
 
 
         SetInventory(inventory);
-        
+
         _drag = this.GetComponent<DraggableItem>();
         _drag.InitializeDrag();
         GetComponent<TooltipTriggerUI>().SetTooltipInfo(info);
@@ -208,7 +207,7 @@ public class ItemPlacer : MonoBehaviour
         int restX = _data.Fish.FishData.Width % 2;
         int restY = _data.Fish.FishData.Height % 2;
         
-        Vector2 cellSize = _currentInventory.GridCellSize;
+        Vector2 cellSize = _grid.cellSize;
         
         if (Mathf.Approximately(_blocksRoot.rotation.eulerAngles.z % 180f, 90f) || Mathf.Approximately(_blocksRoot.rotation.eulerAngles.z % 180f, -90f))
         {
