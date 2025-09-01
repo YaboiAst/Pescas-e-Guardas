@@ -15,6 +15,8 @@ MonoBehaviour:
   questInfo:
     questGiver: 'Pescador '
     title: "Miss\xE3o 1 \u2013 Primeiros Arp\xF5es"
-    Points: 200
     description: 'Aprenda a se tornar um pescador '
     objectiveDescription: Consiga 200 pontos e retorne ao porto
+    objectivePoints: 200
+    questBag: {fileID: 11400000, guid: 3dfa85a8f4f7fc04a934ec08d2969922, type: 2}
+    rewardValue: 0
