@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfo:
     questGiver: Polvo
-    title: Pescando mais
-    Points: 4000
-    description: Pesque mais e mais, nunca acaba
-    objectiveDescription: Consiga 4000 pontos e retorne ao porto
+    title: "Miss\xE3o 4 \u2013 Ca\xE7a ao Raro"
+    Points: 2000
+    description: Pesque peixes raros e valiosos
+    objectiveDescription: Consiga 2000 pontos e retorne ao porto

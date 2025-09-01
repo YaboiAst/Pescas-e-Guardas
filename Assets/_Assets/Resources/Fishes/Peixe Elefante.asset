@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54af0f2288003894d87bd60b5594db90, type: 3}
-  m_Name: Peixe Simples
+  m_Name: Peixe Elefante
   m_EditorClassIdentifier: 
-  _uniqueID: a2d7eaac-b3d0-4609-b09a-fde8ffeb7c4d
-  _displayName: Sardinha
-  _description: "Um peixe simples e comum. Encontrado por todo o oceano, fica um
-    del\xEDcia frito."
-  _rarity: 0
-  _basePoints: 100
-  _icon: {fileID: 21300000, guid: 6ec08541ae8b63b4d98006a635078e01, type: 3}
+  _uniqueID: abe7ee73-f61a-4e6e-ae7d-74a6afe8506b
+  _displayName: Peixe Elefante
+  _description: "Chamado assim por sua tromba caracter\xEDstica. Ex\xF3tico e raro,
+    vale muito para colecionadores."
+  _rarity: 3
+  _basePoints: 1500
+  _icon: {fileID: 21300000, guid: e2a1069972bb3a14f9e2242aa150006b, type: 3}
   _weightRange: {x: 8, y: 10}
   _location: 0
-  HasCustomShape: 0
-  Width: 2
-  Height: 1
+  HasCustomShape: 1
+  Width: 5
+  Height: 2
   Shape:
-  - Cols: 0101
+  - Cols: 0101010101
+  - Cols: 0001010100
