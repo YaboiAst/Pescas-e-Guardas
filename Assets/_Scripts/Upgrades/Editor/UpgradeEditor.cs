@@ -6,6 +6,7 @@ using UnityEngine;
 [CustomEditor(typeof(Upgrade))]
 public class UpgradeEditor : Editor
 {
+    private SerializedProperty _iconProp;
     private SerializedProperty _nameProp;
     private SerializedProperty _descProp;
     private SerializedProperty _costProp;
@@ -16,6 +17,7 @@ public class UpgradeEditor : Editor
 
     private void OnEnable()
     {
+        _iconProp = serializedObject.FindProperty("Icon");
         _nameProp = serializedObject.FindProperty("DisplayName");
         _descProp = serializedObject.FindProperty("Description");
         _costProp = serializedObject.FindProperty("Cost");
@@ -33,6 +35,7 @@ public class UpgradeEditor : Editor
     {
         serializedObject.Update();
 
+        EditorGUILayout.PropertyField(_iconProp);
         EditorGUILayout.PropertyField(_nameProp);
         EditorGUILayout.PropertyField(_descProp);
         EditorGUILayout.PropertyField(_costProp);

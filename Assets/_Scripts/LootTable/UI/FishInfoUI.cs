@@ -13,7 +13,7 @@ public class FishInfoUI : MonoBehaviour
 
         _fishIcon.color = isDiscovered ? Color.white : Color.black;
 
-        _fishProbabilityText.SetText(fish.ProbabilityPercent.ToString("F2") + "%");
+        _fishProbabilityText.SetText($"{(int)fish.ProbabilityPercent}%");
 
         Color textColor = Color.white;
 

@@ -140,7 +140,10 @@ public class MinigameManager : MonoBehaviour
     }
     public void StopMinigame()
     {
-        _currentMinigame.StopMinigame();
+        if (_currentMinigame)
+        {
+            _currentMinigame.StopMinigame();
+        }
         CloseMinigame();
     }
 }

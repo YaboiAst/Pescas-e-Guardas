@@ -60,8 +60,9 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         _tileVisual.color = _defaultColor;
     }
-    
-    // METHODS CALLED BY USER INTERACTION
+
+    public void Clear() => _itemInTile = null;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         var item = InventoryController.Instance._currentSelectedItem;

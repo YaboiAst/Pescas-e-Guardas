@@ -1,20 +1,19 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public class UpgradeObjectUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private Upgrade _upgrade;
     [SerializeField] private Sprite _promptIcon;
+    [SerializeField] private Image _image;
     private TooltipTriggerUI _tooltip;
 
-    public Upgrade Upgrade => _upgrade;
-    public int Cost => _upgrade.Cost;
-
-    private void OnEnable() => _tooltip = GetComponent<TooltipTriggerUI>();
 
     public void SetItem(Upgrade upgrade)
     {
+        _tooltip = GetComponent<TooltipTriggerUI>();
         _upgrade = upgrade;
         _nameText.text = upgrade.DisplayName;
 
@@ -25,6 +24,8 @@ public class UpgradeObjectUI : MonoBehaviour
             Actions = new List<TooltipActionInfo>(),
             Elements = new List<TooltipElementInfo>()
         };
+
+        _image.sprite = upgrade.Icon;
 
         _tooltip.SetTooltipInfo(tooltipInfo);
     }

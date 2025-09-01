@@ -28,7 +28,7 @@ public class FishingManager
             _ => MinigameType.Key
         };
 
-        int difficulty = Random.Range(60, 85);
+        int difficulty = Random.Range(70, 85);
 
         Debug.Log(difficulty);
 
@@ -70,6 +70,10 @@ public class FishingManager
             CommonMinigameUI.Instance.HideOnlyMinigameUI();
             _spot.DestroySpot();
             _spot = null;
+        }
+        else
+        {
+            CommonMinigameUI.Instance.GenerataProbabilitiesUI(CurrentLootTable);
         }
 
         CurrentFish = null;
