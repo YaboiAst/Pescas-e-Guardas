@@ -10,18 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7c013a61d5f4fb2bd0bf40d74315573, type: 3}
+<<<<<<<< HEAD:Assets/_Assets/Resources/Upgrades/Multi_Incomum.asset
+  m_Name: Multi_Incomum
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 64e054be4b8021948ba47fcb0667871d, type: 3}
+  DisplayName: Explorador Marinho
+  Description: Seus peixes incomuns valem 1.5x
+  Cost: 1000
+========
   m_Name: Multi_Sardinha
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: bab8a863eb11ad04a9212418dcfd52bf, type: 3}
   DisplayName: Mestre das Sardinhas
   Description: Suas sardinhas valem 1.5x mais pontos
   Cost: 900
+>>>>>>>> c0e9fe6a6712d94b4e6716e828a97f527b60bd99:Assets/_Assets/Resources/Upgrades/Multi_Sardinha.asset
   Effects:
-  - rid: 2919632220338257921
+  - rid: 184974162678251526
   references:
     version: 2
     RefIds:
-    - rid: 2919632220338257921
-      type: {class: LuckEffect, ns: , asm: Assembly-CSharp}
+    - rid: 184974162678251526
+      type: {class: FishRarityEffect, ns: , asm: Assembly-CSharp}
       data:
-        _chanceIncrease: 10
+        _rarity: 1
+        _flatPerFish: 0
+        _multPerFish: 1.5
