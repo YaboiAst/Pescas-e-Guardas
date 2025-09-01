@@ -48,7 +48,7 @@ public class FishingSpot : Spot
 
     public override void UseFishingAttempt()
     {
-        _currentFish = _lootTable.GetLootDropItem();
+        _currentFish = _lootTable.GetLootDropItem(FishingManager.LuckChance);
         base.UseFishingAttempt();
     }
 }

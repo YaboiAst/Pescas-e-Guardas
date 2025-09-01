@@ -93,3 +93,26 @@ public class FishRarityEffect : Effect
             ctx.Mult *= Mathf.Pow(_multPerFish, count);
     }
 }
+
+
+[System.Serializable]
+public class LuckEffect : Effect
+{
+    [SerializeField] private float _chanceIncrease = 0.1f;
+
+    public LuckEffect() { }
+    public LuckEffect(float chanceIncrease)
+    {
+        _chanceIncrease = chanceIncrease;
+    }
+
+    public override void OnEquip()
+    {
+        FishingManager.LuckChance += _chanceIncrease;
+    }
+
+    public override void OnUnequip()
+    {
+        FishingManager.LuckChance -= _chanceIncrease;
+    }
+}

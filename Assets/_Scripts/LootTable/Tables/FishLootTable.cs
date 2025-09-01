@@ -48,5 +48,13 @@ public class FishLootTable : GenericLootDropTable<FishItem,FishData>
                 LootDropItems.Add(item);
             }
         }
+
+        SortByRarity();
+    }
+
+
+    public void SortByRarity()
+    {
+        LootDropItems = LootDropItems.OrderByDescending(fish => fish.Item.Rarity).ToList();
     }
 }

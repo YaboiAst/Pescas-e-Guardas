@@ -144,18 +144,16 @@ public class InventoryController : MonoBehaviour
         foreach (var tile in _tileBuffer.buffer)
             tile.SetItemInTile(item);
 
-        if (!PlacedItems.Contains(item))
-        {
-            PlacedItems.Add(item);
-        }
-
         List<FishData> fishes = new List<FishData>();
         foreach (ItemPlacer placedItem in PlacedItems)
             fishes.Add(placedItem.GetItemData().Fish.FishData);
 
-        InventoryPoints.Instance.NewFishAdded(fishes);
-
-        CalculatePoints();
+        if (!PlacedItems.Contains(item))
+        {
+            PlacedItems.Add(item);
+            InventoryPoints.Instance.NewFishAdded(fishes);
+            CalculatePoints();
+        }
     }
 
     public bool RemoveItem(ItemPlacer item)

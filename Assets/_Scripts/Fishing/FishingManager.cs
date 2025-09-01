@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -10,6 +11,8 @@ public class FishingManager
     private static Spot _spot;
 
     public static readonly UnityEvent OnFishComplete = new();
+    public static float LuckChance = 0;
+
 
     public static void StartFishing(Spot fishingSpot, FishLootTable lootTable = null)
     {

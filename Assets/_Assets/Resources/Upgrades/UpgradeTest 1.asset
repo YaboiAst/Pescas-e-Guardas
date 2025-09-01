@@ -26,4 +26,4 @@ MonoBehaviour:
       data:
         _rarity: 0
         _flatPerFish: 0
-        _multPerFish: 1
+        _multPerFish: 1.5
