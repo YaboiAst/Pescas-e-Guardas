@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfo:
     questGiver: 'Pescador '
-    title: Aprenda a pescar
-    Points: 100
+    title: "Miss\xE3o 1 \u2013 Primeiros Arp\xF5es"
+    Points: 200
     description: 'Aprenda a se tornar um pescador '
-    objectiveDescription: Consiga 100 pontos e retorne ao porto
+    objectiveDescription: Consiga 200 pontos e retorne ao porto

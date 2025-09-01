@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -76,6 +76,86 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5093229591265529562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654249792671744613}
+  - component: {fileID: 5558023473674814086}
+  m_Layer: 0
+  m_Name: Boid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654249792671744613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5093229591265529562}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7825427056805968979}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5558023473674814086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5093229591265529562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa35b9623162614881082335023629b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behavioralCh: {x: 2, y: 6}
+  debug: 0
+  flockNum: 4
+  fragmentedFlock: 30
+  fragmentedFlockYLimit: 0.5
+  migrationFrequency: 0.1
+  posChangeFrequency: 0.5
+  smoothChFrequency: 0.5
+  birdPrefs:
+  - {fileID: 4129025455754738740, guid: cff4488b3aee2a0458a1b9d6bab2e00f, type: 3}
+  - {fileID: 8063446369752488870, guid: 55cb9c45e3ed3434180f86c971f4d68e, type: 3}
+  - {fileID: 6945538781541883687, guid: a36630dce2ac7c9469b30f66c35b3fa1, type: 3}
+  birdsNum: 20
+  birdSpeed: 1
+  fragmentedBirds: 11
+  fragmentedBirdsYLimit: 0.4
+  soaring: 2
+  verticalWawe: 7
+  rotationClamp: 0
+  rotationClampValue: 50
+  scaleRandom: {x: 1, y: 1.5}
+  danger: 0
+  dangerRadius: 15
+  dangerSpeed: 1.5
+  dangerSoaring: 0.5
+  dangerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _colors:
+  - {r: 0.8207547, g: 0.3445621, b: 0.3445621, a: 0}
+  - {r: 0.8113208, g: 0.65897506, b: 0.41714135, a: 0}
+  - {r: 0.8018868, g: 0.7518732, b: 0.2988163, a: 0}
+  - {r: 0.29803926, g: 0.8, b: 0.33214918, a: 0}
+  - {r: 0.29803926, g: 0.7590867, b: 0.8, a: 0}
+  - {r: 0.29803926, g: 0.4218115, b: 0.8, a: 0}
+  - {r: 0.73274213, g: 0.29803926, b: 0.8, a: 0}
 --- !u!1 &5138528661524935105
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 3.01}
+  m_AnchoredPosition: {x: 0, y: 8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4646514654108387522
@@ -226,7 +306,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7222628050479278079
 CanvasRenderer:
@@ -256,7 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87a85bd6801cca54c90c62f9248bab91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34eb8168e06e6c94384f5e0f0945408b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -300,6 +380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2382777332370385083}
+  - {fileID: 1654249792671744613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &5084375110743506930
@@ -335,29 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969a3dbd962ca9e40bed2fe866046690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minigameType: 2
   _lootTable:
-    LootDropItems:
-    - Item: {fileID: 11400000, guid: c33734535ef15004db796855be7767a3, type: 2}
-      ProbabilityWeight: 30
-      ProbabilityPercent: 40
-      ProbabilityRangeFrom: 0
-      ProbabilityRangeTo: 30
-    - Item: {fileID: 11400000, guid: 88600f119a5e1c945bc74b99fbbc7092, type: 2}
-      ProbabilityWeight: 20
-      ProbabilityPercent: 26.666666
-      ProbabilityRangeFrom: 30
-      ProbabilityRangeTo: 50
-    - Item: {fileID: 11400000, guid: 1a595ebf3e742074484c5f15ef557663, type: 2}
-      ProbabilityWeight: 15
-      ProbabilityPercent: 20
-      ProbabilityRangeFrom: 50
-      ProbabilityRangeTo: 65
-    - Item: {fileID: 11400000, guid: 5333f43e01eb22a4fb6aec63ff30781a, type: 2}
-      ProbabilityWeight: 10
-      ProbabilityPercent: 13.333333
-      ProbabilityRangeFrom: 65
-      ProbabilityRangeTo: 75
+    LootDropItems: []
   _locationType: 0
 --- !u!114 &3705233696976883802
 MonoBehaviour:

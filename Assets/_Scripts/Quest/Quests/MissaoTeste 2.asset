@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MissaoTeste 2
   m_EditorClassIdentifier: 
   questInfo:
-    questGiver: Polvo
-    title: Pescando mais
-    Points: 2000
-    description: Pesque mais e mais
-    objectiveDescription: Consiga 2000 pontos e retorne ao porto
+    questGiver: Lao Feng
+    title: "Miss\xE3o 3 \u2013 Desafio do Oceano"
+    Points: 1000
+    description: Prove seu valor para os pescadores
+    objectiveDescription: Consiga 1000 pontos e retorne ao porto

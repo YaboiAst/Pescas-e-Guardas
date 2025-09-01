@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,11 +9,13 @@ public class CanvasController : MonoBehaviour
 
     [SerializeField] private bool _disableGO = true;
 
+    //private static CanvasController _lastCanvasOpened;
+
     protected bool IsOpen;
-    
+
     public static readonly UnityEvent OnUIOpen = new(), OnUIClosed = new();
     
-    protected void ShowCanvas()
+    protected virtual void ShowCanvas()
     {
         if (_disableGO)
         {
@@ -26,7 +29,7 @@ public class CanvasController : MonoBehaviour
         OnUIOpen?.Invoke();
     }
     
-    protected void HideCanvas()
+    protected virtual void HideCanvas()
     {
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
@@ -47,4 +50,10 @@ public class CanvasController : MonoBehaviour
         else
             ShowCanvas();
     }
+
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Escape))
+    //         _lastCanvasOpened.HideCanvas();
+    // }
 }

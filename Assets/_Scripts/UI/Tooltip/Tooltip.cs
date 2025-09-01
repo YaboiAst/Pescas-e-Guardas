@@ -83,7 +83,7 @@ public class Tooltip : MonoBehaviour
             _headerField.text = info.Header;
         }
 
-        if (!info.Icon)
+        if (!info.Icon || info.Icon == null)
         {
             _headerIcon.gameObject.SetActive(false);
         }
@@ -107,7 +107,7 @@ public class Tooltip : MonoBehaviour
         {
             _elementsParent.gameObject.SetActive(false);
         }
-        
+
         if (info.Actions.Count > 0)
         {
             _actionsParent.gameObject.SetActive(true);

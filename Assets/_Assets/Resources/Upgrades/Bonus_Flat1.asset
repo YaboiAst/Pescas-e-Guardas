@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c013a61d5f4fb2bd0bf40d74315573, type: 3}
+  m_Name: Bonus_Flat1
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 129c72532b193f94899be107593bbb71, type: 3}
+  DisplayName: "Velocidade das \xE1guas"
+  Description: "Adicione +500 pontos na sua pontua\xE7\xE3o final"
+  Cost: 100
+  Effects:
+  - rid: 184974162678251528
+  references:
+    version: 2
+    RefIds:
+    - rid: 184974162678251528
+      type: {class: FlatBonusEffect, ns: , asm: Assembly-CSharp}
+      data:
+        _amount: 500

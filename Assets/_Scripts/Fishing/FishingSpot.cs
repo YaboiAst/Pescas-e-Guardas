@@ -1,49 +1,54 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class FishingSpot : MonoBehaviour
+public class FishingSpot : Spot
 {
-    [SerializeField] private MinigameType _minigameType;
-    
     [SerializeField] private FishLootTable _lootTable;
     [SerializeField] private Location _locationType;
-    private Interactable _interactable;
-
-    private FishData _currentFish;
-
-    private int _fishingAttempts = 3;
-
-
-    private void Start()
-    {
-    }
+    private FishItem _currentFish;
 
     private void OnValidate() => _lootTable.ValidateTable();
 
+    protected override void Start()
+    {
+        UpdateFishingSpot(_locationType);
+        base.Start();
+    }
+
     public void UpdateFishingSpot(Location location)
     {
-        //_lootTable.UpdateLootTable(fishData, _fishLocationType);
-        _fishingAttempts = Random.Range(3, 5);
+        List<FishData> randomFishes = FishManager.GetRandomFishes(3);
+        _lootTable.UpdateLootTable(randomFishes);
+
+        FishingAttempts = Random.Range(3, 5);
         _lootTable.ValidateTable();
     }
 
-    public void UseFishingAttempt()
+    public override void Interact()
     {
-        _fishingAttempts--;
-        if (_fishingAttempts < 0)
-            _fishingAttempts = 0;
+        FishingManager.StartFishing(this, _lootTable);
+        base.Interact();
     }
 
-    public bool CanFish() => _fishingAttempts > 0;
+    public override void OnMinigameComplete(MinigameResult result)
+    {
+        if (result == MinigameResult.Won)
+        {
+            Debug.Log($"Voce pescou um {_currentFish.Item.DisplayName} de raridade {_currentFish.Item.Rarity}");
+            Fish fish = new Fish(_currentFish.Item);
+            DiaryManager.Instance.RegisterFish(fish);
+            InventoryController.Instance.CreateItem(fish);
+        }
+        else
+        {
 
-    public void Interact()
-    {
-        FishingManager.StartFishing(_lootTable, this);
+        }
     }
-    public void DestroySpot()
+
+    public override void UseFishingAttempt()
     {
-        _interactable.RemoveFromRange();
-        ObjectPoolManager.ReturnObjectToPool(this.gameObject);
+        _currentFish = _lootTable.GetLootDropItem(FishingManager.LuckChance);
+        base.UseFishingAttempt();
     }
 }

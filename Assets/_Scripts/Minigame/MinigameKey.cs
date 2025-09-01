@@ -44,6 +44,12 @@ public class MinigameKey : Minigame
         GenerateNewTargetArea();
     }
 
+    public override void StartMinigame()
+    {
+        base.StartMinigame();
+        GenerateNewTargetArea();
+    }
+
     protected override void Update()
     {
         if (_isStopped)

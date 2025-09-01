@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -5,9 +6,11 @@ public class FishingSpotProbabilitiesUI : MonoBehaviour
 {
     [SerializeField] private Transform _prefabParent;
     [SerializeField] private GameObject _probabilityPrefab;
-    
+
+
     public void GenerateUI(FishLootTable fishes)
     {
+        ClearUI();
         foreach (FishItem fish in fishes.LootDropItems)
         {
             FishInfoUI fishInfo = ObjectPoolManager.SpawnGameObject(_probabilityPrefab, _prefabParent, quaternion.identity).GetComponent<FishInfoUI>();

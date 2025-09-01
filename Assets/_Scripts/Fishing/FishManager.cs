@@ -23,8 +23,21 @@ public class FishManager : MonoBehaviour
         }
     }
 
-    // public FishData GetFishByID(string id)
-    // {
-    //     
-    // }
+    public static List<FishData> GetRandomFishes(int number)
+    {
+        List<FishData> selectedFishes = new List<FishData>();
+        List<FishData> availableFishes = new List<FishData>(AllFishes);
+
+        for (int i = 0; i < number; i++)
+        {
+            if (availableFishes.Count == 0)
+                break;
+
+            int randomIndex = Random.Range(0, availableFishes.Count);
+            selectedFishes.Add(availableFishes[randomIndex]);
+            availableFishes.RemoveAt(randomIndex);
+        }
+
+        return selectedFishes;
+    }
 }

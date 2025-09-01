@@ -104,13 +104,13 @@ public class MinigameManager : MonoBehaviour
     private MinigameSettings GenerateMinigameSettings(int difficulty, MinigameType type)
     {
                 const float MIN_SPEED = 10f, MAX_SPEED = 100f;
-                const float MIN_TARGET_AREA_SIZE = 10f, MAX_TARGET_AREA_SIZE = 100f;
+                const float MIN_TARGET_AREA_SIZE = 20f, MAX_TARGET_AREA_SIZE = 60f;
                 const float MIN_CRITICAL_SUCCESS = 10f, MAX_CRITICAL_SUCCESS = 40f;
                 const float MIN_SUCCESS = 5f, MAX_SUCCESS = 25f;
                 const float MIN_FAILURE = 5f, MAX_FAILURE = 20f;
-                const float MIN_DURATION = 10f, MAX_DURATION = 30f;
+                const float MIN_DURATION = 10f, MAX_DURATION = 20f;
                 const float MIN_OVERTIME_DECREASE = 10f, MAX_OVERTIME_DECREASE = 20f;
-                const float MIN_DECREASE_TIMER = 1f, MAX_DECREASE_TIMER = 5f;
+                const float MIN_DECREASE_TIMER = 4f, MAX_DECREASE_TIMER = 8f;
 
                 difficulty = difficulty switch
                 {
@@ -119,14 +119,14 @@ public class MinigameManager : MonoBehaviour
                     _ => difficulty
                 };
 
-                bool shouldDecreaseOvertime = difficulty > 50;
+                bool shouldDecreaseOvertime = difficulty > 80;
                 float t = Mathf.Clamp01((difficulty - 1) / 99f);
                 
         
                 MinigameSettings settings = new MinigameSettings(type)
                 {
                     Speed = Mathf.Lerp(MIN_SPEED, MAX_SPEED, t),
-                    TargetAreaSize = Mathf.Lerp(MIN_TARGET_AREA_SIZE, MAX_TARGET_AREA_SIZE, t),
+                    TargetAreaSize = Mathf.Lerp(MIN_TARGET_AREA_SIZE, MAX_TARGET_AREA_SIZE, 1 - t),
                     CriticalSuccessProgress = Mathf.Lerp(MIN_CRITICAL_SUCCESS, MAX_CRITICAL_SUCCESS, 1 - t),
                     SuccessProgress = Mathf.Lerp(MIN_SUCCESS, MAX_SUCCESS, 1 - t),
                     FailureProgress = Mathf.Lerp(MIN_FAILURE, MAX_FAILURE, t),
@@ -140,7 +140,10 @@ public class MinigameManager : MonoBehaviour
     }
     public void StopMinigame()
     {
-        _currentMinigame.StopMinigame();
+        if (_currentMinigame)
+        {
+            _currentMinigame.StopMinigame();
+        }
         CloseMinigame();
     }
 }

@@ -42,7 +42,7 @@ public class SelectionBuffer
     public bool IsValid() => valid;
 }
 
-public class InventoryController : MonoBehaviour, IDataPersistence
+public class InventoryController : MonoBehaviour
 {
     public static InventoryController Instance;
 
@@ -65,11 +65,15 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public static readonly UnityEvent OnProgressQuest = new();
 
     private SelectionBuffer _tileBuffer;
-    public int TotalPoints { get; private set; } = 0;
+
+    private int _basePoints;
+    // public int TotalPoints { get; private set; } = 0;
 
     public List<ItemPlacer> PlacedItems;
     private InventoryUI _ui;
     private GridGeneration _gridGenerator;
+
+    public static event Action OnItemPlaced;
 
     public Vector2 GridCellSize => _gridGenerator.GridRectSize;
     
@@ -113,6 +117,11 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         }
 
         PlacedItems.Clear();
+        _tileBuffer = new SelectionBuffer();
+        PlacedItems = new List<ItemPlacer>();
+
+        foreach (KeyValuePair<Vector2Int, GridTile> tile in _tiles)
+            tile.Value.Clear();
 
         CalculatePoints();
     }
@@ -140,10 +149,16 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         foreach (var tile in _tileBuffer.buffer)
             tile.SetItemInTile(item);
 
-        if (!PlacedItems.Contains(item))
-            PlacedItems.Add(item);
+        List<FishData> fishes = new List<FishData>();
+        foreach (ItemPlacer placedItem in PlacedItems)
+            fishes.Add(placedItem.GetItemData().Fish.FishData);
 
-        CalculatePoints();
+        if (!PlacedItems.Contains(item))
+        {
+            PlacedItems.Add(item);
+            InventoryPoints.Instance.NewFishAdded(fishes);
+            CalculatePoints();
+        }
     }
 
     public void AddItem(ItemPlacer item)
@@ -168,12 +183,13 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 
     private void CalculatePoints()
     {
-        TotalPoints = 0;
+        _basePoints = 0;
 
         foreach (var item in PlacedItems)
-            TotalPoints += item.GetItemData().Fish.Points;
+            _basePoints += item.GetItemData().Fish.Points;
 
         OnItemPlaced?.Invoke();
+        InventoryPoints.Instance.CalculateScore(_basePoints);
         OnProgressQuest.Invoke();
     }
 
@@ -184,13 +200,6 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public static void HideInventory()
     {
         Instance._ui.HideInventory();
-    }
-    
-    public void LoadData(GameData data)
-    {
-    }
-    public void SaveData(GameData data)
-    {
     }
     
     [Button("Test bag")]
