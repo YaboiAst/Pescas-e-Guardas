@@ -43,7 +43,7 @@ public class FishingSpotsGenerator : MonoBehaviour
 
         foreach (Vector3 position in positions)
         {
-            var spotItem = _table.GetLootDropItem();
+            var spotItem = _table.GetLootDropItem(FishingManager.LuckChance);
             GameObject spot = ObjectPoolManager.SpawnGameObject(spotItem.Item, position, Quaternion.identity);
 
             if (spot.TryGetComponent<FishingSpot>(out FishingSpot fishingSpot))

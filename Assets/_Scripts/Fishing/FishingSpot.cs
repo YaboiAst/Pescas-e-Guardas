@@ -6,6 +6,7 @@ public class FishingSpot : Spot
 {
     [SerializeField] private FishLootTable _lootTable;
     [SerializeField] private Location _locationType;
+    [SerializeField] private bool _notRandom;
     private FishItem _currentFish;
 
     private void OnValidate() => _lootTable.ValidateTable();
@@ -18,6 +19,9 @@ public class FishingSpot : Spot
 
     public void UpdateFishingSpot(Location location)
     {
+        if (_notRandom)
+            return;
+
         List<FishData> randomFishes = FishManager.GetRandomFishes(3);
         _lootTable.UpdateLootTable(randomFishes);
 

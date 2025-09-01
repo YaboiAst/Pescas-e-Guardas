@@ -131,15 +131,11 @@ public class DraggableItem : MonoBehaviour, IPointerClickHandler
     
     private void Update()
     {
-        if (!_isToggled)
-            return;
+        if (!_isToggled) return;
         DragItem();
-            
-        if (!Input.GetMouseButtonUp(1))
-            return;
-        if (_isRotating)
-            return;
-        
+
+        if (!Input.GetMouseButtonUp(1)) return;
+        if (_isRotating) return;
         RotateOnce();
     }
     

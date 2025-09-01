@@ -108,7 +108,7 @@ public class MinigameManager : MonoBehaviour
                 const float MIN_CRITICAL_SUCCESS = 10f, MAX_CRITICAL_SUCCESS = 40f;
                 const float MIN_SUCCESS = 5f, MAX_SUCCESS = 25f;
                 const float MIN_FAILURE = 5f, MAX_FAILURE = 20f;
-                const float MIN_DURATION = 10f, MAX_DURATION = 20f;
+                const float MIN_DURATION = 7f, MAX_DURATION = 15f;
                 const float MIN_OVERTIME_DECREASE = 10f, MAX_OVERTIME_DECREASE = 20f;
                 const float MIN_DECREASE_TIMER = 4f, MAX_DECREASE_TIMER = 8f;
 

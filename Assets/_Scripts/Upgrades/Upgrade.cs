@@ -83,14 +83,25 @@ public class FishRarityEffect : Effect
 
     public override void OnScore(PointsContext ctx)
     {
-        if (ctx?.Fishes == null) return;
-        if (!ctx.Fishes.TryGetValue(_rarity, out var count) || count <= 0) return;
+        if (ctx?.FishesByRarity == null)
+            return;
+        if (!ctx.FishesByRarity.TryGetValue(_rarity, out var count) || count <= 0)
+            return;
 
-        if (_flatPerFish != 0)
-            ctx.Add += _flatPerFish * count;
+        List<FishData> fishes = ctx.Fishes.FindAll(f => f.Rarity == _rarity);
 
-        if (!Mathf.Approximately(_multPerFish, 1f) && _multPerFish > 0f)
-            ctx.Mult *= Mathf.Pow(_multPerFish, count);
+        int add = 0;
+
+        // if (_flatPerFish != 0)
+        //     add += _flatPerFish * count;
+
+        foreach (FishData fish in fishes)
+        {
+            add += _flatPerFish;
+            add += Mathf.RoundToInt(fish.BasePoints * (_multPerFish - 1f) );
+        }
+
+        ctx.Add += add;
     }
 }
 
@@ -98,7 +109,7 @@ public class FishRarityEffect : Effect
 [System.Serializable]
 public class LuckEffect : Effect
 {
-    [SerializeField] private float _chanceIncrease = 0.1f;
+    [Range(-100, 100)][SerializeField] private float _chanceIncrease = 10f;
 
     public LuckEffect() { }
     public LuckEffect(float chanceIncrease)
@@ -108,11 +119,11 @@ public class LuckEffect : Effect
 
     public override void OnEquip()
     {
-        FishingManager.LuckChance += _chanceIncrease;
+        FishingManager.LuckChance += _chanceIncrease / 100;
     }
 
     public override void OnUnequip()
     {
-        FishingManager.LuckChance -= _chanceIncrease;
+        FishingManager.LuckChance -= _chanceIncrease / 100;
     }
 }

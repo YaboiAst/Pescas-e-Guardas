@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[System.Serializable]
 public class QuestProgress 
 {
     public enum QuestStatus
@@ -10,7 +11,8 @@ public class QuestProgress
         NotStarted,
         InProgress,
         Completed,
-        Failed
+        Failed,
+        Claimed,
     }
 
     public MyQuestInfo QuestData;
@@ -26,9 +28,8 @@ public class QuestProgress
 
     public bool IsValid()
     {
-        if (this is null) return false;
         if (QuestData is null) return false;
-        if (Status != QuestStatus.InProgress) return false;
+        if (Status != QuestStatus.Completed) return false;
 
         return true;
     }

@@ -32,6 +32,5 @@ public class DialogueBlock
 public class ScriptableDialogue : ScriptableObject
 {
     public ScriptableQuest questToStart;
-    public int Id;
     public List<DialogueBlock> dialogueBlocks;
 }
