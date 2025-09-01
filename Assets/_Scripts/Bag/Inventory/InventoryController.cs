@@ -61,7 +61,6 @@ public class InventoryController : MonoBehaviour
     
     public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
     public static readonly UnityEvent ClearGrid = new UnityEvent();
-    public static event Action OnItemPlaced;
     public static readonly UnityEvent OnProgressQuest = new();
 
     private SelectionBuffer _tileBuffer;
