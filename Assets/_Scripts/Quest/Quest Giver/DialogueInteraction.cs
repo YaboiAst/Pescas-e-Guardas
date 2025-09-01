@@ -23,20 +23,6 @@ public class DialogueInteraction : MonoBehaviour
 
     public void Interact()
     {
-        
-        if (QuestManager.HasQuestActive)
-        {
-            return;
-        }
-
-        if (QuestManager.QuestCompleted)
-        {
-            QuestManager.OnFinishQuest?.Invoke();
-        }
-        else 
-        {
-            QuestManager.OnNextQuest?.Invoke();
-        }
-                    
+        QuestManager.ParseInteraction();
     }
 }
