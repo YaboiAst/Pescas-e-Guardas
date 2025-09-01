@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -10,6 +11,8 @@ public class FishingManager
     private static Spot _spot;
 
     public static readonly UnityEvent OnFishComplete = new();
+    public static float LuckChance = 0;
+
 
     public static void StartFishing(Spot fishingSpot, FishLootTable lootTable = null)
     {
@@ -58,11 +61,12 @@ public class FishingManager
 
     private static void OnMinigameComplete(MinigameResult result)
     {
-        _spot.OnMinigameComplete(result);
-        if (result == MinigameResult.Won)
             OnFishComplete?.Invoke();
-        else
-            Debug.Log("Voce fracassou e nao pegou o peixe");
+        _spot.OnMinigameComplete(result);
+
+        // if (result == MinigameResult.Won)
+        // else
+        //     Debug.Log("Voce fracassou e nao pegou o peixe");
 
         if (!_spot.CanFish())
         {

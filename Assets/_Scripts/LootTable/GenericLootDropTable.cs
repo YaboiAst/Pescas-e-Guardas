@@ -7,6 +7,8 @@ public abstract class GenericLootDropTable<T,U> where T: GenericLootDropItem<U>
 
     private float _probabilityTotalWeight;
 
+    private float _luckModifier = 0f;
+
     public void ValidateTable()
     {
         if(LootDropItems != null && LootDropItems.Count > 0)
@@ -36,9 +38,14 @@ public abstract class GenericLootDropTable<T,U> where T: GenericLootDropItem<U>
         }        
     }
 
-    public T GetLootDropItem()
+    public T GetLootDropItem(float luckModifier = 0f)
     {
+        _luckModifier = Mathf.Clamp(luckModifier, -1f, 1f);
+
         float pickedNumber = Random.Range(0, _probabilityTotalWeight);
+
+        pickedNumber += _luckModifier * (_probabilityTotalWeight / 4f);
+        pickedNumber = Mathf.Clamp(pickedNumber, 0, _probabilityTotalWeight);
 
         foreach(T lootDropItem in LootDropItems)
         {
