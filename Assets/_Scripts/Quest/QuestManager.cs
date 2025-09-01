@@ -20,20 +20,21 @@ public class QuestManager : MonoBehaviour
     public int currentWorldLevelIndex = 0;
     public int currentDialogueIndex = 0;
 
-    public static bool HasQuestActive => Instance?.CurrentProgress != null && Instance.CurrentProgress.Status == QuestProgress.QuestStatus.InProgress;
-    public static bool QuestCompleted => Instance?.CurrentProgress != null && Instance.IsComplete;
+    public static bool HasQuestActive => Instance?.CurrentProgress is { Status: QuestProgress.QuestStatus.InProgress };
+    public static bool QuestCompleted => Instance?.CurrentProgress is { Status: QuestProgress.QuestStatus.Completed };
 
     public ProgressBar bar;
 
     public float progress = 0;
 
-    public static UnityEvent OnFinishQuest = new();
+    public static readonly UnityEvent OnFinishQuest = new();
 
-    public static UnityEvent OnNextQuest = new();
+    public static readonly UnityEvent OnNextQuest = new();
 
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
     public bool IsComplete = false;
+    public bool isClaimed = false;
 
     private void Awake()
     {
@@ -50,7 +51,20 @@ public class QuestManager : MonoBehaviour
 
         InventoryController.OnProgressQuest.AddListener(CheckQuestProgress);
         DialogueInteraction.OnInteracted.AddListener(CheckQuestIsCompleted);
+        DialogueManager.OnFinishDialogue.AddListener(() => isClaimed = !isClaimed);
     }
+
+    public static void ParseInteraction()
+    {
+        if (HasQuestActive)
+            return;
+
+        if (QuestCompleted)
+            OnFinishQuest?.Invoke();
+        else 
+            OnNextQuest?.Invoke();
+    }
+    
     public void AddQuest(MyQuestInfo quest)
     {
         CurrentProgress = new QuestProgress(quest);
@@ -67,13 +81,13 @@ public class QuestManager : MonoBehaviour
 
         bar.AlterarProgresso(0);
 
-        CurrentProgress.Status = QuestProgress.QuestStatus.Completed;
+        CurrentProgress.Status = QuestProgress.QuestStatus.Claimed;
         Debug.Log($"Missão '{CurrentProgress.QuestData.title}' concluída!");
         OnFinishQuest?.Invoke();
 
         IsComplete = false;
+        isClaimed = false;
         DialogueManager.OnNextDialogueBlock?.Invoke(1);
-
     }
 
 
@@ -99,8 +113,6 @@ public class QuestManager : MonoBehaviour
 
     private void NextQuest()
     {
-
-        Debug.Log("abrindo a próxima missão");
         if (CurrentProgress == null)
         {
             currentWorldLevelIndex = 0;
@@ -108,6 +120,8 @@ public class QuestManager : MonoBehaviour
         }
         else 
         {
+            if (!isClaimed)
+                return;
             UpdateQuest();
         }
         var currentDialogue = dialoguesGroups[currentWorldLevelIndex].dialogues[currentDialogueIndex];
@@ -147,6 +161,4 @@ public class QuestManager : MonoBehaviour
         }
 
     }
-
-   
 }
