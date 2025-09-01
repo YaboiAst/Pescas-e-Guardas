@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7c013a61d5f4fb2bd0bf40d74315573, type: 3}
-  m_Name: UpgradeTest 2
+  m_Name: Bonus_Flat2
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: a105a48bae5384b4cb0713da4b087e24, type: 3}
-  DisplayName: Upgrade B
-  Description: N sei o que n sei q la
-  Cost: 600
-  Effects: []
+  Icon: {fileID: 21300000, guid: 438a0da3bea772145a28237b3ffa6f9d, type: 3}
+  DisplayName: "Orientado a navega\xE7\xE3o"
+  Description: "Adicione +1000 pontos na sua pontua\xE7\xE3o final"
+  Cost: 2000
+  Effects:
+  - rid: 184974162678251527
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 184974162678251527
+      type: {class: FlatBonusEffect, ns: , asm: Assembly-CSharp}
+      data:
+        _amount: 1000
