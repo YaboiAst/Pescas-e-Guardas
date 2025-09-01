@@ -83,7 +83,7 @@ public class QuestManager : MonoBehaviour
 
         CurrentProgress.Status = QuestProgress.QuestStatus.Claimed;
         Debug.Log($"Missão '{CurrentProgress.QuestData.title}' concluída!");
-        OnFinishQuest?.Invoke();
+        // OnFinishQuest?.Invoke();
 
         IsComplete = false;
         isClaimed = false;
@@ -97,7 +97,7 @@ public class QuestManager : MonoBehaviour
         if (CurrentProgress.Status != QuestProgress.QuestStatus.InProgress) return;
 
         int current = InventoryController.Instance.TotalPoints;
-        int goal = CurrentProgress.QuestData.Points;
+        int goal = CurrentProgress.QuestData.objectivePoints;
         Debug.Log($"O jogador tem '{current}' pontos. Ele precisa de '{goal}' pontos.");
 
         progress = (float)current / goal;

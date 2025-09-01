@@ -35,6 +35,8 @@ public class CameraLockController : MonoBehaviour
 
         mainCamera.Priority = 5;
         lockedCamera.Priority = 10;
+
+        Cursor.lockState = UnityEngine.CursorLockMode.None;
     }
 
     private void UnlockCamera()
@@ -44,6 +46,8 @@ public class CameraLockController : MonoBehaviour
 
         mainCamera.Priority = 10;
         lockedCamera.Priority = 5;
+        
+        Cursor.lockState = UnityEngine.CursorLockMode.Locked;
     }
 
     [Button("Lock")]

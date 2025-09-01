@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d988edaa62ed3343b826e38d4a64ccb, type: 3}
-  m_Name: Bag Test
+  m_Name: BagShaped
   m_EditorClassIdentifier: 
   scale: 2
   bagMask: {fileID: 21300000, guid: c68ae9f3658975341b5f865bf5cc0afe, type: 3}

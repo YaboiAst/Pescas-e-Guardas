@@ -76,7 +76,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // METHODS CALLED BY USER INTERACTION
     public void OnPointerEnter(PointerEventData eventData)
     {
-        var item = InventoryController.Instance._currentSelectedItem;
+        var item = InventoryController.Instance.CurrentSelectedItem;
         if (item is null) return;
         
         if (_rectT is null)
@@ -95,7 +95,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        var item = InventoryController.Instance._currentSelectedItem;
+        var item = InventoryController.Instance.CurrentSelectedItem;
         if (item is null) return;
         
         item.SetPositionStatus(false);
@@ -104,7 +104,7 @@ public class GridTile : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        var item = InventoryController.Instance._currentSelectedItem;
+        var item = InventoryController.Instance.CurrentSelectedItem;
        item?.HandleClick(eventData);
     }
     

@@ -4,6 +4,7 @@ using System.Linq;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class SelectionBuffer
@@ -45,18 +46,18 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 {
     public static InventoryController Instance;
 
-    [SerializeField] private GameObject _itemPrefab;
-    [SerializeField] private Transform _spawnParent;
-    [SerializeField] private BagData currentBag;
+    [FormerlySerializedAs("_itemPrefab")] [SerializeField] private GameObject itemPrefab;
+    [FormerlySerializedAs("_spawnParent")] [SerializeField] private Transform spawnParent;
+    private BagData _currentBag;
 
     private Dictionary<Vector2Int, GridTile> _tiles;
     public void InitializeGrid() => _tiles = new Dictionary<Vector2Int, GridTile>();
     public void AddTile(GridTile t) => _tiles.Add(t.GetCoord(), t);
 
-    public ItemPlacer _currentSelectedItem { get; private set; }
-    public static void SelectItem(ItemPlacer item) => Instance._currentSelectedItem ??= item;
-    public static void DeselectItem() => Instance._currentSelectedItem = null;
-    public static bool IsItemSelected() => Instance._currentSelectedItem is not null;
+    public ItemPlacer CurrentSelectedItem { get; private set; }
+    public static void SelectItem(ItemPlacer item) => Instance.CurrentSelectedItem ??= item;
+    public static void DeselectItem() => Instance.CurrentSelectedItem = null;
+    public static bool IsItemSelected() => Instance.CurrentSelectedItem is not null;
     
     public static readonly UnityEvent<ItemPlacer> CheckOverlap = new UnityEvent<ItemPlacer>();
     public static readonly UnityEvent ClearGrid = new UnityEvent();
@@ -70,7 +71,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     private InventoryUI _ui;
     private GridGeneration _gridGenerator;
 
-    public Vector2 GridCellSize => _gridGenerator.gridRectSize;
+    public Vector2 GridCellSize => _gridGenerator.GridRectSize;
     
     private void Awake()
     {
@@ -86,13 +87,22 @@ public class InventoryController : MonoBehaviour, IDataPersistence
         _ui = GetComponentInParent<InventoryUI>();
         
         _gridGenerator = GetComponent<GridGeneration>();
-        _gridGenerator.SetBag(currentBag);
+        _gridGenerator.SetBag(_currentBag);
     }
 
     private void Start()
     {
+        QuestManager.OnStartQuest.AddListener(InitializeBag);
         QuestManager.OnFinishQuest.AddListener(ClearInventory);
     }
+
+    private void InitializeBag(QuestProgress questProgress)
+    {
+        _gridGenerator ??= GetComponent<GridGeneration>();
+        _currentBag = questProgress.QuestData.questBag;
+        _gridGenerator.SetBag(_currentBag);
+    }
+    
     private void ClearInventory()
     {
         for (int i = PlacedItems.Count - 1; i >= 0; i--)
@@ -115,7 +125,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
 
     public void CreateItem(Fish fish)
     {
-        ItemPlacer item = Instantiate(_itemPrefab, _spawnParent).GetComponent<ItemPlacer>();
+        ItemPlacer item = Instantiate(itemPrefab, spawnParent).GetComponent<ItemPlacer>();
         item.Initialize(fish, this);
         SelectItem(item);
         _ui.ShowInventory();
@@ -187,7 +197,7 @@ public class InventoryController : MonoBehaviour, IDataPersistence
     public void TestBag()
     { 
         HideInventory();
-        _gridGenerator?.SetBag(currentBag);
+        _gridGenerator?.SetBag(_currentBag);
         ShowInventory();
     }
 }
