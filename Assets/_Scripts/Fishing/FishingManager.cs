@@ -58,11 +58,12 @@ public class FishingManager
 
     private static void OnMinigameComplete(MinigameResult result)
     {
-        _spot.OnMinigameComplete(result);
-        if (result == MinigameResult.Won)
             OnFishComplete?.Invoke();
-        else
-            Debug.Log("Voce fracassou e nao pegou o peixe");
+        _spot.OnMinigameComplete(result);
+
+        // if (result == MinigameResult.Won)
+        // else
+        //     Debug.Log("Voce fracassou e nao pegou o peixe");
 
         if (!_spot.CanFish())
         {
