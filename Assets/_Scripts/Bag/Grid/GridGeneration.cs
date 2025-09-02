@@ -46,8 +46,8 @@ public class GridGeneration : MonoBehaviour
         if (newBag.bagMask == null)
         {
             bagMaskHolder.color = Color.white - Color.black;
-            bagMaskHolder.sprite = null;
             bagMaskHolder.enabled = false;
+            bagMaskHolder.sprite = null;
             return;
         }
         bagMaskHolder.enabled = true;
