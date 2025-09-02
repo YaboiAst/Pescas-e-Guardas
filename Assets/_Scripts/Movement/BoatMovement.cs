@@ -7,33 +7,37 @@ public class BoatMovement : MonoBehaviour
     [SerializeField] private LayerMask _landLayerMask;
 
     private bool _canMove = true;
+    public void EnableMove(bool set) => _canMove = set;
 
     public void SetupMovement(BoatTypeData data)
     {
         _moveSpeed = data.MoveSpeed;
         _turnSpeed = data.TurnSpeed;
+
+        CanvasController.OnUIOpen.AddListener(() => _canMove = false);
+        CanvasController.OnUIClosed.AddListener(() => _canMove = true);
     }
 
-    private void OnEnable()
-    {
-        Minigame.OnMinigameUpdated += MinigameUpdated;
-    }
-
-    private void OnDestroy()
-    {
-        Minigame.OnMinigameUpdated -= MinigameUpdated;
-    }
-
-    private void MinigameUpdated(bool hasStarted)
-    {
-        if(hasStarted)
-        {
-            _canMove = false;
-        }else
-        {
-            _canMove = true;
-        }
-    }
+    // private void OnEnable()
+    // {
+    //     Minigame.OnMinigameUpdated += MinigameUpdated;
+    // }
+    //
+    // private void OnDestroy()
+    // {
+    //     Minigame.OnMinigameUpdated -= MinigameUpdated;
+    // }
+    //
+    // private void MinigameUpdated(bool hasStarted)
+    // {
+    //     if(hasStarted)
+    //     {
+    //         _canMove = false;
+    //     }else
+    //     {
+    //         _canMove = true;
+    //     }
+    // }
     
     private void Update()
     {

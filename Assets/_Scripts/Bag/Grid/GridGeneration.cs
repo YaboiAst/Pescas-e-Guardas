@@ -50,6 +50,7 @@ public class GridGeneration : MonoBehaviour
             bagMaskHolder.enabled = false;
             return;
         }
+        bagMaskHolder.enabled = true;
         bagMaskHolder.alphaHitTestMinimumThreshold = 0.1f;
         bagMaskHolder.sprite = newBag.bagMask;
         bagMaskHolder.color = Color.white;
