@@ -15,6 +15,8 @@ MonoBehaviour:
   questInfo:
     questGiver: Lao Feng
     title: "Miss\xE3o 3 \u2013 Desafio do Oceano"
-    Points: 1000
     description: Prove seu valor para os pescadores
     objectiveDescription: Consiga 1000 pontos e retorne ao porto
+    objectivePoints: 1000
+    questBag: {fileID: 11400000, guid: 838f59a18f8c6ad408b351810084581a, type: 2}
+    rewardValue: 0
