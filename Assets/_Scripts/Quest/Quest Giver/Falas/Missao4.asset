@@ -20,8 +20,8 @@ MonoBehaviour:
         textLine: "Ouvi falar de monstros marinhos, como tubar\xF5es e o misterioso
           peixe-elefante. Poucos pescadores voltam para contar a hist\xF3ria... Mas
           se voc\xEA conseguir, ser\xE1 lembrado como uma lenda!"
-        whosTalking: Pescador
-        whosTalkingIcon: {fileID: 21300000, guid: 686336d3f9a8e2849be11e7d0c0592de, type: 3}
+        whosTalking: Teobaldo
+        whosTalkingIcon: {fileID: 21300000, guid: f93e91fa3e253374db57c0076df74a8c, type: 3}
     overrideJump: 0
     jumpToBlock: 0
   - dialogueBlock:
@@ -30,7 +30,7 @@ MonoBehaviour:
         textLine: "Eu n\xE3o acredito\u2026 voc\xEA realmente trouxe essas criaturas
           lend\xE1rias! O mar inteiro agora conhece seu nome. Voc\xEA n\xE3o \xE9
           mais s\xF3 um pescador\u2026 \xE9 uma lenda viva."
-        whosTalking: Pescador
-        whosTalkingIcon: {fileID: 21300000, guid: 686336d3f9a8e2849be11e7d0c0592de, type: 3}
+        whosTalking: Teobaldo
+        whosTalkingIcon: {fileID: 21300000, guid: f93e91fa3e253374db57c0076df74a8c, type: 3}
     overrideJump: 0
     jumpToBlock: 0

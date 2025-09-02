@@ -24,4 +24,4 @@ MonoBehaviour:
     - rid: 184974162678251528
       type: {class: FlatBonusEffect, ns: , asm: Assembly-CSharp}
       data:
-        _amount: 500
+        _amount: 100

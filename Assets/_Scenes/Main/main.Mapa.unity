@@ -7065,6 +7065,9 @@ MonoBehaviour:
     dialogues:
     - {fileID: 11400000, guid: 93e95b3755dba8149853590f4fe438ae, type: 2}
     - {fileID: 11400000, guid: 0a090d1866c2c1d4cb7c214ac135c790, type: 2}
+    - {fileID: 11400000, guid: ad7505513250f4a479d22ecfb59e4a68, type: 2}
+    - {fileID: 11400000, guid: a5886a51a34da2c409fda6c0c8441c6b, type: 2}
+    - {fileID: 11400000, guid: 6b985cb5eb1e5394aba5f23812c023d4, type: 2}
   currentWorldLevelIndex: 0
   currentDialogueIndex: 0
   bar: {fileID: 293528518}

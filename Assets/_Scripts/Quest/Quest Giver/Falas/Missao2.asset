@@ -31,10 +31,5 @@ MonoBehaviour:
           aberta! Agora ningu\xE9m pode dizer que voc\xEA s\xF3 pesca sardinha."
         whosTalking: Lao Feng
         whosTalkingIcon: {fileID: 21300000, guid: 9b49fbd0d2ae9c84db3196cf1dfb4873, type: 3}
-    - type: 0
-      textLine:
-        textLine: htfxhtfhxfthfth
-        whosTalking: Polvo
-        whosTalkingIcon: {fileID: 21300000, guid: c042410bbce24934e9cdd8258d43a378, type: 3}
     overrideJump: 0
     jumpToBlock: 0

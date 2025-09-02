@@ -15,6 +15,8 @@ MonoBehaviour:
   questInfo:
     questGiver: Polvo
     title: "Miss\xE3o 4 \u2013 Ca\xE7a ao Raro"
-    Points: 2000
     description: Pesque peixes raros e valiosos
     objectiveDescription: Consiga 2000 pontos e retorne ao porto
+    objectivePoints: 2000
+    questBag: {fileID: 11400000, guid: 838f59a18f8c6ad408b351810084581a, type: 2}
+    rewardValue: 0
