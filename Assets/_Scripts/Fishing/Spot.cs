@@ -14,6 +14,7 @@ public class Spot : MonoBehaviour
     }
 
     public virtual bool CanFish() => FishingAttempts > 0;
+    public virtual bool IsTreasureSpot() => false;
 
     public virtual void Interact()
     {

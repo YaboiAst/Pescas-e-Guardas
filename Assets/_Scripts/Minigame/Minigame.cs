@@ -57,10 +57,7 @@ public class Minigame : MonoBehaviour
             _durationTimer -= Time.deltaTime;
     }
 
-    protected virtual void CheckSuccess()
-    {
-
-    }
+    protected virtual void CheckSuccess() {}
 
     public virtual void PrepMinigame(MinigameSettings settings, Action<MinigameResult> completeMinigame)
     {
