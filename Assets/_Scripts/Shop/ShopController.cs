@@ -41,13 +41,13 @@ public class ShopController : CanvasController
         //PopulateShop();
     }
 
-    protected override void ShowCanvas()
+    protected override void ShowCanvas(bool triggerEvent = true)
     {
         base.ShowCanvas();
         ShopOpen = true;
     }
 
-    protected override void HideCanvas()
+    protected override void HideCanvas(bool triggerEvent = true)
     {
         base.HideCanvas();
         ShopOpen = false;

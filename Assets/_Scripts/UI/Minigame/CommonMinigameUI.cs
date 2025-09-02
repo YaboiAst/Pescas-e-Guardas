@@ -53,14 +53,13 @@ public class CommonMinigameUI : CanvasController
         HideCanvas();
     }
 
-
     public void HideOnlyMinigameUI()
     {
         if (minigameStarted || !IsOpen) return;
 
         FishingManager.CloseFishMinigame();
         _probabilitiesUI.ClearUI();
-        HideCanvas();
+        HideCanvas(triggerEvent: false);
     }
     
     private void Update()

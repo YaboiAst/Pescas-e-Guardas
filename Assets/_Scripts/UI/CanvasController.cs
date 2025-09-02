@@ -15,7 +15,7 @@ public class CanvasController : MonoBehaviour
 
     public static readonly UnityEvent OnUIOpen = new(), OnUIClosed = new();
     
-    protected virtual void ShowCanvas()
+    protected virtual void ShowCanvas(bool triggerEvent = true)
     {
         if (_disableGO)
         {
@@ -26,10 +26,12 @@ public class CanvasController : MonoBehaviour
         _canvasGroup.alpha = 1;
         IsOpen = true;
         
+        if (!triggerEvent) return;
+        
         OnUIOpen?.Invoke();
     }
     
-    protected virtual void HideCanvas()
+    protected virtual void HideCanvas(bool triggerEvent = true)
     {
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
@@ -39,6 +41,8 @@ public class CanvasController : MonoBehaviour
             _canvas.SetActive(false);
         }
         IsOpen = false;
+        
+        if (!triggerEvent) return;
         
         OnUIClosed?.Invoke();
     }

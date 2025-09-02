@@ -6939,10 +6939,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4726589975753295495, guid: 624279ee0c7035046ba6bd1cf24a23c4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1861184990}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 624279ee0c7035046ba6bd1cf24a23c4, type: 3}
 --- !u!4 &1144951030 stripped
 Transform:
@@ -9314,10 +9311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0b0ef0552d2c048a8bb3ff7ca328da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fish:
-    _fishData: {fileID: 11400000, guid: 88600f119a5e1c945bc74b99fbbc7092, type: 2}
-    _weight: 999
-    _points: 900
+  _upgrade: {fileID: 0}
 --- !u!1 &1744459323
 GameObject:
   m_ObjectHideFlags: 0
@@ -9901,35 +9895,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838455110}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1861184987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4726589975753295495, guid: 624279ee0c7035046ba6bd1cf24a23c4, type: 3}
+--- !u!114 &1861184990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6477276957114781275, guid: 624279ee0c7035046ba6bd1cf24a23c4, type: 3}
   m_PrefabInstance: {fileID: 1144951029}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1861184988 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4794129520452766478, guid: 624279ee0c7035046ba6bd1cf24a23c4, type: 3}
-  m_PrefabInstance: {fileID: 1144951029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861184987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1861184990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861184987}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f296f844430f148a5ab5fc7930d5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1861184988}
 --- !u!1 &1865132894
 GameObject:
   m_ObjectHideFlags: 0
@@ -12348,7 +12324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2496524090482245871, guid: 2b20cd7c29aa0a84090698840ab0d43b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000006744734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2496524090482245871, guid: 2b20cd7c29aa0a84090698840ab0d43b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12356,7 +12332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2496524090482245871, guid: 2b20cd7c29aa0a84090698840ab0d43b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00000023806864
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2496524090482245871, guid: 2b20cd7c29aa0a84090698840ab0d43b, type: 3}
       propertyPath: m_LocalRotation.w

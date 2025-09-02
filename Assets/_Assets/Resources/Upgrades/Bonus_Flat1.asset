@@ -10,7 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7c013a61d5f4fb2bd0bf40d74315573, type: 3}
-<<<<<<<< HEAD:Assets/_Assets/Resources/Upgrades/Bonus_Flat1.asset
   m_Name: Bonus_Flat1
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 129c72532b193f94899be107593bbb71, type: 3}
@@ -26,20 +25,3 @@ MonoBehaviour:
       type: {class: FlatBonusEffect, ns: , asm: Assembly-CSharp}
       data:
         _amount: 500
-========
-  m_Name: Bonus_Flat2
-  m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 438a0da3bea772145a28237b3ffa6f9d, type: 3}
-  DisplayName: "Orientado a navega\xE7\xE3o"
-  Description: "Adicione +1000 pontos na sua pontua\xE7\xE3o final"
-  Cost: 2000
-  Effects:
-  - rid: 184974162678251527
-  references:
-    version: 2
-    RefIds:
-    - rid: 184974162678251527
-      type: {class: FlatBonusEffect, ns: , asm: Assembly-CSharp}
-      data:
-        _amount: 1000
->>>>>>>> c0e9fe6a6712d94b4e6716e828a97f527b60bd99:Assets/_Assets/Resources/Upgrades/Bonus_Flat2.asset

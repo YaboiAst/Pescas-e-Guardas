@@ -123,6 +123,8 @@ public class InventoryController : MonoBehaviour
             tile.Value.Clear();
 
         CalculatePoints();
+        
+        _gridGenerator.SetBag(null);
     }
     public static void CheckGrid(ItemPlacer item)
     {
