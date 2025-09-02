@@ -71,7 +71,7 @@ public class FishingManager
         if (!_spot.CanFish())
         {
             CloseFishMinigame();
-            CommonMinigameUI.Instance.HideOnlyMinigameUI();
+            CommonMinigameUI.Instance.HideOnlyMinigameUI(triggerEvent: _spot.IsTreasureSpot());
             _spot.DestroySpot();
             _spot = null;
         }

@@ -26,4 +26,6 @@ public class TreasureSpot : Spot
 
         }
     }
+
+    public override bool IsTreasureSpot() => true;
 }
