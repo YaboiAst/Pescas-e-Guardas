@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [System.Serializable]
 public class QuestBucket
@@ -17,15 +19,15 @@ public class QuestManager : MonoBehaviour
     public static QuestManager Instance { get; private set; }
     public QuestProgress CurrentProgress { get; private set; }
 
-    public int currentWorldLevelIndex = 0;
-    public int currentDialogueIndex = 0;
+    [ReadOnly] public int currentWorldLevelIndex = 0;
+    [ReadOnly] public int currentDialogueIndex = 0;
 
     public static bool HasQuestActive => Instance?.CurrentProgress is { Status: QuestProgress.QuestStatus.InProgress };
     public static bool QuestCompleted => Instance?.CurrentProgress is { Status: QuestProgress.QuestStatus.Completed };
 
     public ProgressBar bar;
 
-    public float progress = 0;
+    [ReadOnly] public float progress = 0;
 
     public static readonly UnityEvent OnFinishQuest = new();
 
@@ -33,8 +35,8 @@ public class QuestManager : MonoBehaviour
 
     public static readonly UnityEvent<QuestProgress> OnStartQuest = new UnityEvent<QuestProgress>();
 
-    public bool IsComplete = false;
-    public bool isClaimed = false;
+    [FormerlySerializedAs("IsComplete")] [ReadOnly] public bool isComplete = false;
+    [ReadOnly] public bool isClaimed = false;
 
     private void Awake()
     {
@@ -85,7 +87,7 @@ public class QuestManager : MonoBehaviour
         Debug.Log($"Missão '{CurrentProgress.QuestData.title}' concluída!");
         // OnFinishQuest?.Invoke();
 
-        IsComplete = false;
+        isComplete = false;
         isClaimed = false;
         DialogueManager.OnNextDialogueBlock?.Invoke(1);
     }
@@ -106,7 +108,7 @@ public class QuestManager : MonoBehaviour
 
         if (current >= goal)
         {
-            IsComplete = true;
+            isComplete = true;
             CurrentProgress.Status = QuestProgress.QuestStatus.Completed;
         }
     }
@@ -130,7 +132,7 @@ public class QuestManager : MonoBehaviour
     }
     private void CheckQuestIsCompleted()
     {
-        if (IsComplete)
+        if (isComplete)
         {
             CompleteQuest();
         }
@@ -153,6 +155,12 @@ public class QuestManager : MonoBehaviour
             {
                 currentWorldLevelIndex++;
                 currentDialogueIndex = 0;
+
+                if (currentWorldLevelIndex > maxWorldLevelIndex)
+                {
+                    Debug.Log("Fim");
+                    ConditionOverlay.OnFinish?.Invoke();
+                }
             }
         }
         else

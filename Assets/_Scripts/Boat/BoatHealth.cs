@@ -10,7 +10,6 @@ public class BoatHealth : MonoBehaviour
     [SerializeField] private TMP_Text _healthText;
     
     public event Action OnBoatHealthUpdate; 
-    public event Action OnBoatDestroy; 
     
     public void SetupHealth(BoatTypeData typeData, int health)
     {
@@ -21,9 +20,9 @@ public class BoatHealth : MonoBehaviour
     public void TakeDamage(int damage = 1)
     {
         SetHealth(_healthPoints - damage);
-        
-        if (_healthPoints <= 0) 
-            OnBoatDestroy?.Invoke();
+
+        if (_healthPoints <= 0)
+            ConditionOverlay.OnLose?.Invoke();
     }
     
     [Command("reset_boat_health", "Resets the health of the boat to max health")]
