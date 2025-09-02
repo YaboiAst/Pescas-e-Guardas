@@ -12,12 +12,6 @@ public class CommonMinigameUI : CanvasController
     
     private void Awake()
     {
-        if (Instance is not null && Instance != this)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-
         Instance = this;
     }
 

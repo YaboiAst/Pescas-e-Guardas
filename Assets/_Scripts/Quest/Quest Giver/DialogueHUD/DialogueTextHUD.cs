@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueTextHUD : MonoBehaviour
+public class DialogueTextHUD : CanvasController
 {
     [SerializeField] private TextMeshProUGUI dialogueTextBox;
     [SerializeField] private TextMeshProUGUI dialogueTextName;
@@ -14,18 +14,18 @@ public class DialogueTextHUD : MonoBehaviour
         DialogueManager.OnFinishDialogue.AddListener(() => {
             //Cursor.visible = false;
             //Cursor.lockState = UnityEngine.CursorLockMode.Locked;
-            gameObject.SetActive(false);
+            HideCanvas();
         });
         
         dialogueTextName.text = "";
         dialogueTextBox.text = "";
         
-        this.gameObject.SetActive(false);
+        HideCanvas();
     }
 
     private void WriteText(MyDialogueInfo textToWrite)
     {
-        this.gameObject.SetActive(true);
+        ShowCanvas();
 
         dialogueIcon.color = Color.white;
         Cursor.visible = true;
