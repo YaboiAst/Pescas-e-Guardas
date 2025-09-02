@@ -30,11 +30,11 @@ public class CommonMinigameUI : CanvasController
         ShowCanvas();
         if (lootTable != null)
         {
-            GenerataProbabilitiesUI(lootTable);
+            GenerateProbabilitiesUI(lootTable);
         }
         FishingManager.PrepFishMinigame();
     }
-    public void GenerataProbabilitiesUI(FishLootTable lootTable) => _probabilitiesUI.GenerateUI(lootTable);
+    public void GenerateProbabilitiesUI(FishLootTable lootTable) => _probabilitiesUI.GenerateUI(lootTable);
     public void HideUI()
     {
         InventoryController.HideInventory();

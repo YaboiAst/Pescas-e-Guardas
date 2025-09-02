@@ -53,7 +53,19 @@ public class QuestManager : MonoBehaviour
 
         InventoryController.OnProgressQuest.AddListener(CheckQuestProgress);
         DialogueInteraction.OnInteracted.AddListener(CheckQuestIsCompleted);
-        DialogueManager.OnFinishDialogue.AddListener(() => isClaimed = !isClaimed);
+        DialogueManager.OnFinishDialogue.AddListener(() =>
+        {
+            isClaimed = !isClaimed;
+
+            var maxWorldLevelIndex = dialoguesGroups.Count - 1;
+            if (currentWorldLevelIndex + 1 <= maxWorldLevelIndex)
+                return;
+            var maxDialogueIdx = dialoguesGroups[currentWorldLevelIndex].dialogues.Count - 1;
+            if (currentDialogueIndex + 1 <= maxDialogueIdx)
+                return;
+            
+            ConditionOverlay.OnFinish?.Invoke();
+        });
     }
 
     public static void ParseInteraction()
@@ -140,10 +152,8 @@ public class QuestManager : MonoBehaviour
 
     private void UpdateQuest()
     {
-   
         int maxWorldLevelIndex = dialoguesGroups.Count - 1;
-               
-
+        
         if (currentWorldLevelIndex <= maxWorldLevelIndex)
         {
             int maxDialogueIndex = dialoguesGroups[currentWorldLevelIndex].dialogues.Count - 1;
@@ -155,12 +165,6 @@ public class QuestManager : MonoBehaviour
             {
                 currentWorldLevelIndex++;
                 currentDialogueIndex = 0;
-
-                if (currentWorldLevelIndex > maxWorldLevelIndex)
-                {
-                    Debug.Log("Fim");
-                    ConditionOverlay.OnFinish?.Invoke();
-                }
             }
         }
         else
