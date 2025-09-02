@@ -78,10 +78,7 @@ public class InventoryController : MonoBehaviour
     
     private void Awake()
     {
-        if (Instance is null)
-            Instance = this;
-        else
-            Destroy(this.gameObject);
+        Instance = this;
 
         _tileBuffer = new SelectionBuffer();
         ClearGrid.AddListener(ResetBuffer);

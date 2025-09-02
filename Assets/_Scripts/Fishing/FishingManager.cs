@@ -61,7 +61,7 @@ public class FishingManager
 
     private static void OnMinigameComplete(MinigameResult result)
     {
-            OnFishComplete?.Invoke();
+        OnFishComplete?.Invoke();
         _spot.OnMinigameComplete(result);
 
         // if (result == MinigameResult.Won)
@@ -77,7 +77,7 @@ public class FishingManager
         }
         else
         {
-            CommonMinigameUI.Instance.GenerataProbabilitiesUI(CurrentLootTable);
+            CommonMinigameUI.Instance.GenerateProbabilitiesUI(CurrentLootTable);
         }
 
         CurrentFish = null;
